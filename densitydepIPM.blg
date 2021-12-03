@@ -1,0 +1,50 @@
+This is BibTeX, Version 0.99d (TeX Live 2018)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: densitydepIPM.aux
+The style file: elsarticle-num-names.bst
+Database file #1: gizshad.bib
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Warning--empty journal in jester1972life
+Warning--empty journal in gutreuter1995long
+You've used 26 entries,
+            2918 wiz_defined-function locations,
+            787 strings with 10641 characters,
+and the built_in function-call counts, 17193 in all, are:
+= -- 1216
+> -- 799
+< -- 12
++ -- 305
+- -- 273
+* -- 2052
+:= -- 2498
+add.period$ -- 27
+call.type$ -- 26
+change.case$ -- 216
+chr.to.int$ -- 26
+cite$ -- 28
+duplicate$ -- 1249
+empty$ -- 1195
+format.name$ -- 355
+if$ -- 3095
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 258
+newline$ -- 135
+num.names$ -- 104
+pop$ -- 472
+preamble$ -- 1
+purify$ -- 219
+quote$ -- 0
+skip$ -- 278
+stack$ -- 0
+substring$ -- 740
+swap$ -- 923
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 231
+warning$ -- 2
+while$ -- 112
+width$ -- 0
+write$ -- 344
+(There were 2 warnings)
