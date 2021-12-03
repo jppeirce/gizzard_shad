@@ -71,7 +71,7 @@ ggplot(plot_df,
   theme(legend.position = c(0.8, 0.4))+
   theme(text = element_text(size=16),
         aspect.ratio = .7)
-ggsave("~/OneDrive - University of Wisconsin-La Crosse/GizzardShad/presentation/figures/sim.png")
+ggsave("~/OneDrive - University of Wisconsin-La Crosse/GizzardShad/paper/figures/sim.png")
 
 ### Age-0 survival vs time
 surv_t <- rep(0, times = tf)

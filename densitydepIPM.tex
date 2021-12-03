@@ -1,22 +1,3 @@
-%% 
-%% Copyright 2007-2020 Elsevier Ltd
-%% 
-%% This file is part of the 'Elsarticle Bundle'.
-%% ---------------------------------------------
-%% 
-%% It may be distributed under the conditions of the LaTeX Project Public
-%% License, either version 1.2 of this license or (at your option) any
-%% later version.  The latest version of this license is in
-%%    http://www.latex-project.org/lppl.txt
-%% and version 1.2 or later is part of all distributions of LaTeX
-%% version 1999/12/01 or later.
-%% 
-%% The list of all files belonging to the 'Elsarticle Bundle' is
-%% given in the file `manifest.txt'.
-%% 
-%% Template article for Elsevier's document class `elsarticle'
-%% with harvard style bibliographic references
-
 \documentclass[preprint,5p,times,twocolumn,authoryear]{elsarticle}
 
 %% Use the option review to obtain double line spacing
@@ -78,7 +59,7 @@ ${\rm 4}$ River Studies Center}
 
 \begin{abstract}
 %% Text of abstract
-
+Gizzard shad are a common freshwater fish throughout the central and eastern portions of North America. Within these areas, gizzard shad play a number of critical roles in the freshwater community. Because of this, it is important that we understand how gizzard shad populations respond to environmental changes (both natural and anthropogenic) and what these changes may mean for aqua7c communities in general and fish assemblages in particular. Here we introduce an integral projection model for gizzard shad based on empirical data and include density-dependent survival in age-0 fish. Integral projection models (IPM) are a generalization of stage-based, matrix population models that have been used to describe a wide range of organisms. IPM are a natural choice for gizzard shad since many aspects of their life cycle have been studied. In this paper, we compared model outcomes to empirical patterns reported for this fish species at points along the Illinois River. Results of our work suggest that this model could serve as an important tool for predicting gizzard shad population responses to changing environmental conditions, including those mediated through species invasions.
 \end{abstract}
 
 %%Graphical abstract
@@ -273,7 +254,7 @@ and is about midway between the Mississippi River and Lake Michigan. The Illinoi
 The location of La Grange Reach was the primary reason it was chosen for the methods part of our study.  Its location has two important features. We parameterized the IPM using data from the main channel of the UMR.  As a part of Illinois River and UMR, La Grange Reach is upstream from the main channel (should we include figure/map?).  The proximity to, but relative independence from, the main channel, made it a good choice.  Secondly, La Grange Reach is a large pool between the main channel of the Mississippi River and Lake Michigan.  In recent years, there have been concerns with the threatening introduction of invasive carp to the Great Lakes.  Consequently, the impact of invasive carp on the native fish populations in the pools leading to the Great Lakes have received an elevated level of attention.  Understanding the population dynamics of gizzard shad, may in the future make it easier to assess the impacts carp has on native fish populations.
 
 \subsection{Parameterization}
-The parameters for the growth function were chosen as the mean values published on a study of gizzard shad located in large impoundments \citep{michaletz2017variation}. The survival rate of adults gizzard shad dependent on their length is not well documented and required us to make some additional modeling assumptions.  An investigation of gizzard shad in Lake Eerie (\cite{bodola1955life}) provided the minimum and maximum survival rate of adults. In many of the river domains included in our analysis, invasive carp are also present (CITE LTRM FISH DATA).  Invasive carp is a well-studied invasive species along the Mississippi and Illinois Rivers.  Assuming the resources that effect survival are similar, we use the published \citep{erickson2017integral} slope parameter, $\beta_s$, for the gizzard shad population.   Finally, we used a least squares method to find the surv_alpha parameter that 
+The parameters for the growth function were chosen as the mean values published on a study of gizzard shad located in large impoundments \citep{michaletz2017variation}. The survival rate of adults gizzard shad dependent on their length is not well documented and required us to make some additional modeling assumptions.  An investigation of gizzard shad in Lake Eerie (\cite{bodola1955life}) provided the minimum and maximum survival rate of adults. In many of the river domains included in our analysis, invasive carp are also present (CITE LTRM FISH DATA).  Invasive carp is a well-studied invasive species along the Mississippi and Illinois Rivers.  Assuming the resources that effect survival are similar, we use the published \citep{erickson2017integral} slope parameter, $\beta_s$, for the gizzard shad population.   Finally, we used a least squares method to find the $alpha_s$ parameter that 
 minimizes the total square-distance between the (observed) pre-carp 
 %LTRM length distribution and (predicted) model equilibrium, say $n(z,100)$.  etermine the inflection point of the adult survival function from mean Spring-time water temperature.
 %
@@ -391,7 +372,7 @@ Figure XXX also demonstrates the growth in gizzard shad population.  The peak le
 \begin{figure*}
 \centering
 \begin{subfigure}[b]{.43\textwidth}
-  \includegraphics[width=\textwidth]{figures/lengthdist.pdf}
+  \includegraphics[width=\textwidth]{figures/sim.png}
 \caption{Simulated frequency of lengths of Gizzard Shad.  Initial density  and N=xxx}
 \label{fig:length_dist}
 \end{subfigure}
