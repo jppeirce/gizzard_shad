@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  3 DEC 2021 15:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  5 DEC 2021 14:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1530,63 +1530,63 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.139 
+l.140 
        [1
 
 
 ]
 
-LaTeX Warning: Reference `life_cycle' on page 2 undefined on input line 145.
+LaTeX Warning: Reference `life_cycle' on page 2 undefined on input line 146.
 
-<adult.jpeg, id=162, 2456.17625pt x 1251.67625pt>
+<adult.jpeg, id=160, 2456.17625pt x 1251.67625pt>
 File: adult.jpeg Graphic file (type jpg)
  <use adult.jpeg>
-Package pdftex.def Info: adult.jpeg used on input line 159.
+Package pdftex.def Info: adult.jpeg used on input line 160.
 (pdftex.def)             Requested size: 62.63745pt x 31.91444pt.
 File: adult.jpeg Graphic file (type jpg)
 
 <use adult.jpeg>
-Package pdftex.def Info: adult.jpeg used on input line 162.
+Package pdftex.def Info: adult.jpeg used on input line 163.
 (pdftex.def)             Requested size: 62.63745pt x 31.91444pt.
 File: adult.jpeg Graphic file (type jpg)
  <use adult.jpeg>
-Package pdftex.def Info: adult.jpeg used on input line 172.
+Package pdftex.def Info: adult.jpeg used on input line 173.
 (pdftex.def)             Requested size: 78.29681pt x 39.89784pt.
 File: adult.jpeg Graphic file (type jpg)
  <use adult.jpeg>
-Package pdftex.def Info: adult.jpeg used on input line 180.
+Package pdftex.def Info: adult.jpeg used on input line 181.
 (pdftex.def)             Requested size: 31.31873pt x 15.94768pt.
 File: adult.jpeg Graphic file (type jpg)
  <use adult.jpeg>
-Package pdftex.def Info: adult.jpeg used on input line 181.
+Package pdftex.def Info: adult.jpeg used on input line 182.
 (pdftex.def)             Requested size: 20.8765pt x 10.63814pt.
 File: adult.jpeg Graphic file (type jpg)
 
 <use adult.jpeg>
-Package pdftex.def Info: adult.jpeg used on input line 182.
+Package pdftex.def Info: adult.jpeg used on input line 183.
 (pdftex.def)             Requested size: 41.76096pt x 21.27629pt.
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.212  \end{align*}
-                    [2] [3 <./adult.jpeg>]
-<figures/Figure1a.pdf, id=219, 818.05624pt x 505.89pt>
+l.219 
+       [2] [3 <./adult.jpeg>]
+<figures/Figure1a.pdf, id=216, 818.05624pt x 505.89pt>
 File: figures/Figure1a.pdf Graphic file (type pdf)
 
 <use figures/Figure1a.pdf>
 Package pdftex.def Info: figures/Figure1a.pdf used on input line 282.
 (pdftex.def)             Requested size: 224.45618pt x 138.79982pt.
 
-<figures/Figure1b.pdf, id=220, 818.05624pt x 505.89pt>
+<figures/Figure1b.pdf, id=217, 818.05624pt x 505.89pt>
 File: figures/Figure1b.pdf Graphic file (type pdf)
 
 <use figures/Figure1b.pdf>
 Package pdftex.def Info: figures/Figure1b.pdf used on input line 287.
 (pdftex.def)             Requested size: 224.45618pt x 138.79982pt.
  [4 <./figures/Figure1a.pdf> <./figures/Figure1b.pdf>]
-Underfull \hbox (badness 7362) in paragraph at lines 305--306
-[]\OT1/txr/m/n/10 The model is coded in R ([]R Core Team[], []2017[])
+Underfull \hbox (badness 4441) in paragraph at lines 305--306
+[]\OT1/txr/m/n/10 The model was coded in R ([]R Core Team[], []2017[])
  []
 
 
@@ -1594,57 +1594,57 @@ Underfull \hbox (badness 10000) in paragraph at lines 305--306
 \OT1/txr/m/n/10 and the scripts are pub-lished on JP github page
  []
 
-<figures/ntotal.pdf, id=267, 627.34375pt x 487.8225pt>
+<figures/ntotal.pdf, id=262, 627.34375pt x 487.8225pt>
 File: figures/ntotal.pdf Graphic file (type pdf)
 
 <use figures/ntotal.pdf>
-Package pdftex.def Info: figures/ntotal.pdf used on input line 313.
+Package pdftex.def Info: figures/ntotal.pdf used on input line 314.
 (pdftex.def)             Requested size: 224.45618pt x 174.53664pt.
 
-<figures/lagrange.pdf, id=268, 632.3625pt x 495.8525pt>
+<figures/lagrange.pdf, id=263, 632.3625pt x 495.8525pt>
 File: figures/lagrange.pdf Graphic file (type pdf)
 
 <use figures/lagrange.pdf>
-Package pdftex.def Info: figures/lagrange.pdf used on input line 318.
+Package pdftex.def Info: figures/lagrange.pdf used on input line 319.
 (pdftex.def)             Requested size: 224.45618pt x 176.00238pt.
 
-<figures/Figure2a.pdf, id=271, 632.3625pt x 495.8525pt>
+<figures/Figure2a.pdf, id=266, 632.3625pt x 495.8525pt>
 File: figures/Figure2a.pdf Graphic file (type pdf)
 
 <use figures/Figure2a.pdf>
-Package pdftex.def Info: figures/Figure2a.pdf used on input line 334.
+Package pdftex.def Info: figures/Figure2a.pdf used on input line 335.
 (pdftex.def)             Requested size: 224.45618pt x 176.00238pt.
 
-<figures/Figure2b.pdf, id=272, 632.3625pt x 495.8525pt>
+<figures/Figure2b.pdf, id=267, 632.3625pt x 495.8525pt>
 File: figures/Figure2b.pdf Graphic file (type pdf)
 
 <use figures/Figure2b.pdf>
-Package pdftex.def Info: figures/Figure2b.pdf used on input line 339.
+Package pdftex.def Info: figures/Figure2b.pdf used on input line 340.
 (pdftex.def)             Requested size: 224.45618pt x 176.00238pt.
 
 
-LaTeX Warning: Reference `surv_age0' on page 5 undefined on input line 351.
+LaTeX Warning: Reference `surv_age0' on page 5 undefined on input line 352.
 
 [5 <./figures/ntotal.pdf> <./figures/lagrange.pdf>]
-<figures/sim.png, id=297, 2638.85875pt x 2069.7325pt>
+<figures/sim.png, id=292, 2638.85875pt x 2069.7325pt>
 File: figures/sim.png Graphic file (type png)
  <use figures/sim.png>
-Package pdftex.def Info: figures/sim.png used on input line 375.
+Package pdftex.def Info: figures/sim.png used on input line 376.
 (pdftex.def)             Requested size: 224.45618pt x 176.03546pt.
 
-<figures/LTRMgraph.pdf, id=299, 818.05624pt x 505.89pt>
+<figures/LTRMgraph.pdf, id=294, 818.05624pt x 505.89pt>
 File: figures/LTRMgraph.pdf Graphic file (type pdf)
 
 <use figures/LTRMgraph.pdf>
-Package pdftex.def Info: figures/LTRMgraph.pdf used on input line 380.
+Package pdftex.def Info: figures/LTRMgraph.pdf used on input line 381.
 (pdftex.def)             Requested size: 224.45618pt x 138.79982pt.
 
-Underfull \hbox (badness 1590) in paragraph at lines 406--407
+Underfull \hbox (badness 1590) in paragraph at lines 402--403
 \OT1/txr/m/n/10 o-log-i-cal Sur-vey (USGS) Long-Term Re-source Mon-i-tor-ing
  []
 
 
-Underfull \hbox (badness 1242) in paragraph at lines 421--427
+Underfull \hbox (badness 1242) in paragraph at lines 417--423
 \OT1/txr/m/n/10 Long Term Re-source Mon-i-tor-ing (LTRM) el-e-ment im-ple-
  []
 
@@ -1652,11 +1652,11 @@ Underfull \hbox (badness 1242) in paragraph at lines 421--427
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 ) [7 <./figures/sim.png> <./figures/LTRMgraph.pdf>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 518.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 518.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 514.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 514.
  (./densitydepIPM.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 518.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 518.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 514.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 514.
 Package rerunfilecheck Info: File `densitydepIPM.out' has not changed.
 (rerunfilecheck)             Checksum: 74E167A1739BA3A31AB1445129BF853D;1306.
 
@@ -1670,7 +1670,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  28599 strings out of 493089
  538723 string characters out of 6134842
- 628764 words of memory out of 5000000
+ 629764 words of memory out of 5000000
  31562 multiletter control sequences out of 15000+600000
  39200 words of font info for 100 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1686,10 +1686,10 @@ ype1/public/txfonts/txsy.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/ur
 w/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/ut
 mr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
 
-Output written on densitydepIPM.pdf (9 pages, 1466253 bytes).
+Output written on densitydepIPM.pdf (9 pages, 1466319 bytes).
 PDF statistics:
- 380 PDF objects out of 1000 (max. 8388607)
- 334 compressed objects within 4 object streams
+ 377 PDF objects out of 1000 (max. 8388607)
+ 331 compressed objects within 4 object streams
  66 named destinations out of 1000 (max. 500000)
  210 words of extra memory for PDF output out of 10000 (max. 10000000)
 
