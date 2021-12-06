@@ -63,12 +63,72 @@ ${\rm 4}$ River Studies Center}
 
 \begin{abstract}
 %% Text of abstract
-Gizzard shad are a common freshwater fish throughout the central and eastern portions of North America. Within these areas, gizzard shad play a number of critical roles in the freshwater community. Because of this, it is important that we understand how gizzard shad populations respond to environmental changes (both natural and anthropogenic) and what these changes may mean for aquatic communities in general and fish assemblages in particular. Here we introduce an integral projection model for gizzard shad based on empirical data and include density-dependent survival in age-0 fish. Integral projection models (IPM) are a generalization of stage-based, matrix population models that have been used to describe a wide range of organisms. IPM are a natural choice for gizzard shad since many aspects of their life cycle have been studied. In this paper, we compared model outcomes to empirical patterns reported for this fish species at a key location along the Illinois River. Results of our work suggest that this model could serve as an important tool for predicting gizzard shad population responses to changing environmental conditions, including those mediated through species invasions.
+Gizzard shad are a common freshwater fish throughout the central and eastern portions of North America. 
+Within these areas, gizzard shad play a number of critical roles in the freshwater community. 
+Because of this, it is important that we understand how gizzard shad populations respond to environmental changes (both natural and anthropogenic) and what these changes may mean for aquatic communities in general and fish assemblages in particular. 
+Here we introduce an integral projection model for gizzard shad based on empirical data and include density-dependent survival in age-0 fish. 
+Integral projection models (IPM) are a generalization of stage-based, matrix population models that have been used to describe a wide range of organisms. 
+IPM are a natural choice for gizzard shad since many aspects of their life cycle have been studied. 
+In this paper, we compared model outcomes to empirical patterns reported for this fish species at a key location along the Illinois River. 
+Results of our work suggest that this model could serve as an important tool for predicting gizzard shad population responses to changing environmental conditions, including those mediated through species invasions.
 \end{abstract}
 
 %%Graphical abstract
 \begin{graphicalabstract}
-%\includegraphics{grabs}
+\begin{figure*}
+\label{llife_cycle}
+    \begin{center}
+%\scalebox{.75}[.75]{
+\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=3cm,
+  thick,
+  main node/.style={rectangle,draw},
+  box/.style = {draw=gray, very thick,
+                            minimum height=11mm, text width=11mm, 
+                            align=center},]
+                              
+\node[main node, align=center] (census_pres) at (0,3) {Census $t$ \\
+        \includegraphics[width=0.12\textwidth]{adult.jpeg} \\
+        $n(z,t)$};
+\node[align=center] (repro) at (3.25,3) {Reproduction\\
+        \includegraphics[width=0.12\textwidth]{adult.jpeg}\\
+        };
+\node (repro_in) at (2.3, 3)  {};
+\node (repro_out) at (4.25, 3)  {};
+\node (repro_down) at (3, 2.5)  {};
+%\node[align=center] (surv) at (4.5,3) {\\
+%        \includegraphics[width=0.15\textwidth]{adult.jpeg}\\
+%        };
+\node (grow_box) at (6.3,3.85) {Survival \& Growth};
+\node[main node, align=center] (census_next) at (10,3) {Census $t+1$ \\
+        \includegraphics[width=0.15\textwidth]{adult.jpeg}\\
+        $n(z',t+1)$};
+\node (repro_box) at (13,3.85)  {Reproduction};
+\node[align=center] (eggs) at (3,0) {Eggs \\ $\bullet$ $\bullet$ $\bullet$ $\bullet$ \\
+  \, $\bullet$ $\bullet$ $\bullet$ $\bullet$ \\ $\bullet$ $\bullet$ $\bullet$ $\bullet$};
+  \node[align=center] (eggs_viable) at (5,0) {Viable \\ $\bullet$ $\bullet$ $\bullet$ \\
+  \, $\bullet$ $\bullet$ \\ $\bullet$ $\bullet$ $\bullet$};
+ \node[align=center] (age1) at (8,0) { Age-1\\
+        \includegraphics[width=0.06\textwidth]{adult.jpeg}
+         \includegraphics[width=0.04\textwidth]{adult.jpeg}\\
+         \includegraphics[width=0.08\textwidth]{adult.jpeg}
+        };
+\node[] (next) at (13,3) {};
+
+\path[->]
+	(census_pres) edge node {} (repro_in)
+	(repro_out) edge node {$s(z)G(z',z)$} (census_next)
+	(census_next) edge node {} (next)
+	(repro_down) edge node {$p_b \rm{egg}(z)$} (eggs)
+	(eggs) edge node {$\nu$} (eggs_viable)
+	(eggs_viable) edge node {$s_0(d)$} (age1)
+	(age1) edge node[right, pos=0.3] {$C_1(z')$} (census_next);
+	
+\end{tikzpicture}
+%}
+\end{center}
+ \caption{\small{Life cycle diagram and census points for pre-reproduction census of gizzard shad.}}
+\end{figure*}
+
 \end{graphicalabstract}
 
 %%Research highlights
@@ -100,48 +160,21 @@ Gizzard shad are a common freshwater fish throughout the central and eastern por
 
 
 \section{Introduction}
-Gizzard shad are a common freshwater fish throughout the central and
-eastern portions of North America, occupying both lotic and lentic
-habitats \citep{pierce1981aspects,vanni2005linking}. Within these
-areas, gizzard shad play a number of important roles in the freshwater
-community. First, young shad often serve as a critical food source for
-many fish species, including those of commercial and recreational
-importance (such as walleye and largemouth bass)
-\citep{jester1972life}. Second, because detritus serves as an
-important food source throughout much of gizzard shad development
-(i.e. from the age-0 stage onward), these fish translocate nutrients
-from benthic regions into pelagic habitats
-\citep{mather1995regeneration, schaus2000effects,
-  vanni2005linking}. This process can result in an increase in the
-nutrients available to organisms within the water column leading to
-increases in phytoplankton biomass, algal blooms, and, due to these
-conditions, shifts in freshwater community structure
-\citep{aday2003direct, schaus2000effects}. Finally, the fact that
-detritus comprises gizzard shad diets makes this species an important
-link between aquatic and terrestrial ecosystems through nutrient
-inputs \citep{schaus2000effects}.
-Given its potentially important role in aquatic ecosystems, interest
-has intensified in understanding how gizzard shad populations respond
-to environmental changes (both natural and anthropogenic) and what
-these changes may mean for freshwater communities in general and fish
-assemblages in particular.
+Gizzard shad are a common freshwater fish throughout the central and eastern portions of North America, occupying both lotic and lentic habitats \citep{pierce1981aspects,vanni2005linking}. 
+Within these areas, gizzard shad play a number of important roles in the freshwater community. 
+First, young shad often serve as a critical food source for many fish species, including those of commercial and recreational importance (such as walleye and largemouth bass)\citep{jester1972life}. 
+Second, because detritus serves as an important food source throughout much of gizzard shad development (i.e. from the age-0 stage onward), these fish translocate nutrients
+from benthic regions into pelagic habitats \citep{mather1995regeneration, schaus2000effects, vanni2005linking}. 
+This process can result in an increase in the nutrients available to organisms within the water column leading to increases in phytoplankton biomass, algal blooms, and, due to theseconditions, shifts in freshwater community structure \citep{aday2003direct, schaus2000effects}. 
+Finally, the fact that detritus comprises gizzard shad diets makes this species an important link between aquatic and terrestrial ecosystems through nutrient inputs \citep{schaus2000effects}.
+Given its potentially important role in aquatic ecosystems, interest has intensified in understanding how gizzard shad populations respond to environmental changes (both natural and anthropogenic) and what these changes may mean for freshwater communities in general and fish assemblages in particular.
 
-Specifically, gizzard shad exist in a broader, interconnected riverine
-system where species interact with each other, space, hydrology, time,
-and nutrients \citep{thorp2006riverine}. 
-These change results in different densities of fishes in the river
-systems such as the Upper Mississippi River
-\citep{holland1986distribution}.
-Gizzard shad populations and the density feedback limiting gizzard
-shad tie into other species as well.
-For example, \citet{love2018does} examine how invasive bighead and
-silver carp impact gizzard shad.
-The invasive carps both out-compete smaller gizzard shad and impact
-the body condition of adults.
-These changes caused \citet{love2018does} to suspect that reducing
-competition from invasive bighead and silver carp may help the species
-by improving adult body condition and the reproductive possibility of
-the gizzard shad.
+Specifically, gizzard shad exist in a broader, interconnected riverine system where species interact with each other, space, hydrology, time, and nutrients \citep{thorp2006riverine}. 
+These change results in different densities of fishes in the river systems such as the Upper Mississippi River \citep{holland1986distribution}.
+Gizzard shad populations and the density feedback limiting gizzard shad tie into other species as well.
+For example, \citet{love2018does} examine how invasive bighead and silver carp impact gizzard shad.
+The invasive carps both out-compete smaller gizzard shad and impact the body condition of adults.
+These changes caused \citet{love2018does} to suspect that reducing competition from invasive bighead and silver carp may help the species by improving adult body condition and the reproductive possibility of the gizzard shad.
 
 %[NEED] Paragraph about density effect on fish species in Upper
 %Mississippi River.
@@ -150,24 +183,14 @@ the gizzard shad.
 %density has in age-0 survival.
 
 
-Although substantial empirical work on gizzard shad biology has
-accumulated over the decades, few if any studies have attempted to use
-these data to model the population dynamics of the particular species.
-Work by \citet{catalano2010size, catalano2011whole} used
-empirically-based simulations of gizzard shad and focused on
-population-level responses.
+Although substantial empirical work on gizzard shad biology has accumulated over the decades, few if any studies have attempted to use these data to model the population dynamics of the particular species.
+Work by \citet{catalano2010size, catalano2011whole} used empirically-based simulations of gizzard shad and focused on population-level responses.
 This work did examine population-structure by examining length and did
 not explore different sources of density feedback on the population
 dynamics.
-Here, we introduce an integral projection model for gizzard shad based
-on empirical data with density-dependent survival in age-0 fish.
-We then compare model outcomes to dynamics reported for this fish
-species in the La Grange Station along the Illinois River.
-The model itself could be an important tool for predicting gizzard
-shad population responses to changing environmental conditions,
-including those mediated through species invasions (i.e., silver and
-bighead carp).
-
+Here, we introduce an integral projection model for gizzard shad based on empirical data with density-dependent survival in age-0 fish.
+We then compare model outcomes to dynamics reported for this fish species in the La Grange Station along the Illinois River.
+The model itself could be an important tool for predicting gizzard shad population responses to changing environmental conditions, including those mediated through species invasions (i.e., silver and bighead carp).
 
 \begin{table*}
   \caption{A summary of parameters, their biological meaning, and source for mean values.
@@ -181,7 +204,6 @@ Logistic survival probability function, $s(z)$ & & \\
   $\ds s_{\rm {max}}$ & maximum survival & $\ds 1-8.871K^{0.73}L_{\infty}^{-0.33}$ 
   & THEN 2015 \\ 
  $\ds \alpha_s$  & inflection point & modeled & LTRM dataset \\
- % \citep{shireman1978size} \\
   $\ds \beta_s$ & slope & -5 &\citep{erickson2017integral} \\\hline
   Growth function, $\ds G(z,z')$ & & \\
   $L_\infty$ & maximum length (in mm) & 394.30 & \citep{catalano2010size} \\
@@ -199,15 +221,17 @@ $\ds a_0$ & intercept & 0.27 & Estimated from \citep{michaletz2010overwinter} \\
 $\ds b_0$ & decay rate & 0.003 & Estimated from \citep{michaletz2010overwinter} \\\hline
 Spawning & & \\ 
  $\nu$  & probability that egg becomes viable & 0.002 & \citep{bodola1955life} \\
- $p_b$ & probability that female spawns & 0.90 &    \\
- 
-      \end{tabular} } \label{table:parameters}
+ $p_b$ & probability that female spawns & 0.90 &    \\ 
+ \end{tabular} } \label{table:parameters}
      \end{center}
      \end{table*}    
 
 \section{Model Development}
 \subsection{Gizzard shad life history}
-The American gizzard shad (\emph{Dorosoma cepedianum}) is a laterally compressed, deep-bodied fish that inhabits numerous fresh and brackish waterbodies across North American. This species tends to reach its highest abundance in eutrophic systems (such as reservoirs) where it often comes to dominate fish assemblages. In these habitats, gizzard shad serve as an important trophic link between primary producers and consumers. Mating within this species can be temperature-dependent, but tends to occur between May and June. Males and females aggregate and then broadcast gametes into the surrounding water; fertilized eggs then settle and adhere to the bottom substrates. After a period of days, eggs hatch and fish develop from the larval stage to juveniles and eventually to adults. In many habitats, individuals can reach sexual maturity within a year. As gizzard shad mature, their diet preferences typically shift from phytoplankton and zooplankton early in development to detritus and zooplankton as adults. Given the large number of eggs produced by shad females ($>$ 300,000/year), there is evidence that intraspecific competition can be intense during early developmental stages in this species. However, the strength of competition can subside as fish transition to different food types during latter stages of development.   
+The American gizzard shad (\emph{Dorosoma cepedianum}) is a laterally compressed, deep-bodied fish that inhabits numerous fresh and brackish waterbodies across North American. 
+This species tends to reach its highest abundance in eutrophic systems (such as reservoirs) where it often comes to dominate fish assemblages. 
+In these habitats, gizzard shad serve as an important trophic link between primary producers and consumers. 
+Mating within this species can be temperature-dependent, but tends to occur between May and June. Males and females aggregate and then broadcast gametes into the surrounding water; fertilized eggs then settle and adhere to the bottom substrates. After a period of days, eggs hatch and fish develop from the larval stage to juveniles and eventually to adults. In many habitats, individuals can reach sexual maturity within a year. As gizzard shad mature, their diet preferences typically shift from phytoplankton and zooplankton early in development to detritus and zooplankton as adults. Given the large number of eggs produced by shad females ($>$ 300,000/year), there is evidence that intraspecific competition can be intense during early developmental stages in this species. However, the strength of competition can subside as fish transition to different food types during latter stages of development.   
 
 \subsection{Equations}
 We use an integral projection model to describe the life history of gizzard shad in the Upper Mississippi River (UMR) system. Integral projection model (IPM) were introduced by Easterling \citep{easterling2000size}, as a generalization of stage-based, matrix population models. IPMs have been used to describe a wide range of organisms \citep{ellner2016data, merow2014advancing, rees2014building} and are a natural choice for gizzard shad since many aspects of their life cycle have been studied. Specifically, functions used in our model incorporate data from studies on egg production and adult size as well as the survival of the age-0 stage and density. 
