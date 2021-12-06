@@ -1,50 +1,56 @@
-This is BibTeX, Version 0.99d (TeX Live 2018)
-Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: densitydepIPM.aux
+Reallocating 'name_of_file' (item size: 1) to 21 items.
 The style file: elsarticle-num-names.bst
+Reallocating 'name_of_file' (item size: 1) to 8 items.
 Database file #1: gizshad.bib
-Reallocated singl_function (elt_size=4) to 100 items from 50.
+Repeated entry---line 88 of file gizshad.bib
+ : @article{catalano2010size
+ :                          ,
+I'm skipping whatever remains of this entry
+Reallocating 'singl_function' (item size: 4) to 100 items.
 Warning--empty journal in jester1972life
 Warning--empty journal in gutreuter1995long
-You've used 26 entries,
+You've used 28 entries,
             2918 wiz_defined-function locations,
-            787 strings with 10641 characters,
-and the built_in function-call counts, 17193 in all, are:
-= -- 1216
-> -- 799
-< -- 12
-+ -- 305
-- -- 273
-* -- 2052
-:= -- 2498
-add.period$ -- 27
-call.type$ -- 26
-change.case$ -- 216
-chr.to.int$ -- 26
-cite$ -- 28
-duplicate$ -- 1249
-empty$ -- 1195
-format.name$ -- 355
-if$ -- 3095
+            800 strings with 10815 characters,
+and the built_in function-call counts, 17963 in all, are:
+= -- 1303
+> -- 756
+< -- 13
++ -- 293
+- -- 255
+* -- 2109
+:= -- 2591
+add.period$ -- 29
+call.type$ -- 28
+change.case$ -- 220
+chr.to.int$ -- 28
+cite$ -- 30
+duplicate$ -- 1326
+empty$ -- 1294
+format.name$ -- 341
+if$ -- 3255
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 258
-newline$ -- 135
-num.names$ -- 104
-pop$ -- 472
+missing$ -- 268
+newline$ -- 145
+num.names$ -- 112
+pop$ -- 490
 preamble$ -- 1
-purify$ -- 219
+purify$ -- 223
 quote$ -- 0
-skip$ -- 278
+skip$ -- 299
 stack$ -- 0
-substring$ -- 740
-swap$ -- 923
+substring$ -- 849
+swap$ -- 958
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 231
+type$ -- 249
 warning$ -- 2
-while$ -- 112
+while$ -- 124
 width$ -- 0
-write$ -- 344
-(There were 2 warnings)
+write$ -- 370
+(There was 1 error message)

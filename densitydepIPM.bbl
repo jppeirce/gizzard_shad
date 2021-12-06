@@ -1,4 +1,4 @@
-\begin{thebibliography}{26}
+\begin{thebibliography}{28}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\href}[2]{#2}
@@ -63,29 +63,32 @@
 \newblock \bibinfo{journal}{Transactions of the American Fisheries Society}
   \bibinfo{volume}{132} (\bibinfo{year}{2003}) \bibinfo{pages}{47--56}.
 %Type = Article
-\bibitem[{Kirk and Socha(2003)}]{kirk2003longevity}
-\bibinfo{author}{J.~P. Kirk}, \bibinfo{author}{R.~C. Socha},
-\newblock \bibinfo{title}{Longevity and persistence of triploid grass carp
-  stocked into the santee cooper reservoirs of south carolina},
-\newblock \bibinfo{journal}{Journal of Aquatic Plant Management}
-  \bibinfo{volume}{41} (\bibinfo{year}{2003}) \bibinfo{pages}{90--92}.
+\bibitem[{Thorp et~al.(2006)Thorp, Thoms, and Delong}]{thorp2006riverine}
+\bibinfo{author}{J.~H. Thorp}, \bibinfo{author}{M.~C. Thoms},
+  \bibinfo{author}{M.~D. Delong},
+\newblock \bibinfo{title}{The riverine ecosystem synthesis: biocomplexity in
+  river networks across space and time},
+\newblock \bibinfo{journal}{River Research and Applications}
+  \bibinfo{volume}{22} (\bibinfo{year}{2006}) \bibinfo{pages}{123--147}.
 %Type = Article
-\bibitem[{Soballe et~al.(1995)Soballe, Burkhardt, Lubinski, Burdis, Clemment,
-  Fischer, Hodge-Richardson, Conaway, Frazier, Gould, Steuck, Ratcliff, Sitzes,
-  Stenzel, and Wright}]{LTRMwater}
-\bibinfo{author}{D.~M. Soballe}, \bibinfo{author}{R.~Burkhardt},
-  \bibinfo{author}{K.~Lubinski}, \bibinfo{author}{R.~Burdis},
-  \bibinfo{author}{T.~Clemment}, \bibinfo{author}{J.~Fischer},
-  \bibinfo{author}{L.~Hodge-Richardson}, \bibinfo{author}{L.~Conaway},
-  \bibinfo{author}{J.~Frazier}, \bibinfo{author}{D.~Gould},
-  \bibinfo{author}{M.~Steuck}, \bibinfo{author}{E.~Ratcliff},
-  \bibinfo{author}{M.~Sitzes}, \bibinfo{author}{S.~Stenzel},
-  \bibinfo{author}{R.~Wright},
-\newblock \bibinfo{title}{Long term resource monitoring program procedures:
-  Water quality monitoring},
-\newblock \bibinfo{journal}{U.S. Geological Survey, Biological Resources
-  Division, Upper Midwest Environmental Sciences Center, La Crosse, Wisconsin}
-  (\bibinfo{year}{1995}).
+\bibitem[{Holland(1986)}]{holland1986distribution}
+\bibinfo{author}{L.~E. Holland},
+\newblock \bibinfo{title}{Distribution of early life history stages of fishes
+  in selected pools of the upper mississippi river},
+\newblock \bibinfo{journal}{Hydrobiologia} \bibinfo{volume}{136}
+  (\bibinfo{year}{1986}) \bibinfo{pages}{121--130}.
+%Type = Article
+\bibitem[{Love et~al.(2018)Love, Lederman, Anderson, DeBoer, and
+  Casper}]{love2018does}
+\bibinfo{author}{S.~A. Love}, \bibinfo{author}{N.~J. Lederman},
+  \bibinfo{author}{R.~L. Anderson}, \bibinfo{author}{J.~A. DeBoer},
+  \bibinfo{author}{A.~F. Casper},
+\newblock \bibinfo{title}{Does aquatic invasive species removal benefit native
+  fish? the response of gizzard shad (dorosoma cepedianum) to commercial
+  harvest of bighead carp (hypophthalmichthys nobilis) and silver carp (h.
+  molitrix)},
+\newblock \bibinfo{journal}{Hydrobiologia} \bibinfo{volume}{817}
+  (\bibinfo{year}{2018}) \bibinfo{pages}{403--412}.
 %Type = Article
 \bibitem[{Catalano and Allen(2010)}]{catalano2010size}
 \bibinfo{author}{M.~J. Catalano}, \bibinfo{author}{M.~S. Allen},
@@ -93,6 +96,18 @@
   recruitment, growth, mortality, and gear selectivity},
 \newblock \bibinfo{journal}{Fisheries Research} \bibinfo{volume}{105}
   (\bibinfo{year}{2010}) \bibinfo{pages}{38--45}.
+%Type = Article
+\bibitem[{Catalano and Allen(2011)}]{catalano2011whole}
+\bibinfo{author}{M.~J. Catalano}, \bibinfo{author}{M.~S. Allen},
+\newblock \bibinfo{title}{A whole-lake density reduction to assess compensatory
+  responses of gizzard shad dorosoma cepedianum},
+\newblock \bibinfo{journal}{Canadian Journal of Fisheries and Aquatic Sciences}
+  \bibinfo{volume}{68} (\bibinfo{year}{2011}) \bibinfo{pages}{955--968}.
+%Type = Phdthesis
+\bibitem[{Bodola(1955)}]{bodola1955life}
+\bibinfo{author}{A.~Bodola}, \bibinfo{title}{The life history of the gizzard
+  shad, Dorosoma cepedianum, in western Lake Erie}, Ph.D. thesis, Doctoral
+  dissertation. Ohio State University, Columbus, \bibinfo{year}{1955}.
 %Type = Article
 \bibitem[{Erickson et~al.(2017)Erickson, Eager, Brey, Hansen, and
   Kocovsky}]{erickson2017integral}
@@ -103,11 +118,13 @@
   application to evaluating grass carp control},
 \newblock \bibinfo{journal}{Ecological Modelling} \bibinfo{volume}{361}
   (\bibinfo{year}{2017}) \bibinfo{pages}{14--25}.
-%Type = Phdthesis
-\bibitem[{Bodola(1955)}]{bodola1955life}
-\bibinfo{author}{A.~Bodola}, \bibinfo{title}{The life history of the gizzard
-  shad, Dorosoma cepedianum, in western Lake Erie}, Ph.D. thesis, Doctoral
-  dissertation. Ohio State University, Columbus, \bibinfo{year}{1955}.
+%Type = Article
+\bibitem[{Michaletz(2017)}]{michaletz2017variation}
+\bibinfo{author}{P.~Michaletz},
+\newblock \bibinfo{title}{Variation in characteristics among gizzard shad
+  populations: The role of impoundment size and productivity},
+\newblock \bibinfo{journal}{Fisheries Management and Ecology}
+  \bibinfo{volume}{24} (\bibinfo{year}{2017}) \bibinfo{pages}{361--371}.
 %Type = Article
 \bibitem[{Jons and Miranda(1997)}]{jons1997ovarian}
 \bibinfo{author}{G.~Jons}, \bibinfo{author}{L.~Miranda},
@@ -176,13 +193,6 @@
   the Long Term Resource Monitoring Program's fish component},
   \bibinfo{type}{Technical Report}, Geological Survey La Crosse WI Upper
   Midwest Environmental Sciences Center, \bibinfo{year}{2002}.
-%Type = Article
-\bibitem[{Michaletz(2017)}]{michaletz2017variation}
-\bibinfo{author}{P.~Michaletz},
-\newblock \bibinfo{title}{Variation in characteristics among gizzard shad
-  populations: The role of impoundment size and productivity},
-\newblock \bibinfo{journal}{Fisheries Management and Ecology}
-  \bibinfo{volume}{24} (\bibinfo{year}{2017}) \bibinfo{pages}{361--371}.
 %Type = Article
 \bibitem[{Burden and Faires(2005)}]{burden2005numerical}
 \bibinfo{author}{R.~Burden}, \bibinfo{author}{J.~D. Faires},
