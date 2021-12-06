@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.11.5)  6 DEC 2021 15:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.11.5)  6 DEC 2021 15:15
 entering extended mode
 **./densitydepIPM.tex
 (densitydepIPM.tex
@@ -1222,8 +1222,8 @@ File: figures/LTRMgraph.pdf Graphic file (type pdf)
 <use figures/LTRMgraph.pdf>
 Package pdftex.def Info: figures/LTRMgraph.pdf  used on input line 452.
 (pdftex.def)             Requested size: 201.99121pt x 124.91289pt.
- [12 <./figures/Figure2a.pdf> <./figures/Figure2b.pdf>] (densitydepIPM.bbl [13 
-<./figures/sim.png> <./figures/LTRMgraph.pdf>] [14] [15]) [16] (densitydepIPM.a
+ [12 <./figures/Figure2a.pdf> <./figures/Figure2b.pdf>] [13 <./figures/sim.png>
+ <./figures/LTRMgraph.pdf>] (densitydepIPM.bbl [14] [15]) [16] (densitydepIPM.a
 ux)
 
 LaTeX Warning: There were undefined references.
@@ -1232,13 +1232,13 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `densitydepIPM.out' has not changed.
-(rerunfilecheck)             Checksum: 7FB0F57E691B765FB54FFF35DF3CF062;3168.
+(rerunfilecheck)             Checksum: 94B8766E87D604C54BB777F7C46463C6;3163.
  ) 
 Here is how much of TeX's memory you used:
- 26589 strings out of 478927
- 489108 string characters out of 2850639
- 814262 words of memory out of 3000000
- 43894 multiletter control sequences out of 15000+600000
+ 26608 strings out of 478927
+ 489240 string characters out of 2850639
+ 814257 words of memory out of 3000000
+ 43896 multiletter control sequences out of 15000+600000
  412815 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  79i,14n,83p,1375b,985s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1264,9 +1264,9 @@ C:/Users/rerickson/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
 MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/rerickson/AppData/Lo
 cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/rericks
 on/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on densitydepIPM.pdf (18 pages, 1671802 bytes).
+Output written on densitydepIPM.pdf (18 pages, 1674731 bytes).
 PDF statistics:
- 481 PDF objects out of 1000 (max. 8388607)
- 77 named destinations out of 1000 (max. 500000)
+ 504 PDF objects out of 1000 (max. 8388607)
+ 94 named destinations out of 1000 (max. 500000)
  210 words of extra memory for PDF output out of 10000 (max. 10000000)
 
