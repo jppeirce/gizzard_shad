@@ -183,7 +183,7 @@ These changes caused \citet{love2018does} to suspect that reducing competition f
 %density has in age-0 survival.
 
 
-Although substantial empirical work on gizzard shad biology has accumulated over the decades, few if any studies have attempted to use these data to model the population dynamics of the particular species.
+Although substantial empirical work on gizzard shad biology has accumulated over the decades, few if any studies have attempted to use these data to model the population dynamics of the gizzard shad.
 Work by \citet{catalano2010size, catalano2011whole} used empirically-based simulations of gizzard shad and focused on population-level responses.
 This work did examine population-structure by examining length and did
 not explore different sources of density feedback on the population
@@ -231,14 +231,28 @@ Spawning & & \\
 The American gizzard shad (\emph{Dorosoma cepedianum}) is a laterally compressed, deep-bodied fish that inhabits numerous fresh and brackish waterbodies across North American. 
 This species tends to reach its highest abundance in eutrophic systems (such as reservoirs) where it often comes to dominate fish assemblages. 
 In these habitats, gizzard shad serve as an important trophic link between primary producers and consumers. 
-Mating within this species can be temperature-dependent, but tends to occur between May and June. Males and females aggregate and then broadcast gametes into the surrounding water; fertilized eggs then settle and adhere to the bottom substrates. After a period of days, eggs hatch and fish develop from the larval stage to juveniles and eventually to adults. In many habitats, individuals can reach sexual maturity within a year. As gizzard shad mature, their diet preferences typically shift from phytoplankton and zooplankton early in development to detritus and zooplankton as adults. Given the large number of eggs produced by shad females ($>$ 300,000/year), there is evidence that intraspecific competition can be intense during early developmental stages in this species. However, the strength of competition can subside as fish transition to different food types during latter stages of development.   
+Mating within this species can be temperature-dependent, but tends to occur between May and June. 
+Males and females aggregate and then broadcast gametes into the surrounding water; fertilized eggs then settle and adhere to the bottom substrates. 
+After a period of days, eggs hatch and fish develop from the larval stage to juveniles and eventually to adults. 
+In many habitats, individuals can reach sexual maturity within a year. As gizzard shad mature, their diet preferences typically shift from phytoplankton and zooplankton early in development to detritus and zooplankton as adults. 
+Given the large number of eggs produced by shad females ($>$ 300,000/year), there is evidence that intraspecific competition can be intense during early developmental stages in this species. 
+However, the strength of competition can subside as fish transition to different food types during latter stages of development.   
 
 \subsection{Equations}
-We use an integral projection model to describe the life history of gizzard shad in the Upper Mississippi River (UMR) system. Integral projection model (IPM) were introduced by Easterling \citep{easterling2000size}, as a generalization of stage-based, matrix population models. IPMs have been used to describe a wide range of organisms \citep{ellner2016data, merow2014advancing, rees2014building} and are a natural choice for gizzard shad since many aspects of their life cycle have been studied. Specifically, functions used in our model incorporate data from studies on egg production and adult size as well as the survival of the age-0 stage and density. 
+We used an integral projection model to describe the life history of gizzard shad in the Upper Mississippi River (UMR) system. 
+Integral projection model (IPM) were introduced by Easterling \citep{easterling2000size}, as a generalization of stage-based, matrix population models. 
+IPMs have been used to describe a wide range of organisms \citep{ellner2016data, merow2014advancing, rees2014building} and are a natural choice for gizzard shad since many aspects of their life cycle have been studied. 
+Specifically, functions used in our model incorporate data from studies on egg production and adult size as well as the survival of the age-0 stage and density. 
 
-We assume that variations among individual gizzard shad can be summarized by its length $z$ (in mm) ranging from the minimum possible length $L$ to the maximum value $U$. The state of the population at time $t$ (in years) is described by the length distribution $n(z,t)$. Specifically, for each time $t$, $n(z,t)$ is a smooth function of $z$ such that the number of individuals of length $z$ in the interval $[a,b]$ at time $t$ is $\ds \int_a^b n(z,t) \, dz$. 
+We assumed that variations among individual gizzard shad can be summarized by its length $z$ (in mm) ranging from the minimum possible length $L$ to the maximum value $U$. 
+The state of the population at time $t$ (in years) is described by the length distribution $n(z,t)$. 
+Specifically, for each time $t$, $n(z,t)$ is a smooth function of $z$ such that the number of individuals of length $z$ in the interval $[a,b]$ at time $t$ is $\ds \int_a^b n(z,t) \, dz$. 
 
-Between times $t$ and $t+1$, individual gizzard shad may grow, die, and produce offspring that vary in length all depending on the individuals current length (Figure \ref{life_cycle}). At time $t+1$ the population will have a length distribution defined by $n(z, t+1)$. For our model, we partition the life cycle of gizzard shad into two stages: 1) survival and growth, and  2) reproduction. For an individual of length $z$ at time $t$, $P(z',z)\Delta z$ is the probability that the individual is alive at time $t+1$, and its size is in the interval $[z', z' + \Delta z]$ (as with $n(z,t)$ this is an approximation that is valid for small $\Delta z$, and the exact probability is given by an integral like the one above). Similarly. $F(z',z)\Delta z$ is the number of new offspring in the interval $[z', z' + \Delta z]$ present at time $t+1$, per length-$z$ individual at time $t$.
+Between times $t$ and $t+1$, individual gizzard shad may grow, die, and produce offspring that vary in length depending on the individuals current length (Figure \ref{life_cycle}). 
+At time $t+1$ the population will have a length distribution defined by $n(z, t+1)$. 
+For our model, we partition the life cycle of gizzard shad into two stages: 1) survival and growth, and  2) reproduction. 
+For an individual of length $z$ at time $t$, $P(z',z)\Delta z$ is the probability that the individual is alive at time $t+1$, and its size is in the interval $[z', z' + \Delta z]$ (as with $n(z,t)$ this is an approximation that is valid for small $\Delta z$, and the exact probability is given by an integral like the one above). 
+Similarly. $F(z',z)\Delta z$ is the number of new offspring in the interval $[z', z' + \Delta z]$ present at time $t+1$, per length-$z$ individual at time $t$.
 
 \begin{figure*}
 \label{llife_cycle}
@@ -295,18 +309,21 @@ Between times $t$ and $t+1$, individual gizzard shad may grow, die, and produce 
 \end{figure*}
 
 \subsubsection{Growth and survival}
-We define $P(z'z) = s(z,T)G(z',z)$ where $s(z)$ is the adult annual survival probability and $G(z',z)$ describes the annual length transitions. We assume that the survival function is a logistic function,
+We define $P(z'z) = s(z,T)G(z',z)$ where $s(z)$ is the adult annual survival probability and $G(z',z)$ describes the annual length transitions. 
+We assumed that the survival function is a logistic function,
 \begin{equation}\label{eq:surv}
 s(z,T) = s_{\rm min} + \frac{s_{\rm max}-s_{\rm min}}{1+e^{\beta_s(\ln(z)-\ln(\alpha_s)),}}.
 \end{equation}
 with four parameters: the minimum survival rate $s_{\rm min}$; a maximum survival rate, $s_{\rm max}$; and intercept parameter, $\alpha_{s}$; and a slope parameter, $\beta_{s}$ \citep{bolker2008ecological}.  
 
-We assume that the growth function is a two-variable normal distribution centered around a modified von Bertalanffy function of the length at time t. The von Bertalanffy equation, commonly used to describe the length of a fish over time, is given by $\ds z(t) = L_{\infty} \left(1-e^{-K(t-t_0)} \right)$ where $L_\infty$ is maximum asymptotic length, $K$ is the growth rate, and $t_0$ is the initial time. The expected length in the next year
+We assumed that the growth function is a two-variable normal distribution centered around a modified von Bertalanffy function of the length at time t. 
+The von Bertalanffy equation, commonly used to describe the length of a fish over time, is given by $\ds z(t) = L_{\infty} \left(1-e^{-K(t-t_0)} \right)$ where $L_\infty$ is maximum asymptotic length, $K$ is the growth rate, and $t_0$ is the initial time. 
+The expected length in the next year
 \begin{align*}
  z' =z(t+1) & =  L_{\infty} \left(1-e^{-K(t+1-t_0)} \right) =  L_{\infty} - L_{\infty}e^{-K(t-t_0)} e^{-K} \\
  & =   L_\infty - \left( z(t)-L_\infty \right) e^{-K} =   L_{\infty} \left(1-e^{-K} \right) + z(t)e^{-K}. 
  \end{align*}
-Consequently, we assume that 
+Consequently, we assumed that 
 %\begin{equation}\label{eq:grow}
 $\ds G(z',z) = \mathrm{Prob}(z' \, | \,  z, L_{\infty}, K_g) = \mathrm{Normal PDF}(\mu_g, \sigma_g)$
 %\end{equation}
@@ -319,19 +336,20 @@ F(z', z) = p_b \, \mbox{egg}(z) \, \nu \, s_0(n(z,t)) \, C_1(z')
 \end{equation}
 where $p_b$ is the probability of reproducing, $\mbox{egg}(z)$ is the mean number of eggs produced, $\nu$ is the probability that an egg is viable, $s_0(n(z,t))$ is the density-dependent probability of surviving to age-1, and $C_1 (z')$ is the length distribution of new recruits at age-1 (when they are first censused).
 
-We assume that the mean number of eggs produced by females of a certain length is a three-parameter logistic function,
+We assumed that the mean number of eggs produced by females of a certain length is a three-parameter logistic function,
 \begin{equation}\label{eq:egg}
 \mbox{egg}(z) = \frac{\mbox{egg}_{\rm max}}{1+e^{\beta_e(\ln(z)-\ln(\alpha_e)),}}.
 \end{equation}
 
-The probability of survival of gizzard shad during their first year may depend on many factors \citep{michaletz2010overwinter} such as mean temperature, mean total length, the present density of age-0 fish.  In this study, we focus only on the density factor and define the probability of survival of age-0 fish as the exponential function
+The probability of survival of gizzard shad during their first year may depend on many factors \citep{michaletz2010overwinter} such as mean temperature, mean total length, the present density of age-0 fish.  
+In this study, we focus only on the density factor and define the probability of survival of age-0 fish as the exponential function
 \begin{equation}\label{eq:s0}
 s_0(d(t)) = a_0 \, e^{-b_0 d(t)}
 \end{equation}
 where $a_0$ is the intercept, $b_0$ the decay rate, and $d(t)$ is the density at time $t$ of age-0 gizzard shad per 1000 m$^3$, 
 \[ d(t) = 10^{-3} \int_L^U p_b \, \mbox{egg}(z) \, \nu n(z,t) \, dz. \]  
 
-Finally, after computing the total number of viable eggs produced and survive to age-1 fish, we multiply this number with a normal distribution of length,
+Finally, after computing the total number of viable eggs produced and survive to age-1 fish, we multiplied this number with a normal distribution of length,
 $ \ds C_1 (z') =  \mathrm{Normal PDF} (\mu_r, \sigma_r)$ where $\mu_r$ is the mean length of age-1 gizzard shad and $\sigma_r$ is the standard deviation. 
 
 \subsection{Dynamical Model} 
@@ -343,18 +361,33 @@ n(z',t+1) = \int_L^U K(z',z)n(z,t) \,dz,
 where $K(z',z) = s(z) G(z',z) + F(z',z)$ and $[L,U]$ is the range of all possible lengths.
 
 \section{Methods}
-\subsection{Study Area and LTRM Data Collection}
-The 129 km long La Grange Reach is located between La Grange Lock and Dam (L\&D) and Peoria L\&D on the Illinois River, U.S., 
-and is about midway between the Mississippi River and Lake Michigan. The Illinois River is a major tributary of the Mississippi River, draining nearly two-thirds of the state of Illinois. Along with the main channel of the UMR, the fish community of La Grange Reach has been monitored by the Long-term Resource Monitoring Program (LTRM) from 1990 to the present, with approximately 500 random collections each year from 15 June to 31 October. The LTRM fish collection methodology included a multiple gear approach (netting and electrofishing) to monitor the general fish community of the UMR system through time \citep{gutreuter1995long}. The total lengths were recorded for all fishes captured. Methodology, protocols and modifications to the LTRM can be found in \cite{gutreuter1995long}, and \cite{ickes2002evaluation}. 
+\subsection{Study Area and LTRMP Data Collection}
+The 129 km long La Grange Reach is located between La Grange Lock and Dam (L\&D) and Peoria L\&D on the Illinois River, U.S., and is about midway between the Mississippi River and Lake Michigan. 
+The Illinois River is a major tributary of the Mississippi River, draining nearly two-thirds of the state of Illinois. 
+Along with the main channel of the UMR, the fish community of La Grange Reach has been monitored by the Long-term Resource Monitoring Program (LTRMP) from 1990 to the present, with approximately 500 random collections each year from 15 June to 31 October. 
+The LTRMP fish collection methodology included a multiple gear approach (netting and electrofishing) to monitor the general fish community of the UMR system through time \citep{gutreuter1995long}. 
+The total lengths were recorded for all fishes captured. 
+Methodology, protocols and modifications to the LTRMP can be found in \cite{gutreuter1995long}, and \cite{ickes2002evaluation}. 
 
-The location of La Grange Reach was the primary reason it was chosen for the methods part of our study.  Its location has two important features. We parameterized the IPM using data from the main channel of the UMR.  As a part of Illinois River and UMR, La Grange Reach is upstream from the main channel (should we include figure/map?).  The proximity to, but relative independence from, the main channel, made it a good choice.  Secondly, La Grange Reach is a large pool between the main channel of the Mississippi River and Lake Michigan.  In recent years, there have been concerns with the threatening introduction of invasive carp to the Great Lakes.  Consequently, the impact of invasive carp on the native fish populations in the pools leading to the Great Lakes have received an elevated level of attention.  Understanding the population dynamics of gizzard shad, may in the future make it easier to assess the impacts carp has on native fish populations.
+The location of La Grange Reach has two important features motivation its choice for the methods of our study. 
+First, we parameterized the IPM using data from the main channel of the UMR.  As a part of Illinois River and UMR, La Grange Reach is upstream from the main channel (should we include figure/map?).  
+The proximity to, but relative independence from, the main channel, made it a good choice.  Secondly, La Grange Reach is a large pool between the main channel of the Mississippi River and Lake Michigan.  
+In recent years, there have been concerns with the threatening introduction of invasive carp to the Great Lakes.  
+Consequently, the impact of invasive carp on the native fish populations in the pools leading to the Great Lakes have received an elevated level of attention.  
+Understanding the population dynamics of gizzard shad, may in the future make it easier to assess the impacts carp has on native fish populations.
 
 \subsection{Parameterization}
-The parameters for the growth function were chosen as the mean values published on a study of gizzard shad located in large impoundments \citep{michaletz2017variation}. The survival rate of adults gizzard shad dependent on their length is not well documented and required us to make some additional modeling assumptions.  An investigation of gizzard shad in Lake Eerie (\cite{bodola1955life}) provided the minimum and maximum survival rate of adults. In many of the river domains included in our analysis, invasive carp are also present (LTRM fish dataset).  Invasive carp is a well-studied invasive species along the Mississippi and Illinois Rivers.  Assuming that the resources that effect survival are similar, we use the published \citep{erickson2017integral} slope parameter, $\beta_s$, for the gizzard shad population.   Finally, we used a least squares method to find the $alpha_s$ parameter that 
-minimizes the total square-distance between the (observed) pre-carp LTRM length distribution and (predicted) model equilibrium, $n(z,100)$.  
+The parameters for the growth function were chosen as the mean values published on a study of gizzard shad located in large impoundments \citep{michaletz2017variation}. 
+The survival rate of adults gizzard shad dependent on their length is not well documented and required us to make some additional modeling assumptions.  
+An investigation of gizzard shad in Lake Eerie (\cite{bodola1955life}) provided the minimum and maximum survival rate of adults. 
+In many of the river domains included in our analysis, invasive carp are also present (LTRMP fish dataset).  
+Invasive carp is a well-studied invasive species along the Mississippi and Illinois Rivers.  
+Assuming that the resources that effect survival are similar, we use the published \citep{erickson2017integral} slope parameter, $\beta_s$, for the gizzard shad population.   
+Finally, we used a least squares method to find the $alpha_s$ parameter that 
+minimizes the total square-distance between the (observed) pre-carp LTRMP length distribution and (predicted) model equilibrium, $n(z,100)$.  
 %
 %\subsubsection{Inflection Point of the Adult Survival Function}
-%We used a least squares method to find the inflection parameter, $\alpha_s$, that minimizes the distance between the model equilibrium length frequency distribution (at $t=300$ years) and the observed frequency from the LTRM fish dataset for each of the four pools within the main channel of the UMR.  Using the LTRM water quality dataset, we associated each pool with the average water temperature $T$ (in $^\circ C$) during the early Spring period March 15 - April 15. The relationship between infection parameter and temperature is illustrated in Figure \ref{fig:alphas} and is modeled using the linear regression line $\alpha_s = -5.518T+190.391$ ($R^2 = 0.871$).  Finally, we applied the linear model to the average early spring water temperature in La Grange, $T=10.19^\circ C$, to find $\alpha_s (10.19) = 135.55$.
+%We used a least squares method to find the inflection parameter, $\alpha_s$, that minimizes the distance between the model equilibrium length frequency distribution (at $t=300$ years) and the observed frequency from the LTRMP fish dataset for each of the four pools within the main channel of the UMR.  Using the LTRMP water quality dataset, we associated each pool with the average water temperature $T$ (in $^\circ C$) during the early Spring period March 15 - April 15. The relationship between infection parameter and temperature is illustrated in Figure \ref{fig:alphas} and is modeled using the linear regression line $\alpha_s = -5.518T+190.391$ ($R^2 = 0.871$).  Finally, we applied the linear model to the average early spring water temperature in La Grange, $T=10.19^\circ C$, to find $\alpha_s (10.19) = 135.55$.
 %
 %\begin{figure}
 %\centering
@@ -367,9 +400,12 @@ minimizes the total square-distance between the (observed) pre-carp LTRM length 
 %The length dependent survival rate of adults gizzard shad is not well documented (IS THIS TRUE). In many of the river domains included in our analysis, asian carp were also present.  Asian carp is a well-studied invasive species along the Mississippi and Illinois Rivers.  Assuming the resources that effect survival are similar, we use the published minimum and maximum survival probabilities for the gizzard shad population.  The slope and infection point are adjusted to accommodate the differences in length range of gizzard shad compared with asian carp.
 
 \subsubsection{Fecundity and recruitment}
-Maturity of female gizzard shad corresponds with lengths of approximately 140 mm and the number of eggs produced increase as the females increase in size \citep{jons1997ovarian}.  The mean eggs produced per female was described by a three-parameter logistic function (see Figure 1) whose parameters were estimated from data provided in Figure 1a. of \citep{jons1997ovarian}. 
+Maturity of female gizzard shad corresponds with lengths of approximately 140 mm and the number of eggs produced increase as the females increase in size \citep{jons1997ovarian}.  
+The mean eggs produced per female was described by a three-parameter logistic function (see Figure 1) whose parameters were estimated from data provided in Figure 1a. of \citep{jons1997ovarian}. 
 
-The survival to age-0 was assumed to be dependent on the density of age-0 gizzard shad (Figure \ref{fig:surv_age0}).  We estimated the exponential parameters using data provided in Table 2 of \citep{michaletz2010overwinter}. The parameters for the size distribution of age-1 fish were gleaned from a study of gizzard shad located in large impoundments \citep{michaletz2017variation} and the historic 1990-2020 LTRM dataset of gizzard shad in La Grange Reach.
+The survival to age-0 was assumed to be dependent on the density of age-0 gizzard shad (Figure \ref{fig:surv_age0}).  
+We estimated the exponential parameters using data provided in Table 2 of \citep{michaletz2010overwinter}. 
+The parameters for the size distribution of age-1 fish were gleaned from a study of gizzard shad located in large impoundments \citep{michaletz2017variation} and the historic 1990-2020 LTRMP dataset of gizzard shad in La Grange Reach.
 
 \begin{figure}
 \centering
@@ -390,18 +426,26 @@ The survival to age-0 was assumed to be dependent on the density of age-0 gizzar
 %To complete the recruitment process we assign a length to the recruited individuals by simulating a Gaussian random variable with mean $\mu_c$ and standard deviation $\sigma_c$.
 
 \section{Analysis and Results}
-We numerically solved the integral model using the Midpoint Rule with large approximating matrices \citep{burden2005numerical}. The Midpoint Rule has been commonly used for integral projection models because of its simplicity and effectiveness \citep{ellner2006integral, ramula2009integral,  merow2014advancing}. During the course of model development, we explored different step sizes for the Midpoint Rule and found that about 50 points provided numerically stable results. We integrated over lengths from 0 mm to 400 mm. The upper limit was chosen based upon numerical stability and consistency of the system (e.g., avoiding eviction or the loss of individuals due to numerical errors \citep{williams2012avoiding}). 
+We numerically solved the integral model using the Midpoint Rule with large approximating matrices \citep{burden2005numerical}. 
+The Midpoint Rule has been commonly used for integral projection models because of its simplicity and effectiveness \citep{ellner2006integral, ramula2009integral,  merow2014advancing}. 
+During the course of model development, we explored different step sizes for the Midpoint Rule and found that about 50 points provided numerically stable results. 
+We integrated over lengths from 0 mm to 400 mm. 
+The upper limit was chosen based upon numerical stability and consistency of the system (e.g., avoiding eviction or the loss of individuals due to numerical errors \citep{williams2012avoiding}). 
 
-\subsection{Initial conditions}  We assumed that the initial density of gizzard shad $d_0 = 964.7$, the annual average density of gizzard shad observed in La Grange Reach from 1993-2019.  The probability of an individual being length $z$ at time $t=0$  was assumed to be normally distributed with mean $0.5L_\infty$ and standard deviation $\sigma_0 = 30$, similar to observations (1990-2020) in LTRM fish dataset.  As a result, we initialized our model with
+\subsection{Initial conditions}  We assumed that the initial density of gizzard shad $d_0 = 964.7$, the annual average density of gizzard shad observed in La Grange Reach from 1993-2019.  
+The probability of an individual being length $z$ at time $t=0$  was assumed to be normally distributed with mean $0.5L_\infty$ and standard deviation $\sigma_0 = 30$, similar to observations (1990-2020) in LTRMP fish dataset.  
+As a result, we initialized our model with
 \begin{equation}\label{eq:n}
  n(z,0) = d_0 \mbox{Norm} (0.5 L_\infty, \sigma_0) = 964.7 \mbox{Norm} (166, 30). 
  \end{equation}
 
 The model was coded in R \citep{R} and the scripts are published on JP github page \verb+https://github.com/jppeirce+.
 
-\subsubsection{Comparison with the LTRM La Grange dataset}
+\subsubsection{Comparison with the LTRMP La Grange dataset}
 %The only data used in the model from La Grange Reach was the average water temperature during the early Spring period March 15 - April 15 (used to determined the adult survival inflection point).
-The total number of gizzard shad in our simulation reached a stable equilibrium (Figure \ref{fig:ntotal}) within 50 years and, more relevantly, the length distribution at that equilibrium compares favorably with the observations from La Grange found in the LTRM fish dataset (Figure \ref{fig:lagrange}). We notice that the peak frequencies are near the same length with the model predicting slightly more adults lengths and fewer juvenile lengths than the observations. The location of the maximum in the LTRM data, corresponding to new recruits, suggests that there may be smaller age-0 fish than in study from \citep{michaletz2017variation} that was used in the model parameterization.  
+The total number of gizzard shad in our simulation reached a stable equilibrium (Figure \ref{fig:ntotal}) within 50 years and, more relevantly, the length distribution at that equilibrium compares favorably with the observations from La Grange found in the LTRMP fish dataset (Figure \ref{fig:lagrange}). 
+We notice that the peak frequencies are near the same length with the model predicting slightly more adults lengths and fewer juvenile lengths than the observations. 
+The location of the maximum in the LTRMP data, corresponding to new recruits, suggests that there may be smaller age-0 fish than in study from \citep{michaletz2017variation} that was used in the model parameterization.  
 
 \begin{figure}
 \centering
@@ -415,13 +459,19 @@ The total number of gizzard shad in our simulation reached a stable equilibrium 
      \caption{}
 \label{fig:lagrange}
 \end{subfigure}
-\caption{(a) The total number of gizzard shad in La Grange Reach predicted by IPM for first 50 year. (b) LTRM observations of gizzard shad in La Grange Reach (histogram with 50 len) compared with the IPM length frequency at equilibrium ($t=100$ years)}
+\caption{(a) The total number of gizzard shad in La Grange Reach predicted by IPM for first 50 year. (b) LTRMP observations of gizzard shad in La Grange Reach (histogram with 50 len) compared with the IPM length frequency at equilibrium ($t=100$ years)}
 %\caption{(a) Graph of $p_b(z)$ (b) Graph of $\mbox{egg}(z)$, (c) Density-dependent survival of age-0 gizzard shard.}
 %\label{fig:fecundity}
 \end{figure}    
 
 \subsubsection{Survival and Relative Growth}
-The dependence on survival of next generation of age-0 fish on the present density of age-0 fish strongly influences the density, at all ages, of gizzard shad within the population. When the fish density is large, there may be more fish at longer lengths and consequently a greater number of eggs produced.  More eggs leads to a higher density of age-0 fish and reflectively a reduction in the survival to age-1.  If this reduced survival continues for a few years, the overall density of fish may decline and there may not be as many larger fish reproducing.  If fewer eggs are spawned, there are less age-0 fish and the reduced density leads to a better survival probability.  For these years we would expect the overall density to increase.  This cycle of oscillation continues, reflected in our model by the time-dependent survival probability of age-0 (Figure \ref{fig:age0time}) and the relative growth rate 
+The dependence on survival of next generation of age-0 fish on the present density of age-0 fish strongly influences the density, at all ages, of gizzard shad within the population. 
+When the fish density is large, there may be more fish at longer lengths and consequently a greater number of eggs produced.  
+More eggs leads to a higher density of age-0 fish and reflectively a reduction in the survival to age-1.  
+If this reduced survival continues for a few years, the overall density of fish may decline and there may not be as many larger fish reproducing.  
+If fewer eggs are spawned, there are less age-0 fish and the reduced density leads to a better survival probability.  
+For these years we would expect the overall density to increase.  
+This cycle of oscillation continues, reflected in our model by the time-dependent survival probability of age-0 (Figure \ref{fig:age0time}) and the relative growth rate 
 $$ \lambda(t) = \left. \int_L^U n(z,t+1) \, dz \middle/ \int_L^U n(z,t) \, dz \right.$$ (Figure \ref{fig:lambda}).
 
 \begin{figure}
@@ -442,9 +492,16 @@ $$ \lambda(t) = \left. \int_L^U n(z,t+1) \, dz \middle/ \int_L^U n(z,t) \, dz \r
 \end{figure}    
 
 \subsection{Time Evolution of Initial State}
-Starting with $n(z,0)$ defined by Equation \ref{eq:n}, we computed the length distribution for 3 years.  In year 1, there are two relative maximum frequencies corresponding to the recruitment of age-1 fish and the survival of the adults.
+Starting with $n(z,0)$ defined by Equation \ref{eq:n}, we computed the length distribution for 3 years.  
+In year 1, there are two relative maximum frequencies corresponding to the recruitment of age-1 fish and the survival of the adults.
+
 \subsubsection{Dynamics of the Age-1 Over Time - Fixed Frame}
- The greatest value of $n(z,1)$ during year one is centered at the mean length of recruitment. In the following years, the decrease in the maximum value is a result of the two factors:  the reduction in the density of adults and the density-dependent survival function for age-0 fish. Starting in year 1, there is a reduction in the number of egg-producing adults (lengths above 140 mm) compared with the initial population.  From Figure \ref{fig:eggs}, fewer longer adults implies fewer eggs produced.  The eggs that are produced, however, may have a greater chance of survival to the age-1 census (Figure \ref{surv_age0}).   This is evident in the increase in density of recruits (NEED TO SHOW?) but is illustrated in lower frequency of recruits (Figure \ref{fig:length_dist}) 
+ The greatest value of $n(z,1)$ during year one is centered at the mean length of recruitment. 
+ In the following years, the decrease in the maximum value is a result of the two factors:  the reduction in the density of adults and the density-dependent survival function for age-0 fish. 
+ Starting in year 1, there is a reduction in the number of egg-producing adults (lengths above 140 mm) compared with the initial population.  
+ From Figure \ref{fig:eggs}, fewer longer adults implies fewer eggs produced.  
+ The eggs that are produced, however, may have a greater chance of survival to the age-1 census (Figure \ref{surv_age0}).  
+ This is evident in the increase in density of recruits (NEED TO SHOW?) but is illustrated in lower frequency of recruits (Figure \ref{fig:length_dist}) 
 
 %illustrates that this survival advantage is not sufficient to maintain or increase the frequency of recruits.  
 
@@ -452,7 +509,9 @@ Starting with $n(z,0)$ defined by Equation \ref{eq:n}, we computed the length di
 % and as a consequence the density of    to lengths centered at approximately 210 mm.  In the following years, there is a decrease in the frequency of the age-0 fish length.  This is caused by two factors resulting from the reduction in the frequency of egg-producing adults (lengths above 140 mm) compared with the initial population. First, is the decline in the numbers of eggs produced.  From Figure XXX, we assumed that longer fish produce more eggs.  As a result, the second factor is the increase in the density of age-0 fish.  As density of age-0 fish increases, the survival rate of age-0 decreases (see Figure XXX).
 
 [Theme: Dynamics of a cohort - moving frame]
-Figure XXX also demonstrates the growth in gizzard shad population.  The peak length frequency of age-1 fish in $n(z,1)$ near $z = 105$ mm is seen as a peak in $n(z,2)$ near 160 mm, and again as a peak in $n(z,3)$ at about 210 mm.  MORE DISCUSSION NEEDED
+Figure XXX also demonstrates the growth in gizzard shad population.  
+The peak length frequency of age-1 fish in $n(z,1)$ near $z = 105$ mm is seen as a peak in $n(z,2)$ near 160 mm, and again as a peak in $n(z,3)$ at about 210 mm. 
+ MORE DISCUSSION NEEDED
 
 %Two factors influence a reduction in the frequency of age-0 lengths in years 2 and 3. First, there are fewer egg-producing adults (lengths above 140 mm) compared with the initial population.  This cause Second, the density of age-0
 
@@ -477,7 +536,7 @@ Figure XXX also demonstrates the growth in gizzard shad population.  The peak le
 \caption{Simulated frequency of lengths of Gizzard Shad.  Initial density  and N=xxx}
 \label{fig:length_dist}
 \end{subfigure}
-\caption{(a) Simulated length distributions. (b) LTRM gizzard shad density from La Grange Reach 1992-2020}
+\caption{(a) Simulated length distributions. (b) LTRMP gizzard shad density from La Grange Reach 1992-2020}
 %\caption{(a) Graph of $p_b(z)$ (b) Graph of $\mbox{egg}(z)$, (c) Density-dependent survival of age-0 gizzard shard.}
 %\label{fig:fecundity}
 \end{figure*}    
@@ -494,10 +553,13 @@ Figure XXX also demonstrates the growth in gizzard shad population.  The peak le
 %\label{fig:LTRM}
 %\end{figure*}    
 
-We compare a simulated length distribution with U.S. Geological Survey (USGS) Long-Term Resource Monitoring (LTRM) data from the La Grange Reach of the Illinois River from 1992-2019. The La Grange Reach of the Illinois River is a 125 km segment of the lower Illinois River between the La Grange Lock and Dam at RKM 129 and the Peoria Lock and Dam at RKM 254. It is characterized by a wide floodplain surrounding the main channel and a mosaic of side channels, fully connected backwaters, and semi-connected backwaters.
+We compare a simulated length distribution with U.S. Geological Survey (USGS) Long-Term Resource Monitoring (LTRMP) data from the La Grange Reach of the Illinois River from 1992-2019. 
+The La Grange Reach of the Illinois River is a 125 km segment of the lower Illinois River between the La Grange Lock and Dam at RKM 129 and the Peoria Lock and Dam at RKM 254. 
+It is characterized by a wide floodplain surrounding the main channel and a mosaic of side channels, fully connected backwaters, and semi-connected backwaters.
 
 [Comparison of Frequency plots vs Simulation - Similarities]
-In these data, we see similar patterns as displayed in Figure XXX.  Specifically, from years 2010-2012...
+In these data, we see similar patterns as displayed in Figure XXX.  
+Specifically, from years 2010-2012...
 
 
 [Comparison of Frequency plots vs Simulation - Differences]
@@ -540,7 +602,7 @@ In these data, we see similar patterns as displayed in Figure XXX.  Specifically
 \section{Acknowledgments}
 
 These data are a product of the U.S. Army Corps of Engineer's Upper Mississippi 
-River Restoration Program (UMRR) Long Term Resource Monitoring (LTRM) element 
+River Restoration Program (UMRR) Long Term Resource Monitoring (LTRMP) element 
 implemented by the U.S. Geological Survey in collaboration with the five 
 Upper Mississippi River System (UMRS) states of Illinois, Iowa, Minnesota, 
 Missouri, and Wisconsin.
