@@ -1,0 +1,162 @@
+### Graph And Analysis of Gizzard Shad Model
+source("gizshadmodel.R")
+
+#######################
+## Graphing Fun Time!
+#######################
+
+## Normal Distribution ##
+N <- 50 # number of size classes
+l_shad <- 0.00   # lower size limit in mm
+u_shad <- 500.0    # upper size limit in mm - we want this to be
+                   # larger than L-infty
+delta_z <- (u_shad - l_shad) / N
+zmesh <-  l_shad + ((1:N) - 1 / 2) * (u_shad - l_shad) / N
+tf <- 100 # number of years
+
+# Initial length distribution
+n <- matrix(0, length(zmesh), tf)
+n0_total <- 995
+n[, 1] <- dnorm(zmesh, mean = 0.5*m_par$grow_max, sd = 30)
+    #normal like LTRM 1994
+n[, 1] <- (n[, 1] / sum(n[, 1])) * n0_total / delta_z
+# Note: sum(n[,1])*delta_z = n0_total
+
+# Dynamical System
+for (i in 1:(tf - 1)) {
+  k_iter <- (p_z1z(zmesh, zmesh, m_par) + f_z1z(zmesh, zmesh, n[, i],
+                                                m_par)) * delta_z
+  n[, i + 1] <- k_iter %*% n[, i]
+}
+
+# Population size vs time
+n_total <- rep(0, tf)
+for (i in 1:tf) {
+  n_total[i] <- sum(n[, i]) * delta_z
+}
+
+plot_df <- data.frame(year = 1:tf, total = n_total)
+ggplot(plot_df,
+       aes(x = year, y = total)) + 
+  geom_line() +
+  labs(x = "years",
+       y = "total") +
+  labs(x = "time (in years)",
+       y = "total density",
+       title = "Total n(z,t)",
+       color = "Legend") +
+  theme_bw() +  
+  theme(legend.position = c(0.8, 0.4))+
+  theme(text = element_text(size=16),
+        aspect.ratio = .7)
+ggsave("~/Documents/research/gizzard_shad/figures/ntotal.png")
+
+#####################################################
+## Length FREQUENCY distributions for first few years
+#####################################################
+show_years <- 1:4
+#show_years <- c(5, 15, 25)
+#show_years <- 41:51
+n_freq <- sweep(n, 2, colSums(n),  FUN = "/")
+plot_df <- data.frame(z = zmesh, year = n_freq[,show_years])
+plot_df <- melt(plot_df, id.vars = 'z', variable.name = 'year')
+ggplot(plot_df,
+       aes(z, value)) + 
+  geom_line(aes(color = year)) + 
+  labs(x = "length (in mm)",
+       y = "relative frequency",
+       title = "n(z,t)/total",
+       color = "Legend") +
+  theme_bw() +  
+  theme(legend.position = c(0.8, 0.4))+
+  theme(text = element_text(size=16),
+        aspect.ratio = .7)
+ggsave("~/Documents/research/gizzard_shad/figures/sim.png")
+
+### Age-0 survival vs time
+surv_t <- rep(0, times = tf)
+for (i in 1:tf) {
+  surv_t[i] <- surv_age0(n = n[, i], z = zmesh, m_par)
+}
+
+plot_df <- tibble(time_years = 1:tf, prob = surv_t[1:tf])
+ggplot(data = plot_df,
+       aes(x = time_years, y = prob)) +
+  geom_line(color = "blue", size = 1) +
+  labs(x = "time (in years)",
+       y = "probability of survival",
+       title = "Survival Probability of Age-0")+
+  #       subtitle = paste("Inital Total Density =", n0_total / 1000,
+  #                        "per m^3")) +
+  scale_x_continuous(limits = c(5, tf), breaks = seq(0, tf, 5)) +
+  scale_y_continuous(limits = c(0, .02), breaks = seq(0, 0.2, 0.005)) +
+  theme_bw() +
+  theme(text = element_text(size = 16),
+        aspect.ratio = .7)
+ggsave("~/Documents/research/gizzard_shad/figures/Figure2a.pdf")
+
+
+# Population growth rate lambda vs time
+lambda_t <- rep(0, tf)
+for (i in 1:(tf - 1)) {
+  lambda_t[i] <- n_total[i + 1] / n_total[i]
+}
+
+plot_df <- tibble(time_years = 1:tf, lambda = lambda_t[1:tf])
+ggplot(data = plot_df,
+       aes(x = time_years, y = lambda)) +
+  geom_line(color = "blue", size = 1) +
+  geom_abline(slope = 0, intercept =1) +
+  labs(x = "time (in years)",
+       y = "lambda",
+       title = "Population Growth Rate")+
+  scale_x_continuous(limits = c(5, tf), breaks = seq(0, tf, 10)) +
+  scale_y_continuous(limits = c(0.5, 2.5), breaks = seq(.5, 2.5, .5)) +
+  theme_bw() +
+  theme(text = element_text(size = 16),
+        aspect.ratio = .7)
+ggsave("~/Documents/research/gizzard_shad/figures/Figure2b.pdf")
+
+#############################
+########
+ltrm_gzsd <- read_csv("ltrm_fish_data.csv")
+# Remove length 0 and NA
+ltrm_gzsd <- ltrm_gzsd[!is.na(ltrm_gzsd$length) & (ltrm_gzsd$length > 0) &
+                         !is.na(ltrm_gzsd$fdate), ]
+# Convert date into new format
+# Then pull year and add it as a new column
+ltrm_gzsd$fdate <- as.Date(ltrm_gzsd$fdate, "%m/%d/%Y")
+ltrm_gzsd <- ltrm_gzsd %>% mutate(year = year(fdate))
+ltrm_gzsd <- ltrm_gzsd %>%
+  filter(year != 2107)
+
+## Model equilibrium n(z,100) compated with LTRMP data from La Grange
+#### Now Check with La Grange
+n <- matrix(0, length(zmesh), tf)
+n0_total <- 995
+n[, 1] <- dnorm(zmesh, mean = 0.5 * m_par$grow_max, sd = 30)
+n[, 1] <- (n[, 1] / sum(n[, 1])) * n0_total / delta_z
+# Dynamical System
+for (i in 1:(tf - 1)) {
+  k_iter <- (p_z1z(zmesh, zmesh, m_par) + f_z1z(zmesh, zmesh, n[, i],
+                                                m_par)) * delta_z
+  n[, i + 1] <- k_iter %*% n[, i]
+}
+
+plot_df <- data.frame(z = zmesh, freq = n[, tf]/sum(n[, tf]))
+ltrm_gzsd_lg <- ltrm_gzsd %>% 
+  mutate(length_round = round(ltrm_gzsd$length, -1))  %>% 
+  filter(pool == "LG")
+ggplot(data = ltrm_gzsd_lg, aes(x = length_round)) +
+  geom_histogram(aes(y = ..density..), bins = 49)+
+  #  geom_density(aes(x = length)) +
+  geom_line(data = plot_df, aes(x = z, y = freq/delta_z))+
+  labs(x = "length (in mm)",
+       y = "frequency",
+       color = "Legend") +
+  scale_color_manual(breaks=c("a","b"))+
+  theme_bw()+
+  theme(text = element_text(size=16),
+        aspect.ratio = .7)
+ggsave("~/Documents/research/gizzard_shad/figures/lagrange.pdf")
+
