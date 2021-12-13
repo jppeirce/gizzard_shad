@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  10 DEC 2021 13:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  13 DEC 2021 05:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1211,7 +1211,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.171 
+l.170 
        [1
 
 
@@ -1219,109 +1219,102 @@ l.171
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.194 
+l.193 
        [2] [3] [4]
 
-LaTeX Warning: Reference `life_cycle' on page 5 undefined on input line 251.
+LaTeX Warning: Reference `life_cycle' on page 5 undefined on input line 247.
 
 File: adult.jpeg Graphic file (type jpg)
 <use adult.jpeg>
-Package pdftex.def Info: adult.jpeg used on input line 269.
+Package pdftex.def Info: adult.jpeg used on input line 265.
 (pdftex.def)             Requested size: 56.3683pt x 28.72491pt.
 File: adult.jpeg Graphic file (type jpg)
  <use adult.jpeg>
-Package pdftex.def Info: adult.jpeg used on input line 272.
+Package pdftex.def Info: adult.jpeg used on input line 268.
 (pdftex.def)             Requested size: 56.3683pt x 28.72491pt.
 File: adult.jpeg Graphic file (type jpg)
  <use adult.jpeg>
-Package pdftex.def Info: adult.jpeg used on input line 282.
+Package pdftex.def Info: adult.jpeg used on input line 278.
 (pdftex.def)             Requested size: 70.46037pt x 35.90614pt.
 File: adult.jpeg Graphic file (type jpg)
  <use adult.jpeg>
-Package pdftex.def Info: adult.jpeg used on input line 290.
+Package pdftex.def Info: adult.jpeg used on input line 286.
 (pdftex.def)             Requested size: 28.18414pt x 14.36246pt.
 File: adult.jpeg Graphic file (type jpg)
 
 <use adult.jpeg>
-Package pdftex.def Info: adult.jpeg used on input line 291.
+Package pdftex.def Info: adult.jpeg used on input line 287.
 (pdftex.def)             Requested size: 18.78703pt x 9.5686pt.
 File: adult.jpeg Graphic file (type jpg)
  <use adult.jpeg>
-Package pdftex.def Info: adult.jpeg used on input line 292.
+Package pdftex.def Info: adult.jpeg used on input line 288.
 (pdftex.def)             Requested size: 37.58125pt x 19.1372pt.
  [5] [6]
-Overfull \hbox (20.02708pt too wide) in paragraph at lines 352--354
+Overfull \hbox (20.02708pt too wide) in paragraph at lines 348--350
 \OT1/cmr/m/n/12 fish, we mul-ti-plied this num-ber with a nor-mal dis-tri-bu-ti
 on of length, $\OML/cmm/m/it/12 C[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 z[]\OT1/cm
 r/m/n/12 ) = [](\OML/cmm/m/it/12 ^^V[]; ^^[[]\OT1/cmr/m/n/12 )$
  []
 
-[7] [8] <figures/Figure1a.pdf, id=264, 818.05624pt x 505.89pt>
+[7] [8] <figures/Figure1a.pdf, id=263, 818.05624pt x 505.89pt>
 File: figures/Figure1a.pdf Graphic file (type pdf)
 
 <use figures/Figure1a.pdf>
-Package pdftex.def Info: figures/Figure1a.pdf used on input line 413.
+Package pdftex.def Info: figures/Figure1a.pdf used on input line 409.
 (pdftex.def)             Requested size: 201.99121pt x 124.91289pt.
 
-<figures/Figure1b.pdf, id=265, 818.05624pt x 505.89pt>
+<figures/Figure1b.pdf, id=264, 818.05624pt x 505.89pt>
 File: figures/Figure1b.pdf Graphic file (type pdf)
 
 <use figures/Figure1b.pdf>
-Package pdftex.def Info: figures/Figure1b.pdf used on input line 418.
+Package pdftex.def Info: figures/Figure1b.pdf used on input line 414.
 (pdftex.def)             Requested size: 201.99121pt x 124.91289pt.
  [9 <./figures/Figure1a.pdf> <./figures/Figure1b.pdf>] <figures/ntotal.png, id=
-311, 2266.4675pt x 2069.7325pt>
+310, 2266.4675pt x 2069.7325pt>
 File: figures/ntotal.png Graphic file (type png)
 
 <use figures/ntotal.png>
-Package pdftex.def Info: figures/ntotal.png used on input line 453.
+Package pdftex.def Info: figures/ntotal.png used on input line 449.
 (pdftex.def)             Requested size: 201.99121pt x 184.43616pt.
 
-<figures/lagrange.pdf, id=313, 543.02875pt x 495.8525pt>
+<figures/lagrange.pdf, id=312, 543.02875pt x 495.8525pt>
 File: figures/lagrange.pdf Graphic file (type pdf)
 
 <use figures/lagrange.pdf>
-Package pdftex.def Info: figures/lagrange.pdf used on input line 458.
+Package pdftex.def Info: figures/lagrange.pdf used on input line 454.
 (pdftex.def)             Requested size: 201.99121pt x 184.44614pt.
  [10]
-<figures/Figure2a.pdf, id=325, 543.02875pt x 495.8525pt>
+<figures/Figure2a.pdf, id=324, 543.02875pt x 495.8525pt>
 File: figures/Figure2a.pdf Graphic file (type pdf)
 
 <use figures/Figure2a.pdf>
-Package pdftex.def Info: figures/Figure2a.pdf used on input line 480.
-(pdftex.def)             Requested size: 201.99121pt x 184.44614pt.
-
-<figures/Figure2b.pdf, id=326, 543.02875pt x 495.8525pt>
-File: figures/Figure2b.pdf Graphic file (type pdf)
-
-<use figures/Figure2b.pdf>
-Package pdftex.def Info: figures/Figure2b.pdf used on input line 485.
-(pdftex.def)             Requested size: 201.99121pt x 184.44614pt.
+Package pdftex.def Info: figures/Figure2a.pdf used on input line 476.
+(pdftex.def)             Requested size: 187.89914pt x 171.57622pt.
 
 
-LaTeX Warning: Reference `surv_age0' on page 11 undefined on input line 503.
+LaTeX Warning: Reference `surv_age0' on page 11 undefined on input line 499.
 
 [11 <./figures/ntotal.png> <./figures/lagrange.pdf>]
-<figures/sim.png, id=342, 2266.4675pt x 2069.7325pt>
+<figures/sim.png, id=340, 2266.4675pt x 2069.7325pt>
 File: figures/sim.png Graphic file (type png)
  <use figures/sim.png>
-Package pdftex.def Info: figures/sim.png used on input line 530.
+Package pdftex.def Info: figures/sim.png used on input line 526.
 (pdftex.def)             Requested size: 201.99121pt x 184.43616pt.
 
-<figures/LTRMgraph.pdf, id=343, 818.05624pt x 505.89pt>
+<figures/LTRMgraph.pdf, id=341, 818.05624pt x 505.89pt>
 File: figures/LTRMgraph.pdf Graphic file (type pdf)
 
 <use figures/LTRMgraph.pdf>
-Package pdftex.def Info: figures/LTRMgraph.pdf used on input line 535.
+Package pdftex.def Info: figures/LTRMgraph.pdf used on input line 531.
 (pdftex.def)             Requested size: 201.99121pt x 124.91289pt.
- [12 <./figures/Figure2a.pdf> <./figures/Figure2b.pdf>] [13 <./figures/sim.png>
- <./figures/LTRMgraph.pdf>] (./densitydepIPM.bbl
-[14] [15] [16]) [17]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 707.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 707.
- (./densitydepIPM.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 707.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 707.
+ [12 <./figures/Figure2a.pdf>] [13 <./figures/sim.png> <./figures/LTRMgraph.pdf
+>] (./densitydepIPM.bbl [14] [15] [16]) [17]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 703.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 703.
+
+(./densitydepIPM.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 703.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 703.
 Package rerunfilecheck Info: File `densitydepIPM.out' has not changed.
 (rerunfilecheck)             Checksum: 34106C7CF5CACB6B7E50A14C6ADFE98E;1307.
 
@@ -1333,35 +1326,36 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 28341 strings out of 493089
- 535760 string characters out of 6134842
- 622575 words of memory out of 5000000
- 31324 multiletter control sequences out of 15000+600000
- 12688 words of font info for 53 fonts, out of 8000000 for 9000
+ 28339 strings out of 493089
+ 535691 string characters out of 6134842
+ 622574 words of memory out of 5000000
+ 31322 multiletter control sequences out of 15000+600000
+ 13394 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  54i,14n,75p,10361b,1007s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
-></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
-/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></
-usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></us
-r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/
-local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/lo
-cal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/loca
-l/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/
-texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/tex
-live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texliv
-e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2
-015/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/201
-5/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2015/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2015/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2015/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on densitydepIPM.pdf (19 pages, 1724588 bytes).
+></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pf
+b></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
+></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
+/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></u
+sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr
+/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/l
+ocal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/loc
+al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local
+/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/te
+xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texli
+ve/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/
+2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/20
+15/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/201
+5/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2015/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2015/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2015/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on densitydepIPM.pdf (19 pages, 1729653 bytes).
 PDF statistics:
- 489 PDF objects out of 1000 (max. 8388607)
- 424 compressed objects within 5 object streams
+ 485 PDF objects out of 1000 (max. 8388607)
+ 421 compressed objects within 5 object streams
  96 named destinations out of 1000 (max. 500000)
- 210 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 205 words of extra memory for PDF output out of 10000 (max. 10000000)
 
