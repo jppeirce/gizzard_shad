@@ -371,7 +371,7 @@ Understanding the population dynamics of gizzard shad, may in the future make it
 The parameters for the growth function were chosen as the mean values published on a study of gizzard shad located in large impoundments \citep{michaletz2017variation}. 
 The survival rate of adults gizzard shad dependent on their length is not well documented and required us to make some additional modeling assumptions.  
 An investigation of gizzard shad in Lake Eerie (\cite{bodola1955life}) provided the minimum and maximum survival rate of adults. 
-We used a least squares method to find the $\alpha_s$ and $\beta_s parameters that 
+We used a least squares method to find the $\alpha_s$ and $\beta_s$ parameters that 
 minimized the total square-distance between the (observed) pre-carp LTRMP length distribution in the main channels of the UMR (pools 4, 8, 13, 26, and the open river) and (predicted) model equilibrium, $n(z,100)$.  
 
 \subsubsection{Fecundity and recruitment}
@@ -420,7 +420,11 @@ The model was coded in R \citep{R} and the scripts are published on JP github pa
 %The only data used in the model from La Grange Reach was the average water temperature during the early Spring period March 15 - April 15 (used to determined the adult survival inflection point).
 The total number of gizzard shad in our simulation reached a stable equilibrium (Figure \ref{fig:ntotal}) within 50 years and, more relevantly, the length distribution at that equilibrium compares favorably with the observations from La Grange found in the LTRMP fish dataset (Figure \ref{fig:lagrange}). 
 We notice that the peak frequencies are near the same length with the model predicting slightly more adults lengths and fewer juvenile lengths than the observations. 
-The location of the maximum in the LTRMP data, corresponding to new recruits, suggests that there may be smaller age-0 fish than in study from \citep{michaletz2017variation} that was used in the model parameterization.  
+This may be explained by gear bias.
+The methods used to capture fish make it more likely to record longer lengths ($>200$mm). 
+Studies suggest that due to the environmental stochasticity and other effects, smaller recruitment fish densities can fluctuate annually and be difficult to measure accurately. 
+While our model uses age-0 density to effect age-0 survival, we use a constant viability which may be sensitive to the external factors mentioned above.
+In addition, the location of the maximum length and the variation in the of length of new recruits recorded in the LTRMP data, suggests that there may be smaller age-0 fish in La Grange Reach than in study location \citep{michaletz2017variation} used to parameterize the model.  
 
 \begin{figure}
 \centering
@@ -446,8 +450,7 @@ More eggs leads to a higher density of age-0 fish and reflectively a reduction i
 If this reduced survival continues for a few years, the overall density of fish may decline and there may not be as many larger fish reproducing.  
 If fewer eggs are spawned, there are less age-0 fish and the reduced density leads to a better survival probability.  
 For these years we would expect the overall density to increase.  
-This cycle of oscillation continues, reflected in our model by the time-dependent survival probability of age-0 (Figure \ref{fig:age0time}) and the relative growth rate 
-$$ \lambda(t) = \left. \int_L^U n(z,t+1) \, dz \middle/ \int_L^U n(z,t) \, dz \right.$$ (Figure \ref{fig:lambda}).
+This cycle of oscillation continues, reflected in our model by the time-dependent survival probability of age-0 recruits(Figure \ref{fig:age0time}).
 
 \begin{figure}
 \centering
