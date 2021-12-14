@@ -197,8 +197,8 @@ Logistic survival probability function, $s(z)$ & & \\
   $\ds s_{\rm {min}}$ & minimum survival & 0.002 & \citep{bodola1955life} \\
   $\ds s_{\rm {max}}$ & maximum survival & $\ds 1-8.871K^{0.73}L_{\infty}^{-0.33}$ 
   & THEN 2015 \\ 
- $\ds \alpha_s$  & inflection point & modeled & LTRM dataset \\
-  $\ds \beta_s$ & slope & -5 &\citep{erickson2017integral} \\\hline
+ $\ds \alpha_s$  & inflection point & 103.53 & modeled from LTRM dataset \\
+  $\ds \beta_s$ & slope & -943.89 & modeled from LTRM dataset \\\hline
   Growth function, $\ds G(z,z')$ & & \\
   $L_\infty$ & maximum length (in mm) & 394.30 & \citep{catalano2010size} \\
   $K_g$ & growth rate & 0.26 &  \citep{michaletz2017variation} \\
@@ -371,24 +371,8 @@ Understanding the population dynamics of gizzard shad, may in the future make it
 The parameters for the growth function were chosen as the mean values published on a study of gizzard shad located in large impoundments \citep{michaletz2017variation}. 
 The survival rate of adults gizzard shad dependent on their length is not well documented and required us to make some additional modeling assumptions.  
 An investigation of gizzard shad in Lake Eerie (\cite{bodola1955life}) provided the minimum and maximum survival rate of adults. 
-In many of the river domains included in our analysis, invasive carp are also present (LTRMP fish dataset).  
-Invasive carp is a well-studied invasive species along the Mississippi and Illinois Rivers.  
-Assuming that the resources that effect survival are similar, we use the published \citep{erickson2017integral} slope parameter, $\beta_s$, for the gizzard shad population.   
-Finally, we used a least squares method to find the $alpha_s$ parameter that 
-minimizes the total square-distance between the (observed) pre-carp LTRMP length distribution and (predicted) model equilibrium, $n(z,100)$.  
-%
-%\subsubsection{Inflection Point of the Adult Survival Function}
-%We used a least squares method to find the inflection parameter, $\alpha_s$, that minimizes the distance between the model equilibrium length frequency distribution (at $t=300$ years) and the observed frequency from the LTRMP fish dataset for each of the four pools within the main channel of the UMR.  Using the LTRMP water quality dataset, we associated each pool with the average water temperature $T$ (in $^\circ C$) during the early Spring period March 15 - April 15. The relationship between infection parameter and temperature is illustrated in Figure \ref{fig:alphas} and is modeled using the linear regression line $\alpha_s = -5.518T+190.391$ ($R^2 = 0.871$).  Finally, we applied the linear model to the average early spring water temperature in La Grange, $T=10.19^\circ C$, to find $\alpha_s (10.19) = 135.55$.
-%
-%\begin{figure}
-%\centering
-%\includegraphics[width=.4\textwidth]{figures/alphas.pdf}
-%\caption{Inflection point parameter for adult survival as a function of the mean water temperature (March 15 - April 15).  Points are identified by Pool number within the UMR.  Linear regression model is also shown.}
-%\label{fig:alphas}
-%\end{figure}    
-
-
-%The length dependent survival rate of adults gizzard shad is not well documented (IS THIS TRUE). In many of the river domains included in our analysis, asian carp were also present.  Asian carp is a well-studied invasive species along the Mississippi and Illinois Rivers.  Assuming the resources that effect survival are similar, we use the published minimum and maximum survival probabilities for the gizzard shad population.  The slope and infection point are adjusted to accommodate the differences in length range of gizzard shad compared with asian carp.
+We used a least squares method to find the $\alpha_s$ and $\beta_s parameters that 
+minimized the total square-distance between the (observed) pre-carp LTRMP length distribution in the main channels of the UMR (pools 4, 8, 13, 26, and the open river) and (predicted) model equilibrium, $n(z,100)$.  
 
 \subsubsection{Fecundity and recruitment}
 Maturity of female gizzard shad corresponds with lengths of approximately 140 mm and the number of eggs produced increase as the females increase in size \citep{jons1997ovarian}.  
