@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  14 DEC 2021 09:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  16 DEC 2021 09:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1315,40 +1315,38 @@ File: figures/Figure1b.pdf Graphic file (type pdf)
 Package pdftex.def Info: figures/Figure1b.pdf  used on input line 393.
 (pdftex.def)             Requested size: 201.99121pt x 124.91289pt.
  [9 <./figures/Figure1a.pdf> <./figures/Figure1b.pdf>]
-<figures/ntotal.png, id=297, 2266.4675pt x 2069.7325pt>
+<figures/ntotal.png, id=297, 3872.4675pt x 2483.2775pt>
 File: figures/ntotal.png Graphic file (type png)
 <use figures/ntotal.png>
 Package pdftex.def Info: figures/ntotal.png  used on input line 432.
-(pdftex.def)             Requested size: 201.99121pt x 184.43616pt.
-<figures/lagrange.pdf, id=299, 543.02875pt x 495.8525pt>
+(pdftex.def)             Requested size: 201.99121pt x 129.51387pt.
+<figures/lagrange.pdf, id=299, 929.4725pt x 595.22375pt>
 File: figures/lagrange.pdf Graphic file (type pdf)
 <use figures/lagrange.pdf>
 Package pdftex.def Info: figures/lagrange.pdf  used on input line 437.
-(pdftex.def)             Requested size: 201.99121pt x 184.44614pt.
+(pdftex.def)             Requested size: 201.99121pt x 129.35114pt.
  [10]
-<figures/Figure2a.pdf, id=310, 543.02875pt x 495.8525pt>
+<figures/Figure2a.pdf, id=310, 929.4725pt x 595.22375pt>
 File: figures/Figure2a.pdf Graphic file (type pdf)
 <use figures/Figure2a.pdf>
 Package pdftex.def Info: figures/Figure2a.pdf  used on input line 458.
-(pdftex.def)             Requested size: 187.89914pt x 171.57622pt.
+(pdftex.def)             Requested size: 187.89914pt x 120.32326pt.
+ [11 <./figures/ntotal.png> <./figures/lagrange.pdf> <./figures/Figure2a.pdf>]
 
+LaTeX Warning: Reference `surv_age0' on page 12 undefined on input line 481.
 
-LaTeX Warning: Reference `surv_age0' on page 11 undefined on input line 481.
-
-[11 <./figures/ntotal.png> <./figures/lagrange.pdf>]
-<figures/sim.png, id=326, 2266.4675pt x 2069.7325pt>
+<figures/sim.png, id=331, 3872.4675pt x 2483.2775pt>
 File: figures/sim.png Graphic file (type png)
 <use figures/sim.png>
 Package pdftex.def Info: figures/sim.png  used on input line 508.
-(pdftex.def)             Requested size: 201.99121pt x 184.43616pt.
-<figures/LTRMgraph.pdf, id=327, 818.05624pt x 505.89pt>
+(pdftex.def)             Requested size: 201.99121pt x 129.51387pt.
+<figures/LTRMgraph.pdf, id=332, 818.05624pt x 505.89pt>
 File: figures/LTRMgraph.pdf Graphic file (type pdf)
 <use figures/LTRMgraph.pdf>
 Package pdftex.def Info: figures/LTRMgraph.pdf  used on input line 513.
 (pdftex.def)             Requested size: 201.99121pt x 124.91289pt.
- [12 <./figures/Figure2a.pdf>] [13 <./figures/sim.png> <./figures/LTRMgraph.pdf
->] (./densitydepIPM.bbl
-[14] [15] [16]) [17]
+[12 <./figures/sim.png> <./figures/LTRMgraph.pdf>] [13] (./densitydepIPM.bbl
+[14] [15]) [16]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 685.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 685.
  (./densitydepIPM.aux)
@@ -1365,8 +1363,8 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 30737 strings out of 492649
- 587442 string characters out of 6129622
+ 30736 strings out of 492649
+ 587435 string characters out of 6129622
  685713 words of memory out of 5000000
  34114 multiletter control sequences out of 15000+600000
  540026 words of font info for 63 fonts, out of 8000000 for 9000
@@ -1391,10 +1389,10 @@ ve/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2018/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2018/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on densitydepIPM.pdf (19 pages, 1720200 bytes).
+Output written on densitydepIPM.pdf (18 pages, 1937385 bytes).
 PDF statistics:
- 474 PDF objects out of 1000 (max. 8388607)
- 410 compressed objects within 5 object streams
- 96 named destinations out of 1000 (max. 500000)
+ 469 PDF objects out of 1000 (max. 8388607)
+ 406 compressed objects within 5 object streams
+ 95 named destinations out of 1000 (max. 500000)
  205 words of extra memory for PDF output out of 10000 (max. 10000000)
 

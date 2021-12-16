@@ -8,7 +8,7 @@ source("gizshadmodel.R")
 ## Normal Distribution ##
 N <- 50 # number of size classes
 l_shad <- 0.00   # lower size limit in mm
-u_shad <- 400.0    # upper size limit in mm - we want this to be
+u_shad <- 450.0    # upper size limit in mm - we want this to be
                    # larger than L-infty
 delta_z <- (u_shad - l_shad) / N
 zmesh <-  l_shad + ((1:N) - 1 / 2) * (u_shad - l_shad) / N
