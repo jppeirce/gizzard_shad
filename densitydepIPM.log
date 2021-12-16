@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  16 DEC 2021 09:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  16 DEC 2021 09:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1307,51 +1307,51 @@ r/m/n/12 ) = [](\OML/cmm/m/it/12 ^^V[]; ^^[[]\OT1/cmr/m/n/12 )$
 <figures/Figure1a.pdf, id=250, 818.05624pt x 505.89pt>
 File: figures/Figure1a.pdf Graphic file (type pdf)
 <use figures/Figure1a.pdf>
-Package pdftex.def Info: figures/Figure1a.pdf  used on input line 388.
+Package pdftex.def Info: figures/Figure1a.pdf  used on input line 392.
 (pdftex.def)             Requested size: 201.99121pt x 124.91289pt.
 <figures/Figure1b.pdf, id=251, 818.05624pt x 505.89pt>
 File: figures/Figure1b.pdf Graphic file (type pdf)
 <use figures/Figure1b.pdf>
-Package pdftex.def Info: figures/Figure1b.pdf  used on input line 393.
+Package pdftex.def Info: figures/Figure1b.pdf  used on input line 397.
 (pdftex.def)             Requested size: 201.99121pt x 124.91289pt.
  [9 <./figures/Figure1a.pdf> <./figures/Figure1b.pdf>]
-<figures/ntotal.png, id=297, 3872.4675pt x 2483.2775pt>
+<figures/ntotal.png, id=296, 3872.4675pt x 2483.2775pt>
 File: figures/ntotal.png Graphic file (type png)
 <use figures/ntotal.png>
-Package pdftex.def Info: figures/ntotal.png  used on input line 432.
+Package pdftex.def Info: figures/ntotal.png  used on input line 436.
 (pdftex.def)             Requested size: 201.99121pt x 129.51387pt.
-<figures/lagrange.pdf, id=299, 929.4725pt x 595.22375pt>
+<figures/lagrange.pdf, id=298, 929.4725pt x 595.22375pt>
 File: figures/lagrange.pdf Graphic file (type pdf)
 <use figures/lagrange.pdf>
-Package pdftex.def Info: figures/lagrange.pdf  used on input line 437.
+Package pdftex.def Info: figures/lagrange.pdf  used on input line 441.
 (pdftex.def)             Requested size: 201.99121pt x 129.35114pt.
  [10]
 <figures/Figure2a.pdf, id=310, 929.4725pt x 595.22375pt>
 File: figures/Figure2a.pdf Graphic file (type pdf)
 <use figures/Figure2a.pdf>
-Package pdftex.def Info: figures/Figure2a.pdf  used on input line 458.
+Package pdftex.def Info: figures/Figure2a.pdf  used on input line 462.
 (pdftex.def)             Requested size: 187.89914pt x 120.32326pt.
  [11 <./figures/ntotal.png> <./figures/lagrange.pdf> <./figures/Figure2a.pdf>]
 
-LaTeX Warning: Reference `surv_age0' on page 12 undefined on input line 481.
+LaTeX Warning: Reference `surv_age0' on page 12 undefined on input line 485.
 
 <figures/sim.png, id=331, 3872.4675pt x 2483.2775pt>
 File: figures/sim.png Graphic file (type png)
 <use figures/sim.png>
-Package pdftex.def Info: figures/sim.png  used on input line 508.
+Package pdftex.def Info: figures/sim.png  used on input line 512.
 (pdftex.def)             Requested size: 201.99121pt x 129.51387pt.
 <figures/LTRMgraph.pdf, id=332, 818.05624pt x 505.89pt>
 File: figures/LTRMgraph.pdf Graphic file (type pdf)
 <use figures/LTRMgraph.pdf>
-Package pdftex.def Info: figures/LTRMgraph.pdf  used on input line 513.
+Package pdftex.def Info: figures/LTRMgraph.pdf  used on input line 517.
 (pdftex.def)             Requested size: 201.99121pt x 124.91289pt.
 [12 <./figures/sim.png> <./figures/LTRMgraph.pdf>] [13] (./densitydepIPM.bbl
 [14] [15]) [16]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 685.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 685.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 689.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 689.
  (./densitydepIPM.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 685.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 685.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 689.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 689.
 Package rerunfilecheck Info: File `densitydepIPM.out' has not changed.
 (rerunfilecheck)             Checksum: 34106C7CF5CACB6B7E50A14C6ADFE98E;1307.
 
@@ -1389,7 +1389,7 @@ ve/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2018/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2018/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on densitydepIPM.pdf (18 pages, 1937385 bytes).
+Output written on densitydepIPM.pdf (18 pages, 1937620 bytes).
 PDF statistics:
  469 PDF objects out of 1000 (max. 8388607)
  406 compressed objects within 5 object streams
