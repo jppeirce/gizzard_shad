@@ -1,11 +1,53 @@
 ### Graph And Analysis of Gizzard Shad Model
+# Remember to set the working directory:
+# Session -> Set Working Directory -> To Source Location
 source("gizshadmodel.R")
 
 #######################
 ## Graphing Fun Time!
 #######################
 
-## Normal Distribution ##
+## Parameter Graphs
+plot_df <- data.frame(z = zmesh, eggs =  eggs_z(zmesh, m_par)/1000 )
+ggplot(data = plot_df,
+       aes( x = z, y = eggs)) +
+  geom_line(color = "blue", size = 1)+
+  labs(x = "length (in mm)",
+       y = "eggs (in thousands)",
+       title = "Eggs Produced") +
+  #     subtitle = "Gizzard Shad")  
+  scale_x_continuous(limits = c(0,as.numeric(m_par["grow_max"])), breaks = seq(0,500,100))+
+  scale_y_continuous(limits = c(0,700), breaks = seq(0,700,100))+
+  geom_point(data = egg_size_data,
+             aes(x = x, y = EggLengthData),
+             color = "black")+
+  theme_bw()+
+  theme(text = element_text(size=16),
+        aspect.ratio = .7)
+ggsave("~/OneDrive - University of Wisconsin-La Crosse/GizzardShad/paper/figures/eggs.png")
+
+dmesh <- seq( from = min(Michaletz_data$density), 
+              to =max(Michaletz_data$density), 
+              length.out = length(Michaletz_data$density) )
+
+plot_df <- data.frame(x = dmesh , prob = surv_density(dmesh, m_par) )
+ggplot(data = plot_df,
+       aes( x = x, y = prob))+
+  geom_line(color = "blue", size = 1)+
+  labs(x = "density (age-0 per 1000 m^3)",
+       y = "probability of survival",
+       title = "Survival Probability for Age-0")+
+  scale_x_continuous(limits = c(0,max(Michaletz_data$density)), 
+                     breaks = seq(0,max(Michaletz_data$density),200))+
+  scale_y_continuous(limits = c(0,1), breaks = seq(0,1,.1))+
+  geom_point(data = Michaletz_data, 
+             aes(x = density, y = survival/100))+
+  theme_bwc()+
+  theme(text = element_text(size=16),
+        aspect.ratio = .7)
+
+## Model Simulation Setup ##
+# Normal Distribution 
 N <- 50 # number of size classes
 l_shad <- 0.00   # lower size limit in mm
 u_shad <- 450.0    # upper size limit in mm - we want this to be

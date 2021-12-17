@@ -76,7 +76,6 @@ Results of our work suggest that this model could serve as an important tool for
 %%Graphical abstract
 \begin{graphicalabstract}
 \begin{figure*}
-\label{llife_cycle}
     \begin{center}
 %\scalebox{.75}[.75]{
 \begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=3cm,
@@ -231,9 +230,10 @@ However, the strength of competition can subside as fish transition to different
 
 \subsection{Equations}
 We used an integral projection model to describe the life history of gizzard shad in the Upper Mississippi River (UMR) system. 
-Integral projection model (IPM) were introduced by Easterling \citep{easterling2000size}, as a generalization of stage-based, matrix population models. 
-IPMs have been used to describe a wide range of organisms \citep{ellner2016data, merow2014advancing, rees2014building} and are a natural choice for gizzard shad since many aspects of their life cycle have been studied. 
-Specifically, functions used in our model incorporate data from studies on egg production and adult size as well as the survival of the age-0 stage and density. 
+Integral projection models (IPM) were introduced by Easterling \citep{easterling2000size}, as a generalization of stage-based, matrix population models. 
+IPMs have been used to describe a wide range of organisms \citep{ellner2016data, merow2014advancing, rees2014building} and have only recently be used to model fish populations \citep{erickson2017integral, liao2019dynamic, white2016fitting, pollesch2022developing}.
+The availability of empirical size observation to aid with model parameterization makes IPM a natural choice for gizzard shad since many aspects of their life cycle have been studied. 
+Specifically, functions used in our model incorporate data from studies on egg production and adult size,  survival of the age-0 stage and density, and nearly thirty years of length measurements in the main channel of the Upper Mississippi River system.
 
 We assumed that variations among individual gizzard shad can be summarized by its length $z$ (in mm) ranging from the minimum possible length $L$ to the maximum value $U$. 
 The state of the population at time $t$ (in years) is described by the length distribution $n(z,t)$. 
@@ -246,7 +246,7 @@ For an individual of length $z$ at time $t$, $P(z',z)\Delta z$ is the probabilit
 Similarly. $F(z',z)\Delta z$ is the number of new offspring in the interval $[z', z' + \Delta z]$ present at time $t+1$, per length-$z$ individual at time $t$.
 
 \begin{figure*}
-\label{llife_cycle}
+\label{life_cycle}
     \begin{center}
 %\scalebox{.75}[.75]{
 \begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=3cm,

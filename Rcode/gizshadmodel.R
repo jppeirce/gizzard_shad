@@ -8,6 +8,10 @@ library(reshape2)
 ##############################################################
 ## Section 1 - Define the demographic functions and parameters
 ##############################################################
+
+# Estimating parameters from data
+source("gizshad_parameter_estimation.R")
+
 m_par <- tibble(
   ## growth from Michaletz (2017) paper - Table 1
   grow_rate = 0.26, # growth rate
@@ -27,13 +31,13 @@ m_par <- tibble(
   ## From Bodola (1955):
   egg_viable = 0.002,
   ## Estimated from Jons and Miranda (1997)
-  egg_slope = -4.361915,
-  egg_max = 41540.608025,
-  egg_infl = 935.528239,
+  egg_slope = egg_extended_m3$coefficients[1], # -4.361915
+  egg_max =  egg_extended_m3$coefficients[2], # 41540.608025
+  egg_infl = egg_extended_m3$coefficients[3], # 935.528239
   ## Spawning Probability - Estimated from Michaletz (2009)
   prob_spawn = 0.90,
-  surv0_int = 0.2686,
-  surv0_decay = 0.0030
+  surv0_int = coef(surv_den_exp)[1], # 0.2686
+  surv0_decay = coef(surv_den_exp)[2], # 0.0030
   )
 
 ##########################

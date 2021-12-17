@@ -17,7 +17,7 @@ source("gizshadmodel.R")
 
 N <- 50 # number of size classes
 l_shad <- 0.00   # lower size limit in mm
-u_shad <- 400.0    # upper size limit in mm - we want this to be
+u_shad <- 500.0    # upper size limit in mm - we want this to be
 # larger than L-infty
 delta_z <- (u_shad - l_shad) / N
 zmesh <-  l_shad + ((1:N) - 1 / 2) * (u_shad - l_shad) / N
@@ -78,9 +78,16 @@ ltrm_gzsd_main <- ltrm_gzsd_main %>%
 zmesh_obs <- ltrm_gzsd_main$length_round 
 
 ## Least square function to minimize ##
-least_sq <- function(surv_alpha){
-  m_par$surv_alpha <- surv_alpha # assign parameter
+least_sq <- function(x){
+  # assign parameters where
+  # x[1] = surv_alpha, x[2] = surv_beta
+  m_par$surv_alpha <- x[1]
+  m_par$surv_beta <- x[2] 
   ## Run model
+  l_shad <- 0.00   # lower size limit in mm
+  u_shad <- max(ltrm_gzsd_main$length_round)  # upper size limit in mm - we want this to be
+  delta_z <- (u_shad - l_shad) / N
+  zmesh <-  l_shad + ((1:N) - 1 / 2) * (u_shad - l_shad) / N
   # Initial length distribution
   n <- matrix(0, length(zmesh), tf)
   n0_total <- 995
@@ -89,7 +96,7 @@ least_sq <- function(surv_alpha){
   # Dynamical System
   for (i in 1:(tf - 1)) {
     k_iter <- (p_z1z(zmesh, zmesh, m_par) + f_z1z(zmesh, zmesh, n[, i],
-                                                          m_par)) * delta_z
+                                                  m_par)) * delta_z
     n[, i + 1] <- k_iter %*% n[, i]
   }
   # Compute equilibrium frequencies
@@ -107,10 +114,12 @@ delta_z <- (u_shad - l_shad) / N
 zmesh <-  l_shad + (1:N) * (u_shad - l_shad) / N
 # Optimize step
 
-opt <- optimize(least_sq, c(10,150))
+# Initial guess surv_alpha = 90, surv_beta = -5
+opt <- optim(c(90,-5), fn = least_sq)
 
 #### Now Check with La Grange
-m_par$surv_alpha <- opt$minimum
+m_par$surv_alpha <- opt$par[1]
+m_par$surv_beta <- opt$par[2]
 n <- matrix(0, length(zmesh), tf)
 n0_total <- 995
 n[, 1] <- dnorm(zmesh, mean = 0.5 * m_par$grow_max, sd = 30)
@@ -118,7 +127,7 @@ n[, 1] <- (n[, 1] / sum(n[, 1])) * n0_total / delta_z
 # Dynamical System
 for (i in 1:(tf - 1)) {
   k_iter <- (p_z1z(zmesh, zmesh, m_par) + f_z1z(zmesh, zmesh, n[, i],
-                                                        m_par)) * delta_z
+                                                m_par)) * delta_z
   n[, i + 1] <- k_iter %*% n[, i]
 }
 
@@ -137,5 +146,5 @@ ggplot(data = ltrm_gzsd_lg, aes(x = length_round)) +
   #  theme_bw()+
   theme(text = element_text(size=16),
         aspect.ratio = .7)
-ggsave("~/OneDrive - University of Wisconsin-La Crosse/GizzardShad/paper/figures/lagrange.pdf")
+#ggsave("~/OneDrive - University of Wisconsin-La Crosse/GizzardShad/paper/figures/lagrange.pdf")
 

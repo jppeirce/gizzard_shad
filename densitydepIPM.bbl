@@ -1,162 +1,126 @@
-\begin{thebibliography}{28}
-\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\begin{thebibliography}{29}
+\providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
-\providecommand{\href}[2]{#2}
-\providecommand{\path}[1]{#1}
-\providecommand{\DOIprefix}{doi:}
-\providecommand{\ArXivprefix}{arXiv:}
-\providecommand{\URLprefix}{URL: }
-\providecommand{\Pubmedprefix}{pmid:}
-\providecommand{\doi}[1]{\href{http://dx.doi.org/#1}{\path{#1}}}
-\providecommand{\Pubmed}[1]{\href{pmid:#1}{\path{#1}}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
+  \providecommand{\doi}[1]{doi:\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\url{#1}\endgroup}\fi
 \providecommand{\bibinfo}[2]{#2}
-\ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
-%Type = Article
+
 \bibitem[{Pierce et~al.(1981)Pierce, Wissing, and Megrey}]{pierce1981aspects}
 \bibinfo{author}{R.~J. Pierce}, \bibinfo{author}{T.~E. Wissing},
-  \bibinfo{author}{B.~A. Megrey},
-\newblock \bibinfo{title}{Aspects of the feeding ecology of gizzard shad in
-  acton lake, ohio},
-\newblock \bibinfo{journal}{Transactions of the American Fisheries Society}
-  \bibinfo{volume}{110} (\bibinfo{year}{1981}) \bibinfo{pages}{391--395}.
-%Type = Article
+  \bibinfo{author}{B.~A. Megrey}, \bibinfo{title}{Aspects of the feeding
+  ecology of gizzard shad in Acton Lake, Ohio}, \bibinfo{journal}{Transactions
+  of the American Fisheries Society}
+  \bibinfo{volume}{110}~(\bibinfo{number}{3}) (\bibinfo{year}{1981})
+  \bibinfo{pages}{391--395}.
+
 \bibitem[{Vanni et~al.(2005)Vanni, Arend, Bremigan, Bunnell, Garvey, Gonzalez,
   Renwick, Soranno, and Stein}]{vanni2005linking}
 \bibinfo{author}{M.~J. Vanni}, \bibinfo{author}{K.~K. Arend},
   \bibinfo{author}{M.~T. Bremigan}, \bibinfo{author}{D.~B. Bunnell},
   \bibinfo{author}{J.~E. Garvey}, \bibinfo{author}{M.~J. Gonzalez},
   \bibinfo{author}{W.~H. Renwick}, \bibinfo{author}{P.~A. Soranno},
-  \bibinfo{author}{R.~A. Stein},
-\newblock \bibinfo{title}{Linking landscapes and food webs: effects of
-  omnivorous fish and watersheds on reservoir ecosystems},
-\newblock \bibinfo{journal}{BioScience} \bibinfo{volume}{55}
+  \bibinfo{author}{R.~A. Stein}, \bibinfo{title}{Linking landscapes and food
+  webs: effects of omnivorous fish and watersheds on reservoir ecosystems},
+  \bibinfo{journal}{BioScience} \bibinfo{volume}{55}~(\bibinfo{number}{2})
   (\bibinfo{year}{2005}) \bibinfo{pages}{155--167}.
-%Type = Article
+
 \bibitem[{Jester et~al.(1972)Jester, Jensen et~al.}]{jester1972life}
 \bibinfo{author}{D.~B. Jester}, \bibinfo{author}{B.~L. Jensen}, et~al.,
-\newblock \bibinfo{title}{Life history and ecology of the gizzard shad,
-  \emph{Dorosoma cepedianum} (le sueur) with reference to {E}lephant {B}utte
-  {L}ake}  (\bibinfo{year}{1972}).
-%Type = Article
+  \bibinfo{title}{Life history and ecology of the gizzard shad, \emph{Dorosoma
+  cepedianum} (Le Sueur) with reference to {E}lephant {B}utte {L}ake} .
+
 \bibitem[{Mather et~al.(1995)Mather, Vanni, Wissing, Davis, and
   Schaus}]{mather1995regeneration}
 \bibinfo{author}{M.~E. Mather}, \bibinfo{author}{M.~J. Vanni},
   \bibinfo{author}{T.~E. Wissing}, \bibinfo{author}{S.~A. Davis},
-  \bibinfo{author}{M.~H. Schaus},
-\newblock \bibinfo{title}{Regeneration of nitrogen and phosphorus by bluegill
-  and gizzard shad: effect of feeding history},
-\newblock \bibinfo{journal}{Canadian Journal of Fisheries and Aquatic Sciences}
-  \bibinfo{volume}{52} (\bibinfo{year}{1995}) \bibinfo{pages}{2327--2338}.
-%Type = Article
+  \bibinfo{author}{M.~H. Schaus}, \bibinfo{title}{Regeneration of nitrogen and
+  phosphorus by bluegill and gizzard shad: effect of feeding history},
+  \bibinfo{journal}{Canadian Journal of Fisheries and Aquatic Sciences}
+  \bibinfo{volume}{52}~(\bibinfo{number}{11}) (\bibinfo{year}{1995})
+  \bibinfo{pages}{2327--2338}.
+
 \bibitem[{Schaus and Vanni(2000)}]{schaus2000effects}
 \bibinfo{author}{M.~H. Schaus}, \bibinfo{author}{M.~J. Vanni},
-\newblock \bibinfo{title}{Effects of gizzard shad on phytoplankton and nutrient
-  dynamics: role of sediment feeding and fish size},
-\newblock \bibinfo{journal}{Ecology} \bibinfo{volume}{81}
-  (\bibinfo{year}{2000}) \bibinfo{pages}{1701--1719}.
-%Type = Article
+  \bibinfo{title}{Effects of gizzard shad on phytoplankton and nutrient
+  dynamics: role of sediment feeding and fish size}, \bibinfo{journal}{Ecology}
+  \bibinfo{volume}{81}~(\bibinfo{number}{6}) (\bibinfo{year}{2000})
+  \bibinfo{pages}{1701--1719}.
+
 \bibitem[{Aday et~al.(2003)Aday, Hoxmeier, and Wahl}]{aday2003direct}
 \bibinfo{author}{D.~D. Aday}, \bibinfo{author}{R.~J.~H. Hoxmeier},
-  \bibinfo{author}{D.~H. Wahl},
-\newblock \bibinfo{title}{Direct and indirect effects of gizzard shad on
-  bluegill growth and population size structure},
-\newblock \bibinfo{journal}{Transactions of the American Fisheries Society}
-  \bibinfo{volume}{132} (\bibinfo{year}{2003}) \bibinfo{pages}{47--56}.
-%Type = Article
+  \bibinfo{author}{D.~H. Wahl}, \bibinfo{title}{Direct and indirect effects of
+  gizzard shad on bluegill growth and population size structure},
+  \bibinfo{journal}{Transactions of the American Fisheries Society}
+  \bibinfo{volume}{132}~(\bibinfo{number}{1}) (\bibinfo{year}{2003})
+  \bibinfo{pages}{47--56}.
+
 \bibitem[{Thorp et~al.(2006)Thorp, Thoms, and Delong}]{thorp2006riverine}
 \bibinfo{author}{J.~H. Thorp}, \bibinfo{author}{M.~C. Thoms},
-  \bibinfo{author}{M.~D. Delong},
-\newblock \bibinfo{title}{The riverine ecosystem synthesis: biocomplexity in
-  river networks across space and time},
-\newblock \bibinfo{journal}{River Research and Applications}
-  \bibinfo{volume}{22} (\bibinfo{year}{2006}) \bibinfo{pages}{123--147}.
-%Type = Article
-\bibitem[{Holland(1986)}]{holland1986distribution}
-\bibinfo{author}{L.~E. Holland},
-\newblock \bibinfo{title}{Distribution of early life history stages of fishes
-  in selected pools of the upper mississippi river},
-\newblock \bibinfo{journal}{Hydrobiologia} \bibinfo{volume}{136}
-  (\bibinfo{year}{1986}) \bibinfo{pages}{121--130}.
-%Type = Article
-\bibitem[{Love et~al.(2018)Love, Lederman, Anderson, DeBoer, and
-  Casper}]{love2018does}
-\bibinfo{author}{S.~A. Love}, \bibinfo{author}{N.~J. Lederman},
-  \bibinfo{author}{R.~L. Anderson}, \bibinfo{author}{J.~A. DeBoer},
-  \bibinfo{author}{A.~F. Casper},
-\newblock \bibinfo{title}{Does aquatic invasive species removal benefit native
-  fish? the response of gizzard shad (dorosoma cepedianum) to commercial
-  harvest of bighead carp (hypophthalmichthys nobilis) and silver carp (h.
-  molitrix)},
-\newblock \bibinfo{journal}{Hydrobiologia} \bibinfo{volume}{817}
-  (\bibinfo{year}{2018}) \bibinfo{pages}{403--412}.
-%Type = Article
+  \bibinfo{author}{M.~D. Delong}, \bibinfo{title}{The riverine ecosystem
+  synthesis: biocomplexity in river networks across space and time},
+  \bibinfo{journal}{River Research and Applications}
+  \bibinfo{volume}{22}~(\bibinfo{number}{2}) (\bibinfo{year}{2006})
+  \bibinfo{pages}{123--147}.
+
 \bibitem[{Catalano and Allen(2010)}]{catalano2010size}
 \bibinfo{author}{M.~J. Catalano}, \bibinfo{author}{M.~S. Allen},
-\newblock \bibinfo{title}{A size-and age-structured model to estimate fish
-  recruitment, growth, mortality, and gear selectivity},
-\newblock \bibinfo{journal}{Fisheries Research} \bibinfo{volume}{105}
-  (\bibinfo{year}{2010}) \bibinfo{pages}{38--45}.
-%Type = Article
+  \bibinfo{title}{A size-and age-structured model to estimate fish recruitment,
+  growth, mortality, and gear selectivity}, \bibinfo{journal}{Fisheries
+  Research} \bibinfo{volume}{105}~(\bibinfo{number}{1}) (\bibinfo{year}{2010})
+  \bibinfo{pages}{38--45}.
+
 \bibitem[{Catalano and Allen(2011)}]{catalano2011whole}
 \bibinfo{author}{M.~J. Catalano}, \bibinfo{author}{M.~S. Allen},
-\newblock \bibinfo{title}{A whole-lake density reduction to assess compensatory
-  responses of gizzard shad dorosoma cepedianum},
-\newblock \bibinfo{journal}{Canadian Journal of Fisheries and Aquatic Sciences}
-  \bibinfo{volume}{68} (\bibinfo{year}{2011}) \bibinfo{pages}{955--968}.
-%Type = Phdthesis
+  \bibinfo{title}{A whole-lake density reduction to assess compensatory
+  responses of gizzard shad Dorosoma cepedianum}, \bibinfo{journal}{Canadian
+  Journal of Fisheries and Aquatic Sciences}
+  \bibinfo{volume}{68}~(\bibinfo{number}{6}) (\bibinfo{year}{2011})
+  \bibinfo{pages}{955--968}.
+
 \bibitem[{Bodola(1955)}]{bodola1955life}
 \bibinfo{author}{A.~Bodola}, \bibinfo{title}{The life history of the gizzard
-  shad, Dorosoma cepedianum, in western Lake Erie}, Ph.D. thesis, Doctoral
-  dissertation. Ohio State University, Columbus, \bibinfo{year}{1955}.
-%Type = Article
-\bibitem[{Erickson et~al.(2017)Erickson, Eager, Brey, Hansen, and
-  Kocovsky}]{erickson2017integral}
-\bibinfo{author}{R.~A. Erickson}, \bibinfo{author}{E.~A. Eager},
-  \bibinfo{author}{M.~K. Brey}, \bibinfo{author}{M.~J. Hansen},
-  \bibinfo{author}{P.~M. Kocovsky},
-\newblock \bibinfo{title}{An integral projection model with yy-males and
-  application to evaluating grass carp control},
-\newblock \bibinfo{journal}{Ecological Modelling} \bibinfo{volume}{361}
-  (\bibinfo{year}{2017}) \bibinfo{pages}{14--25}.
-%Type = Article
+  shad, Dorosoma cepedianum, in western Lake Erie}, Ph.D. thesis,
+  \bibinfo{school}{Doctoral dissertation. Ohio State University, Columbus},
+  \bibinfo{year}{1955}.
+
 \bibitem[{Michaletz(2017)}]{michaletz2017variation}
-\bibinfo{author}{P.~Michaletz},
-\newblock \bibinfo{title}{Variation in characteristics among gizzard shad
-  populations: The role of impoundment size and productivity},
-\newblock \bibinfo{journal}{Fisheries Management and Ecology}
-  \bibinfo{volume}{24} (\bibinfo{year}{2017}) \bibinfo{pages}{361--371}.
-%Type = Article
+\bibinfo{author}{P.~Michaletz}, \bibinfo{title}{Variation in characteristics
+  among gizzard shad populations: The role of impoundment size and
+  productivity}, \bibinfo{journal}{Fisheries Management and Ecology}
+  \bibinfo{volume}{24}~(\bibinfo{number}{5}) (\bibinfo{year}{2017})
+  \bibinfo{pages}{361--371}.
+
 \bibitem[{Jons and Miranda(1997)}]{jons1997ovarian}
 \bibinfo{author}{G.~Jons}, \bibinfo{author}{L.~Miranda},
-\newblock \bibinfo{title}{Ovarian weight as an index of fecundity, maturity,
-  and spawning periodicity},
-\newblock \bibinfo{journal}{Journal of Fish Biology} \bibinfo{volume}{50}
-  (\bibinfo{year}{1997}) \bibinfo{pages}{150--156}.
-%Type = Article
+  \bibinfo{title}{Ovarian weight as an index of fecundity, maturity, and
+  spawning periodicity}, \bibinfo{journal}{Journal of Fish Biology}
+  \bibinfo{volume}{50}~(\bibinfo{number}{1}) (\bibinfo{year}{1997})
+  \bibinfo{pages}{150--156}.
+
 \bibitem[{Michaletz(2010)}]{michaletz2010overwinter}
-\bibinfo{author}{P.~H. Michaletz},
-\newblock \bibinfo{title}{Overwinter survival of age-0 gizzard shad in missouri
-  reservoirs spanning a productivity gradient: roles of body size and winter
-  severity},
-\newblock \bibinfo{journal}{Transactions of the American Fisheries Society}
-  \bibinfo{volume}{139} (\bibinfo{year}{2010}) \bibinfo{pages}{241--256}.
-%Type = Article
+\bibinfo{author}{P.~H. Michaletz}, \bibinfo{title}{Overwinter survival of age-0
+  gizzard shad in Missouri reservoirs spanning a productivity gradient: roles
+  of body size and winter severity}, \bibinfo{journal}{Transactions of the
+  American Fisheries Society} \bibinfo{volume}{139}~(\bibinfo{number}{1})
+  (\bibinfo{year}{2010}) \bibinfo{pages}{241--256}.
+
 \bibitem[{Easterling et~al.(2000)Easterling, Ellner, and
   Dixon}]{easterling2000size}
 \bibinfo{author}{M.~R. Easterling}, \bibinfo{author}{S.~P. Ellner},
-  \bibinfo{author}{P.~M. Dixon},
-\newblock \bibinfo{title}{Size-specific sensitivity: applying a new structured
-  population model},
-\newblock \bibinfo{journal}{Ecology} \bibinfo{volume}{81}
-  (\bibinfo{year}{2000}) \bibinfo{pages}{694--708}.
-%Type = Article
+  \bibinfo{author}{P.~M. Dixon}, \bibinfo{title}{Size-specific sensitivity:
+  applying a new structured population model}, \bibinfo{journal}{Ecology}
+  \bibinfo{volume}{81}~(\bibinfo{number}{3}) (\bibinfo{year}{2000})
+  \bibinfo{pages}{694--708}.
+
 \bibitem[{Ellner et~al.(2016)Ellner, Childs, Rees et~al.}]{ellner2016data}
 \bibinfo{author}{S.~P. Ellner}, \bibinfo{author}{D.~Z. Childs},
-  \bibinfo{author}{M.~Rees}, et~al.,
-\newblock \bibinfo{title}{Data-driven modelling of structured populations},
-\newblock \bibinfo{journal}{A practical guide to the Integral Projection Model.
-  Cham: Springer}  (\bibinfo{year}{2016}).
-%Type = Article
+  \bibinfo{author}{M.~Rees}, et~al., \bibinfo{title}{Data-driven modelling of
+  structured populations}, \bibinfo{journal}{A practical guide to the Integral
+  Projection Model. Cham: Springer} .
+
 \bibitem[{Merow et~al.(2014)Merow, Dahlgren, Metcalf, Childs, Evans, Jongejans,
   Record, Rees, Salguero-G{\'o}mez, and McMahon}]{merow2014advancing}
 \bibinfo{author}{C.~Merow}, \bibinfo{author}{J.~P. Dahlgren},
@@ -164,70 +128,109 @@
   \bibinfo{author}{M.~E. Evans}, \bibinfo{author}{E.~Jongejans},
   \bibinfo{author}{S.~Record}, \bibinfo{author}{M.~Rees},
   \bibinfo{author}{R.~Salguero-G{\'o}mez}, \bibinfo{author}{S.~M. McMahon},
-\newblock \bibinfo{title}{Advancing population ecology with integral projection
-  models: a practical guide},
-\newblock \bibinfo{journal}{Methods in Ecology and Evolution}
-  \bibinfo{volume}{5} (\bibinfo{year}{2014}) \bibinfo{pages}{99--110}.
-%Type = Article
+  \bibinfo{title}{Advancing population ecology with integral projection models:
+  a practical guide}, \bibinfo{journal}{Methods in Ecology and Evolution}
+  \bibinfo{volume}{5}~(\bibinfo{number}{2}) (\bibinfo{year}{2014})
+  \bibinfo{pages}{99--110}.
+
 \bibitem[{Rees et~al.(2014)Rees, Childs, and Ellner}]{rees2014building}
 \bibinfo{author}{M.~Rees}, \bibinfo{author}{D.~Z. Childs},
-  \bibinfo{author}{S.~P. Ellner},
-\newblock \bibinfo{title}{Building integral projection models: a user's guide},
-\newblock \bibinfo{journal}{Journal of Animal Ecology} \bibinfo{volume}{83}
-  (\bibinfo{year}{2014}) \bibinfo{pages}{528--545}.
-%Type = Book
+  \bibinfo{author}{S.~P. Ellner}, \bibinfo{title}{Building integral projection
+  models: a user's guide}, \bibinfo{journal}{Journal of Animal Ecology}
+  \bibinfo{volume}{83}~(\bibinfo{number}{3}) (\bibinfo{year}{2014})
+  \bibinfo{pages}{528--545}.
+
+\bibitem[{Erickson et~al.(2017)Erickson, Eager, Brey, Hansen, and
+  Kocovsky}]{erickson2017integral}
+\bibinfo{author}{R.~A. Erickson}, \bibinfo{author}{E.~A. Eager},
+  \bibinfo{author}{M.~K. Brey}, \bibinfo{author}{M.~J. Hansen},
+  \bibinfo{author}{P.~M. Kocovsky}, \bibinfo{title}{An integral projection
+  model with YY-males and application to evaluating grass carp control},
+  \bibinfo{journal}{Ecological Modelling} \bibinfo{volume}{361}
+  (\bibinfo{year}{2017}) \bibinfo{pages}{14--25}.
+
+\bibitem[{Liao et~al.(2019)Liao, Shan, Zhou, Han, Chen, and
+  Liu}]{liao2019dynamic}
+\bibinfo{author}{B.~Liao}, \bibinfo{author}{X.~Shan},
+  \bibinfo{author}{C.~Zhou}, \bibinfo{author}{Y.~Han},
+  \bibinfo{author}{Y.~Chen}, \bibinfo{author}{Q.~Liu}, \bibinfo{title}{A
+  dynamic energy budget--integral projection model (DEB-IPM) to predict
+  population-level dynamics based on individual data: a case study using the
+  small and rapidly reproducing species Engraulis japonicus},
+  \bibinfo{journal}{Marine and Freshwater Research}
+  \bibinfo{volume}{71}~(\bibinfo{number}{4}) (\bibinfo{year}{2019})
+  \bibinfo{pages}{461--468}.
+
+\bibitem[{White et~al.(2016)White, Nickols, Malone, Carr, Starr, Cordoleani,
+  Baskett, Hastings, and Botsford}]{white2016fitting}
+\bibinfo{author}{J.~W. White}, \bibinfo{author}{K.~J. Nickols},
+  \bibinfo{author}{D.~Malone}, \bibinfo{author}{M.~H. Carr},
+  \bibinfo{author}{R.~M. Starr}, \bibinfo{author}{F.~Cordoleani},
+  \bibinfo{author}{M.~L. Baskett}, \bibinfo{author}{A.~Hastings},
+  \bibinfo{author}{L.~W. Botsford}, \bibinfo{title}{Fitting state-space
+  integral projection models to size-structured time series data to estimate
+  unknown parameters}, \bibinfo{journal}{Ecological Applications}
+  \bibinfo{volume}{26}~(\bibinfo{number}{8}) (\bibinfo{year}{2016})
+  \bibinfo{pages}{2677--2694}.
+
+\bibitem[{Pollesch et~al.(2022)Pollesch, Flynn, Kadlec, Swintek, Raimondo, and
+  Etterson}]{pollesch2022developing}
+\bibinfo{author}{N.~Pollesch}, \bibinfo{author}{K.~Flynn},
+  \bibinfo{author}{S.~Kadlec}, \bibinfo{author}{J.~Swintek},
+  \bibinfo{author}{S.~Raimondo}, \bibinfo{author}{M.~Etterson},
+  \bibinfo{title}{Developing integral projection models for ecotoxicology},
+  \bibinfo{journal}{Ecological Modelling} \bibinfo{volume}{464}
+  (\bibinfo{year}{2022}) \bibinfo{pages}{109813}.
+
 \bibitem[{Bolker(2008)}]{bolker2008ecological}
 \bibinfo{author}{B.~M. Bolker}, \bibinfo{title}{Ecological models and data in
   R}, \bibinfo{publisher}{Princeton University Press}, \bibinfo{year}{2008}.
-%Type = Article
+
 \bibitem[{Gutreuter et~al.(1995)Gutreuter, Burkhardt, and
   Lubinski}]{gutreuter1995long}
 \bibinfo{author}{S.~Gutreuter}, \bibinfo{author}{R.~Burkhardt},
-  \bibinfo{author}{K.~S. Lubinski},
-\newblock \bibinfo{title}{Long term resource monitoring program procedures
-  [microform]}  (\bibinfo{year}{1995}).
-%Type = Techreport
+  \bibinfo{author}{K.~S. Lubinski}, \bibinfo{title}{Long Term Resource
+  Monitoring Program procedures [microform]} .
+
 \bibitem[{Ickes and Burkhardt(2002)}]{ickes2002evaluation}
 \bibinfo{author}{B.~S. Ickes}, \bibinfo{author}{R.~W. Burkhardt},
   \bibinfo{title}{Evaluation and proposed refinement of the sampling design for
   the Long Term Resource Monitoring Program's fish component},
-  \bibinfo{type}{Technical Report}, Geological Survey La Crosse WI Upper
-  Midwest Environmental Sciences Center, \bibinfo{year}{2002}.
-%Type = Article
+  \bibinfo{type}{Tech. Rep.}, \bibinfo{institution}{Geological Survey La Crosse
+  WI Upper Midwest Environmental Sciences Center}, \bibinfo{year}{2002}.
+
 \bibitem[{Burden and Faires(2005)}]{burden2005numerical}
 \bibinfo{author}{R.~Burden}, \bibinfo{author}{J.~D. Faires},
-\newblock \bibinfo{title}{Numerical analysis 8th ed},
-\newblock \bibinfo{journal}{Thomson Brooks/Cole}  (\bibinfo{year}{2005}).
-%Type = Article
+  \bibinfo{title}{Numerical analysis 8th ed}, \bibinfo{journal}{Thomson
+  Brooks/Cole} .
+
 \bibitem[{Ellner and Rees(2006)}]{ellner2006integral}
 \bibinfo{author}{S.~P. Ellner}, \bibinfo{author}{M.~Rees},
-\newblock \bibinfo{title}{Integral projection models for species with complex
-  demography},
-\newblock \bibinfo{journal}{The American Naturalist} \bibinfo{volume}{167}
-  (\bibinfo{year}{2006}) \bibinfo{pages}{410--428}.
-%Type = Article
+  \bibinfo{title}{Integral projection models for species with complex
+  demography}, \bibinfo{journal}{The American Naturalist}
+  \bibinfo{volume}{167}~(\bibinfo{number}{3}) (\bibinfo{year}{2006})
+  \bibinfo{pages}{410--428}.
+
 \bibitem[{Ramula et~al.(2009)Ramula, Rees, and Buckley}]{ramula2009integral}
 \bibinfo{author}{S.~Ramula}, \bibinfo{author}{M.~Rees}, \bibinfo{author}{Y.~M.
-  Buckley},
-\newblock \bibinfo{title}{Integral projection models perform better for small
+  Buckley}, \bibinfo{title}{Integral projection models perform better for small
   demographic data sets than matrix population models: a case study of two
-  perennial herbs},
-\newblock \bibinfo{journal}{Journal of Applied Ecology} \bibinfo{volume}{46}
-  (\bibinfo{year}{2009}) \bibinfo{pages}{1048--1053}.
-%Type = Article
+  perennial herbs}, \bibinfo{journal}{Journal of Applied Ecology}
+  \bibinfo{volume}{46}~(\bibinfo{number}{5}) (\bibinfo{year}{2009})
+  \bibinfo{pages}{1048--1053}.
+
 \bibitem[{Williams et~al.(2012)Williams, Miller, and
   Ellner}]{williams2012avoiding}
 \bibinfo{author}{J.~L. Williams}, \bibinfo{author}{T.~E. Miller},
-  \bibinfo{author}{S.~P. Ellner},
-\newblock \bibinfo{title}{Avoiding unintentional eviction from integral
-  projection models},
-\newblock \bibinfo{journal}{Ecology} \bibinfo{volume}{93}
-  (\bibinfo{year}{2012}) \bibinfo{pages}{2008--2014}.
-%Type = Manual
+  \bibinfo{author}{S.~P. Ellner}, \bibinfo{title}{Avoiding unintentional
+  eviction from integral projection models}, \bibinfo{journal}{Ecology}
+  \bibinfo{volume}{93}~(\bibinfo{number}{9}) (\bibinfo{year}{2012})
+  \bibinfo{pages}{2008--2014}.
+
 \bibitem[{{R Core Team}(2017)}]{R}
 \bibinfo{author}{{R Core Team}}, \bibinfo{title}{R: A Language and Environment
   for Statistical Computing}, \bibinfo{organization}{R Foundation for
   Statistical Computing}, \bibinfo{address}{Vienna, Austria},
-  \bibinfo{year}{2017}. \URLprefix \url{https://www.R-project.org/}.
+  \urlprefix\url{https://www.R-project.org/}, \bibinfo{year}{2017}.
 
 \end{thebibliography}

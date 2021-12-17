@@ -1,56 +1,49 @@
-This is BibTeX, Version 0.99d
-Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+This is BibTeX, Version 0.99d (TeX Live 2018)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: densitydepIPM.aux
-Reallocating 'name_of_file' (item size: 1) to 21 items.
 The style file: elsarticle-num-names.bst
-Reallocating 'name_of_file' (item size: 1) to 8 items.
 Database file #1: gizshad.bib
-Repeated entry---line 88 of file gizshad.bib
- : @article{catalano2010size
- :                          ,
-I'm skipping whatever remains of this entry
-Reallocating 'singl_function' (item size: 4) to 100 items.
 Warning--empty journal in jester1972life
 Warning--empty journal in gutreuter1995long
-You've used 28 entries,
-            2918 wiz_defined-function locations,
-            800 strings with 10815 characters,
-and the built_in function-call counts, 17963 in all, are:
-= -- 1303
-> -- 756
-< -- 13
-+ -- 293
-- -- 255
-* -- 2109
-:= -- 2591
+You've used 29 entries,
+            2793 wiz_defined-function locations,
+            785 strings with 11000 characters,
+and the built_in function-call counts, 16787 in all, are:
+= -- 979
+> -- 651
+< -- 12
++ -- 270
+- -- 200
+* -- 2282
+:= -- 2267
 add.period$ -- 29
-call.type$ -- 28
-change.case$ -- 220
-chr.to.int$ -- 28
-cite$ -- 30
+call.type$ -- 29
+change.case$ -- 117
+chr.to.int$ -- 29
+cite$ -- 31
 duplicate$ -- 1326
-empty$ -- 1294
-format.name$ -- 341
-if$ -- 3255
+empty$ -- 1259
+format.name$ -- 291
+if$ -- 2940
 int.to.chr$ -- 1
-int.to.str$ -- 1
-missing$ -- 268
-newline$ -- 145
-num.names$ -- 112
-pop$ -- 490
+int.to.str$ -- 30
+missing$ -- 337
+newline$ -- 97
+num.names$ -- 87
+pop$ -- 371
 preamble$ -- 1
-purify$ -- 223
+purify$ -- 145
 quote$ -- 0
-skip$ -- 299
+skip$ -- 328
 stack$ -- 0
-substring$ -- 849
-swap$ -- 958
+substring$ -- 887
+swap$ -- 1221
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 249
+type$ -- 172
 warning$ -- 2
-while$ -- 124
+while$ -- 99
 width$ -- 0
-write$ -- 370
-(There was 1 error message)
+write$ -- 297
+(There were 2 warnings)
