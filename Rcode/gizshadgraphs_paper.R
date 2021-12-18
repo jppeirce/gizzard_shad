@@ -42,9 +42,11 @@ ggplot(data = plot_df,
   scale_y_continuous(limits = c(0,1), breaks = seq(0,1,.1))+
   geom_point(data = Michaletz_data, 
              aes(x = density, y = survival/100))+
-  theme_bwc()+
+  theme_bw()+
   theme(text = element_text(size=16),
         aspect.ratio = .7)
+ggsave("~/OneDrive - University of Wisconsin-La Crosse/GizzardShad/paper/figures/age0surv.png")
+
 
 ## Model Simulation Setup ##
 # Normal Distribution 
@@ -124,14 +126,14 @@ for (i in 1:tf) {
 plot_df <- tibble(time_years = 1:tf, prob = surv_t[1:tf])
 ggplot(data = plot_df,
        aes(x = time_years, y = prob)) +
-  geom_line(color = "blue", size = 1) +
+  geom_line(color = "black", size = 1) +
   labs(x = "time (in years)",
        y = "probability of survival",
        title = "Survival Probability of Age-0")+
   #       subtitle = paste("Inital Total Density =", n0_total / 1000,
   #                        "per m^3")) +
   scale_x_continuous(limits = c(5, tf), breaks = seq(0, tf, 5)) +
-  scale_y_continuous(limits = c(0, .02), breaks = seq(0, 0.2, 0.005)) +
+  scale_y_continuous(limits = c(0, .04), breaks = seq(0, 0.4, 0.005)) +
   theme_bw() +
   theme(text = element_text(size = 16),
         aspect.ratio = .7)
@@ -173,7 +175,7 @@ ltrm_gzsd <- ltrm_gzsd %>% mutate(year = year(fdate))
 ltrm_gzsd <- ltrm_gzsd %>%
   filter(year != 2107)
 
-## Model equilibrium n(z,100) compated with LTRMP data from La Grange
+## Model equilibrium n(z,100) computed with LTRMP data from La Grange
 #### Now Check with La Grange
 n <- matrix(0, length(zmesh), tf)
 n0_total <- 995

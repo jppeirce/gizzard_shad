@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  17 DEC 2021 11:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  18 DEC 2021 08:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1305,29 +1305,29 @@ r/m/n/12 ) = [](\OML/cmm/m/it/12 ^^V[]; ^^[[]\OT1/cmr/m/n/12 )$
  []
 
 [7] [8]
-<figures/Figure1a.pdf, id=263, 818.05624pt x 505.89pt>
-File: figures/Figure1a.pdf Graphic file (type pdf)
-<use figures/Figure1a.pdf>
-Package pdftex.def Info: figures/Figure1a.pdf  used on input line 392.
-(pdftex.def)             Requested size: 201.99121pt x 124.91289pt.
-<figures/Figure1b.pdf, id=264, 818.05624pt x 505.89pt>
-File: figures/Figure1b.pdf Graphic file (type pdf)
-<use figures/Figure1b.pdf>
-Package pdftex.def Info: figures/Figure1b.pdf  used on input line 397.
-(pdftex.def)             Requested size: 201.99121pt x 124.91289pt.
- [9 <./figures/Figure1a.pdf> <./figures/Figure1b.pdf>]
-<figures/ntotal.png, id=310, 3872.4675pt x 2483.2775pt>
+<figures/eggs.png, id=263, 3872.4675pt x 2483.2775pt>
+File: figures/eggs.png Graphic file (type png)
+<use figures/eggs.png>
+Package pdftex.def Info: figures/eggs.png  used on input line 392.
+(pdftex.def)             Requested size: 201.99121pt x 129.51387pt.
+<figures/age0surv.png, id=265, 3872.4675pt x 2483.2775pt>
+File: figures/age0surv.png Graphic file (type png)
+<use figures/age0surv.png>
+Package pdftex.def Info: figures/age0surv.png  used on input line 397.
+(pdftex.def)             Requested size: 201.99121pt x 129.51387pt.
+ [9 <./figures/eggs.png> <./figures/age0surv.png>]
+<figures/ntotal.png, id=302, 3872.4675pt x 2483.2775pt>
 File: figures/ntotal.png Graphic file (type png)
 <use figures/ntotal.png>
 Package pdftex.def Info: figures/ntotal.png  used on input line 436.
 (pdftex.def)             Requested size: 201.99121pt x 129.51387pt.
-<figures/lagrange.pdf, id=312, 929.4725pt x 595.22375pt>
+<figures/lagrange.pdf, id=303, 929.4725pt x 595.22375pt>
 File: figures/lagrange.pdf Graphic file (type pdf)
 <use figures/lagrange.pdf>
 Package pdftex.def Info: figures/lagrange.pdf  used on input line 441.
 (pdftex.def)             Requested size: 201.99121pt x 129.35114pt.
  [10]
-<figures/Figure2a.pdf, id=323, 929.4725pt x 595.22375pt>
+<figures/Figure2a.pdf, id=315, 929.4725pt x 595.22375pt>
 File: figures/Figure2a.pdf Graphic file (type pdf)
 <use figures/Figure2a.pdf>
 Package pdftex.def Info: figures/Figure2a.pdf  used on input line 462.
@@ -1337,12 +1337,12 @@ Package pdftex.def Info: figures/Figure2a.pdf  used on input line 462.
 LaTeX Warning: Reference `surv_age0' on page 11 undefined on input line 485.
 
 [11 <./figures/ntotal.png> <./figures/lagrange.pdf>]
-<figures/sim.png, id=339, 3872.4675pt x 2483.2775pt>
+<figures/sim.png, id=331, 3872.4675pt x 2483.2775pt>
 File: figures/sim.png Graphic file (type png)
 <use figures/sim.png>
 Package pdftex.def Info: figures/sim.png  used on input line 512.
 (pdftex.def)             Requested size: 201.99121pt x 129.51387pt.
-<figures/LTRMgraph.pdf, id=340, 818.05624pt x 505.89pt>
+<figures/LTRMgraph.pdf, id=332, 818.05624pt x 505.89pt>
 File: figures/LTRMgraph.pdf Graphic file (type pdf)
 <use figures/LTRMgraph.pdf>
 Package pdftex.def Info: figures/LTRMgraph.pdf  used on input line 517.
@@ -1367,8 +1367,8 @@ LaTeX Warning: There were multiply-defined labels.
  ) 
 Here is how much of TeX's memory you used:
  30739 strings out of 492649
- 587545 string characters out of 6129622
- 685880 words of memory out of 5000000
+ 587477 string characters out of 6129622
+ 685879 words of memory out of 5000000
  34115 multiletter control sequences out of 15000+600000
  540026 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1392,10 +1392,10 @@ ve/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2018/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2018/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on densitydepIPM.pdf (19 pages, 1939504 bytes).
+Output written on densitydepIPM.pdf (19 pages, 2489249 bytes).
 PDF statistics:
- 485 PDF objects out of 1000 (max. 8388607)
- 421 compressed objects within 5 object streams
+ 477 PDF objects out of 1000 (max. 8388607)
+ 413 compressed objects within 5 object streams
  97 named destinations out of 1000 (max. 500000)
  205 words of extra memory for PDF output out of 10000 (max. 10000000)
 
