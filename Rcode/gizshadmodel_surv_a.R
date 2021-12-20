@@ -21,7 +21,7 @@ u_shad <- 500.0    # upper size limit in mm - we want this to be
 # larger than L-infty
 delta_z <- (u_shad - l_shad) / N
 zmesh <-  l_shad + ((1:N) - 1 / 2) * (u_shad - l_shad) / N
-tf <- 100 # number of years
+tf <- 500 # number of years
 
 # Initial length distribution
 n <- matrix(0, length(zmesh), tf)

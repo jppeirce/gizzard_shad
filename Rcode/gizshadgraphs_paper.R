@@ -56,7 +56,7 @@ u_shad <- 450.0    # upper size limit in mm - we want this to be
                    # larger than L-infty
 delta_z <- (u_shad - l_shad) / N
 zmesh <-  l_shad + ((1:N) - 1 / 2) * (u_shad - l_shad) / N
-tf <- 100 # number of years
+tf <- 500 # number of years
 
 # Initial length distribution
 n <- matrix(0, length(zmesh), tf)
@@ -67,6 +67,11 @@ n[, 1] <- (n[, 1] / sum(n[, 1])) * n0_total / delta_z
 # Note: sum(n[,1])*delta_z = n0_total
 
 # Dynamical System
+# update survival alpha and beta parameters if needed
+# use if gizshadmode_surv_a.R was recently run
+m_par$surv_alpha <- opt$par[1]
+m_par$surv_beta <- opt$par[2]
+
 for (i in 1:(tf - 1)) {
   k_iter <- (p_z1z(zmesh, zmesh, m_par) + f_z1z(zmesh, zmesh, n[, i],
                                                 m_par)) * delta_z
@@ -99,7 +104,7 @@ ggsave("~/OneDrive - University of Wisconsin-La Crosse/GizzardShad/paper/figures
 ## Length FREQUENCY distributions for first few years
 #####################################################
 show_years <- 1:4
-#show_years <- c(5, 15, 25)
+#show_years <- c(160, 170, 182)
 #show_years <- 41:51
 n_freq <- sweep(n, 2, colSums(n),  FUN = "/")
 plot_df <- data.frame(z = zmesh, year = n_freq[,show_years])
@@ -126,41 +131,18 @@ for (i in 1:tf) {
 plot_df <- tibble(time_years = 1:tf, prob = surv_t[1:tf])
 ggplot(data = plot_df,
        aes(x = time_years, y = prob)) +
-  geom_line(color = "black", size = 1) +
+  geom_line()+
   labs(x = "time (in years)",
        y = "probability of survival",
        title = "Survival Probability of Age-0")+
   #       subtitle = paste("Inital Total Density =", n0_total / 1000,
   #                        "per m^3")) +
-  scale_x_continuous(limits = c(5, tf), breaks = seq(0, tf, 5)) +
+  scale_x_continuous(limits = c(5, tf), breaks = seq(0, tf, 50)) +
   scale_y_continuous(limits = c(0, .04), breaks = seq(0, 0.4, 0.005)) +
   theme_bw() +
   theme(text = element_text(size = 16),
         aspect.ratio = .7)
 ggsave("~/OneDrive - University of Wisconsin-La Crosse/GizzardShad/paper/figures/Figure2a.pdf")
-
-
-# Population growth rate lambda vs time
-lambda_t <- rep(0, tf)
-for (i in 1:(tf - 1)) {
-  lambda_t[i] <- n_total[i + 1] / n_total[i]
-}
-
-plot_df <- tibble(time_years = 1:tf, lambda = lambda_t[1:tf])
-ggplot(data = plot_df,
-       aes(x = time_years, y = lambda)) +
-  geom_line(color = "blue", size = 1) +
-  geom_abline(slope = 0, intercept =1) +
-  labs(x = "time (in years)",
-       y = "lambda",
-       title = "Population Growth Rate")+
-  scale_x_continuous(limits = c(5, tf), breaks = seq(0, tf, 10)) +
-  scale_y_continuous(limits = c(0.5, 2.5), breaks = seq(.5, 2.5, .5)) +
-  theme_bw() +
-  theme(text = element_text(size = 16),
-        aspect.ratio = .7)
-ggsave("~/OneDrive - University of Wisconsin-La Crosse/GizzardShad/paper/figures/Figure2b.pdf")
-
 
 #############################
 ########
