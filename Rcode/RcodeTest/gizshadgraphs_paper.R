@@ -12,7 +12,7 @@ u_shad <- 500.0    # upper size limit in mm - we want this to be
                    # larger than L-infty
 delta_z <- (u_shad - l_shad) / N
 zmesh <-  l_shad + ((1:N) - 1 / 2) * (u_shad - l_shad) / N
-tf <- 100 # number of years
+tf <- 500 # number of years
 
 # Initial length distribution
 n <- matrix(0, length(zmesh), tf)
@@ -56,7 +56,7 @@ ggsave("~/Documents/research/gizzard_shad/figures/ntotal.png")
 #####################################################
 show_years <- 1:4
 #show_years <- c(5, 15, 25)
-#show_years <- 41:51
+show_years <- 800:808
 n_freq <- sweep(n, 2, colSums(n),  FUN = "/")
 plot_df <- data.frame(z = zmesh, year = n_freq[,show_years])
 plot_df <- melt(plot_df, id.vars = 'z', variable.name = 'year')

@@ -21,7 +21,7 @@ u_shad <- 500.0    # upper size limit in mm - we want this to be
 # larger than L-infty
 delta_z <- (u_shad - l_shad) / N
 zmesh <-  l_shad + ((1:N) - 1 / 2) * (u_shad - l_shad) / N
-tf <- 100 # number of years
+tf <- 300 # number of years
 
 # Initial length distribution
 n <- matrix(0, length(zmesh), tf)
@@ -99,8 +99,12 @@ least_sq <- function(x){
                                                           m_par)) * delta_z
     n[, i + 1] <- k_iter %*% n[, i]
   }
-  # Compute equilibrium frequencies
-  model_equil <- n[zmesh_obs/delta_z, tf]/sum(n[zmesh_obs/delta_z, tf])
+  # Compute equilibrium frequencies - averaged over approximately 1 period of 8 years
+  ### Since tf = 300:
+  year_start <- 290
+  year_end <- 290 + 8 - 1
+  model_equil <- (1/8)*rowSums(n[zmesh_obs/delta_z, year_start:year_end]/sum(n[zmesh_obs/delta_z, year_start:year_end]) )
+  #  model_equil <- n[zmesh_obs/delta_z, tf]/sum(n[zmesh_obs/delta_z, tf])
   ## End model 
   sse <- sum((ltrm_gzsd_main$freq - model_equil)^2)
   return(sse)
@@ -115,7 +119,12 @@ zmesh <-  l_shad + (1:N) * (u_shad - l_shad) / N
 # Optimize step
 
 # Initial guess surv_alpha = 90, surv_beta = -5
-opt <- optim(c(90,-5), fn = least_sq)
+ opt <- optim(c(90,-50), fn = least_sq)
+# over an interval
+ opt <- optim(c(90,-5), fn = least_sq, 
+ method = "L-BFGS-B",
+ lower = c(20,-1),
+ upper = c(150, -1200))
 
 #### Now Check with La Grange
 m_par$surv_alpha <- opt$par[1]

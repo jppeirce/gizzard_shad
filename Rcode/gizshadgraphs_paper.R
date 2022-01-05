@@ -7,6 +7,16 @@ source("gizshadmodel.R")
 ## Graphing Fun Time!
 #######################
 
+## Model Simulation Setup ##
+# Normal Distribution 
+N <- 50 # number of size classes
+l_shad <- 0.00   # lower size limit in mm
+u_shad <- 500.0    # upper size limit in mm - we want this to be
+# larger than L-infty
+delta_z <- (u_shad - l_shad) / N
+zmesh <-  l_shad + ((1:N) - 1 / 2) * (u_shad - l_shad) / N
+tf <- 5000 # number of years
+
 ## Parameter Graphs
 plot_df <- data.frame(z = zmesh, eggs =  eggs_z(zmesh, m_par)/1000 )
 ggplot(data = plot_df,
@@ -48,15 +58,6 @@ ggplot(data = plot_df,
 ggsave("~/OneDrive - University of Wisconsin-La Crosse/GizzardShad/paper/figures/age0surv.png")
 
 
-## Model Simulation Setup ##
-# Normal Distribution 
-N <- 50 # number of size classes
-l_shad <- 0.00   # lower size limit in mm
-u_shad <- 450.0    # upper size limit in mm - we want this to be
-                   # larger than L-infty
-delta_z <- (u_shad - l_shad) / N
-zmesh <-  l_shad + ((1:N) - 1 / 2) * (u_shad - l_shad) / N
-tf <- 500 # number of years
 
 # Initial length distribution
 n <- matrix(0, length(zmesh), tf)

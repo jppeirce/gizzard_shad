@@ -9,11 +9,11 @@ egg_size_data <- read.csv('./EggSizeData.csv',header=TRUE,sep=",")
 zero_eggs <- data.frame(x = seq(floor(min(egg_size_data$x))), 
                         EggLengthData=rep(0,floor(min(egg_size_data$x))))
 # assume max eggs for length greater than recorded in data
-max_eggs <-  data.frame(x = seq(ceiling(max(egg_size_data$x)), 400), 
+max_eggs <-  data.frame(x = seq(ceiling(max(egg_size_data$x)), 500), 
                         EggLengthData=max(egg_size_data$EggLengthData))
 egg_size_data_ext <- rbind(zero_eggs, egg_size_data, max_eggs)
 
-### USE LL3. We fit a 3 parameter (max, slope, inflection) logit model to the eggs produced data 
+### We fit a 3 parameter (max, slope, inflection) logit model to the eggs produced data 
 # since biological observations suggest that eggs are not produced by females below size 140mm.
 egg_extended_nls <- nls(EggLengthData~egg_max/(1+exp(egg_slope*(log(x)-log(egg_inf)))),
                         data = egg_size_data_ext,
