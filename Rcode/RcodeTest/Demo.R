@@ -133,8 +133,8 @@ m_par_eq <- tibble(
   surv_max = 1 - 8.872*grow_rate^.73*grow_max^(-.33), 
   # inflection point: will be temp dependent
   # computed for La Grange Reach
-  surv_alpha = 107.3992, 
-  surv_beta = -1158.5694, # slope
+  surv_alpha = 103.5187, 
+  surv_beta = -1006.1837, # slope
   ## New recruit from Michaletz (2017)
   recruit_mean = 105,
   recruit_sd = 25, # same as grow_sd
@@ -178,7 +178,7 @@ m_par_periodic <- tibble(
   surv0_decay = coef(surv_den_exp)[2], # 0.0030
 )
 
-m_par <- m_par_periodic
+m_par <- m_par_eq
 
 eggs_z <- function(z, m_par) { # Eggs produced (note: data are in thousands)
   return(1000 * m_par$egg_max / (1

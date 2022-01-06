@@ -9,7 +9,7 @@ egg_size_data <- read.csv('./EggSizeData.csv',header=TRUE,sep=",")
 zero_eggs <- data.frame(x = seq(floor(min(egg_size_data$x))), 
                         EggLengthData=rep(0,floor(min(egg_size_data$x))))
 # assume max eggs for length greater than recorded in data
-max_eggs <-  data.frame(x = seq(ceiling(max(egg_size_data$x)), 400), 
+max_eggs <-  data.frame(x = seq(ceiling(max(egg_size_data$x)), 500), 
                         EggLengthData=max(egg_size_data$EggLengthData))
 egg_size_data_ext <- rbind(zero_eggs, egg_size_data, max_eggs)
 
