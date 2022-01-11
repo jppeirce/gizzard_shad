@@ -21,7 +21,7 @@ u_shad <- 500.0    # upper size limit in mm - we want this to be
 # larger than L-infty
 delta_z <- (u_shad - l_shad) / N
 zmesh <-  l_shad + ((1:N) - 1 / 2) * (u_shad - l_shad) / N
-tf <- 500 # number of years
+tf <- 200 # number of years
 
 # Initial length distribution
 n <- matrix(0, length(zmesh), tf)
@@ -96,13 +96,15 @@ least_sq <- function(x){
   # Dynamical System
   for (i in 1:(tf - 1)) {
     k_iter <- (p_z1z(zmesh, zmesh, m_par) + f_z1z(zmesh, zmesh, n[, i],
-                                                  m_par)) * delta_z
+                                                          m_par)) * delta_z
     n[, i + 1] <- k_iter %*% n[, i]
   }
-  # Compute equilibrium frequencies
-  model_equil <- n[zmesh_obs/delta_z, tf]/sum(n[zmesh_obs/delta_z, tf])
+  # Compute equilibrium frequencies - averaged over approximately 1 period of 8 years
+  ### Since tf = 200:
+#  model_equil <- (1/16)*rowSums(n[zmesh_obs/delta_z, year_start:year_end]/sum(n[zmesh_obs/delta_z, year_start:year_end]) )
+    model_equil <- n[zmesh_obs/delta_z, tf]/sum(n[zmesh_obs/delta_z, tf])
   ## End model 
-  sse <- sum((ltrm_gzsd_main$freq - model_equil)^2)
+  sse <- sum((ltrm_gzsd_main$freq - model_equil/delta_z)^2)
   return(sse)
 }
 
@@ -115,7 +117,24 @@ zmesh <-  l_shad + (1:N) * (u_shad - l_shad) / N
 # Optimize step
 
 # Initial guess surv_alpha = 90, surv_beta = -5
-opt <- optim(c(90,-5), fn = least_sq)
+# opt <- optim(c(90,-50), fn = least_sq)
+ 
+# Estimate surv_alpha and surv_beta for each year (8) of the period
+# Use mean for model parameters
+
+n_total_period <- 8
+
+surv_params <- tibble(
+  year = tf-n_total_period + 1:(n_total_period -1), 
+  surv_alpha = rep(0, n_total_period -1),
+  surv_beta = rep(0, n_total_period -1)
+)
+for(i in 1:(n_total_period -1)){
+tf <- 200 - n_total_period + i
+opt <- optim(c(90,-50), fn = least_sq)
+surv_params[i,2] <- opt$par[1] # assign alpha
+surv_params[i,3] <- opt$par[2] # assign beta
+}
 
 #### Now Check with La Grange
 m_par$surv_alpha <- opt$par[1]
@@ -127,7 +146,7 @@ n[, 1] <- (n[, 1] / sum(n[, 1])) * n0_total / delta_z
 # Dynamical System
 for (i in 1:(tf - 1)) {
   k_iter <- (p_z1z(zmesh, zmesh, m_par) + f_z1z(zmesh, zmesh, n[, i],
-                                                m_par)) * delta_z
+                                                        m_par)) * delta_z
   n[, i + 1] <- k_iter %*% n[, i]
 }
 

@@ -372,10 +372,17 @@ Understanding the population dynamics of gizzard shad, may in the future make it
 The parameters for the growth function were chosen as the mean values published on a study of gizzard shad located in large impoundments \citep{michaletz2017variation}. 
 The survival rate of adults gizzard shad dependent on their length is not well documented and required us to make some additional modeling assumptions.  
 An investigation of gizzard shad in Lake Eerie (\cite{bodola1955life}) provided the minimum and maximum survival rate of adults. 
+
+Based on the observed length distributions of gizzard shad sampled from the main channel of the Mississippi River (Figure \ref{fig:LTRMmain}), we assumed that solutions of our model will exhibit periodic behavior every 8-9 years.  
+\begin{figure}  \label{fig:LTRMmain}
+\centering
+  \includegraphics[width=.6\textwidth]{figures/LTRMmain.png}
+\caption{Length frequency of sampled gizzard shad in the main channel of the Upper Mississippi River system.}
+\end{figure}    
 We used a least squares method to estimate the $\alpha_s$ and $\beta_s$ parameters that 
-minimized the total square-distance between the (observed) pre-carp LTRMP length distribution in the main channels of the UMR (pools 4, 8, 13, 26, and the open river) and (predicted) model equilibrium, $n(z,100)$.  
+minimized the total square-distance between the (observed) pre-carp LTRMP length distribution in the main channels of the UMR (pools 4, 8, 13, 26, and the open river) and (predicted) model equilibrium, $n(z,t)$ during a 8-year period 100 years after initialization.  
 The slope parameter $\beta_s$ was found to be large in magnitude resulting in a primarily two-valued survival probability.  
-Gizzard shad less than $\alpha_s$ mm in length have a very low survival rate ( $\ds s_{\rm {min}}$) while lengths larger than  $\alpha_s$ mm have the maximum survival rate $\ds s_{\rm {max}}$. 
+Gizzard shad less than $\alpha_s$ mm in length have a very low survival rate ($\ds s_{\rm {min}}$) while lengths larger than  $\alpha_s$ mm have the maximum survival rate $\ds s_{\rm {max}}$. 
 A two-valued survival probability model are common in fisheries model (GREG - CITATIONS)
 
 \subsubsection{Fecundity and recruitment}
@@ -418,15 +425,9 @@ As a result, we initialized our model with length distribution
 
 The model was coded in R \citep{R} and the scripts are published on JP github page \verb+https://github.com/jppeirce+.
 
-\subsubsection{Comparison with the LTRMP La Grange dataset}
-The total number of gizzard shad in our simulation reached a stable equilibrium (Figure \ref{fig:ntotal}) within 50 years and, more relevantly, the length distribution at that equilibrium compares favorably with the observations from La Grange found in the LTRMP fish dataset (Figure \ref{fig:lagrange}). 
-We notice that the peak frequencies are near the same length with the model predicting slightly more adults lengths and fewer juvenile lengths than the observations. 
-This may be explained by gear bias.
-The methods used to capture fish make it more likely to record longer lengths ($>200$mm). 
-Studies [CITATION] suggest that due to the environmental stochasticity and other effects, smaller recruitment fish densities can fluctuate annually and be difficult to measure accurately. 
-While our model uses age-0 density to effect age-0 survival, we assumed constant viability which may be sensitive to the external factors mentioned above.
-In addition, the location of the maximum length and the variation in the of length of new recruits recorded in the LTRMP data, suggests that there may be smaller age-0 fish in La Grange Reach than in study location \citep{michaletz2017variation} used to parameterize the model.  
-
+\subsubsection{Periodic orbit and comparison with the LTRMP La Grange dataset}
+The total number of gizzard shad in our simulation reached a stable periodic orbit (Figure \ref{fig:ntotal}) within 50 years. 
+The length distributions during the periodic orbit (Figure \ref{fig:period}) compares favorably with the length observations from La Grange found in the LTRMP fish dataset (Figure \ref{fig:LTRMlg}). 
 \begin{figure}
 \centering
 \begin{subfigure}[b]{.43\textwidth}
@@ -435,14 +436,35 @@ In addition, the location of the maximum length and the variation in the of leng
   \label{fig:ntotal}
 \end{subfigure}
 \begin{subfigure}[b]{.43\textwidth}
+   \includegraphics[width=\textwidth]{figures/period.png}
+     \caption{}
+\label{fig:period}
+\end{subfigure}
+\caption{(a) The total number of gizzard shad in La Grange Reach predicted by IPM for first 150 years. (b) USE-later - LTRMP observations of gizzard shad in La Grange Reach (histogram with 50 len) compared with the IPM length frequency at equilibrium ($t=500$ years)}
+\end{figure}    
+The average simulated length distribution has similarities to the average observations from La Grange found in the LTRMP fish dataset (Figure \ref{fig:lagrange}). 
+\begin{figure}
+\centering
+\begin{subfigure}[b]{.43\textwidth}
+  \includegraphics[width=\textwidth]{figures/LTRMlg.png}
+   \caption{}
+  \label{fig:ntotal}
+\end{subfigure}
+\begin{subfigure}[b]{.43\textwidth}
    \includegraphics[width=\textwidth]{figures/lagrange.pdf}
      \caption{}
-\label{fig:lagrange}
+\label{fig:period}
 \end{subfigure}
-\caption{(a) The total number of gizzard shad in La Grange Reach predicted by IPM for first 500 years. (b) LTRMP observations of gizzard shad in La Grange Reach (histogram with 50 len) compared with the IPM length frequency at equilibrium ($t=500$ years)}
-%\caption{(a) Graph of $p_b(z)$ (b) Graph of $\mbox{egg}(z)$, (c) Density-dependent survival of age-0 gizzard shard.}
-%\label{fig:fecundity}
+\caption{(a) The total number of gizzard shad in La Grange Reach predicted by IPM for first 150 years. (b) USE-later - LTRMP observations of gizzard shad in La Grange Reach (histogram with 50 len) compared with the IPM length frequency at equilibrium ($t=500$ years)}
 \end{figure}    
+We notice that the peak frequencies are near the same length with the model predicting slightly more adults lengths and fewer juvenile lengths than the observations. 
+This may be explained by gear bias.
+The methods used to capture fish make it more likely to record longer lengths ($>200$mm). 
+Studies [CITATION] suggest that due to the environmental stochasticity and other effects, smaller recruitment fish densities can fluctuate annually and be difficult to measure accurately. 
+While our model uses age-0 density to effect age-0 survival, we assumed constant viability which may be sensitive to the external factors mentioned above.
+In addition, the location of the maximum length and the variation in the of length of new recruits recorded in the LTRMP data, suggests that there may be smaller age-0 fish in La Grange Reach than in study location \citep{michaletz2017variation} used to parameterize the model.  
+
+
 
 \subsubsection{Survival and Relative Growth}
 The dependence on survival of next generation of age-0 fish on the present density of age-0 fish strongly influences the density, at all ages, of gizzard shad within the population. 
@@ -505,18 +527,16 @@ The peak length frequency of age-1 fish in $n(z,1)$ near $z = 105$ mm is seen as
 
 \begin{figure*}
 \centering
-\begin{subfigure}[b]{.43\textwidth}
-  \includegraphics[width=\textwidth]{figures/sim.png}
-\caption{Simulated frequency of lengths of Gizzard Shad.  Initial density  and N=xxx}
+%\begin{subfigure}[b]{.43\textwidth}
+  \includegraphics[width=.5\textwidth]{figures/initial_sim.png}
+\caption{Simulated frequency of lengths of gizzard shad.  Initial density  and N=50}
 \label{fig:length_dist}
-\end{subfigure}
-\begin{subfigure}[b]{.43\textwidth}
-\includegraphics[width=\textwidth]{figures/LTRMgraph.pdf}
-\caption{Simulated frequency of lengths of Gizzard Shad.  Initial density  and N=xxx}
-\label{fig:length_dist}
-\end{subfigure}
-\caption{(a) Simulated length distributions. (b) LTRMP gizzard shad density from La Grange Reach 1992-2020}
-%\caption{(a) Graph of $p_b(z)$ (b) Graph of $\mbox{egg}(z)$, (c) Density-dependent survival of age-0 gizzard shard.}
+%\end{subfigure}
+%\begin{subfigure}[b]{.43\textwidth}
+%\includegraphics[width=\textwidth]{figures/LTRMgraph.pdf}
+%\caption{Simulated frequency of lengths of Gizzard Shad.  Initial density  and N=xxx}
+%\label{fig:length_dist}
+%\end{subfigure}shard.}
 %\label{fig:fecundity}
 \end{figure*}    
 

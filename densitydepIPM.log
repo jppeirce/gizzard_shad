@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  5 JAN 2022 14:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  11 JAN 2022 11:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1017,10 +1017,16 @@ Package: pst-node 2010/04/22 package wrapper for pst-node.tex
 File: pst-node.tex 2017/12/30 1.41 `pst-node' (tvz,hv)
 ) (./densitydepIPM.aux
 
-LaTeX Warning: Label `fig:length_dist' multiply defined.
+LaTeX Warning: Label `fig:ntotal' multiply defined.
 
 
-LaTeX Warning: Label `sub@fig:length_dist' multiply defined.
+LaTeX Warning: Label `sub@fig:ntotal' multiply defined.
+
+
+LaTeX Warning: Label `fig:period' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:period' multiply defined.
 
 )
 \openout1 = `densitydepIPM.aux'.
@@ -1141,7 +1147,7 @@ LaTeX Font Info:    Try loading font information for U+lasy on input line 77.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-<adult.jpeg, id=83, 2456.17625pt x 1251.67625pt>
+<adult.jpeg, id=87, 2456.17625pt x 1251.67625pt>
 File: adult.jpeg Graphic file (type jpg)
 <use adult.jpeg>
 Package pdftex.def Info: adult.jpeg  used on input line 89.
@@ -1304,63 +1310,83 @@ on of length, $\OML/cmm/m/it/12 C[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 z[]\OT1/cm
 r/m/n/12 ) = [](\OML/cmm/m/it/12 ^^V[]; ^^[[]\OT1/cmr/m/n/12 )$
  []
 
-[7] [8]
-<figures/eggs.png, id=266, 3872.4675pt x 2483.2775pt>
+[7]
+
+Package caption Warning: \label without proper reference on input line 377.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `fig:LTRMmain' on page 8 undefined on input line 376.
+
+<figures/LTRMmain.png, id=253, 3303.34125pt x 2019.545pt>
+File: figures/LTRMmain.png Graphic file (type png)
+<use figures/LTRMmain.png>
+Package pdftex.def Info: figures/LTRMmain.png  used on input line 379.
+(pdftex.def)             Requested size: 281.85587pt x 172.29077pt.
+[8] [9 <./figures/LTRMmain.png>]
+<figures/eggs.png, id=279, 3872.4675pt x 2483.2775pt>
 File: figures/eggs.png Graphic file (type png)
 <use figures/eggs.png>
-Package pdftex.def Info: figures/eggs.png  used on input line 392.
+Package pdftex.def Info: figures/eggs.png  used on input line 399.
 (pdftex.def)             Requested size: 201.99121pt x 129.51387pt.
-<figures/age0surv.png, id=268, 3872.4675pt x 2483.2775pt>
+<figures/age0surv.png, id=280, 3872.4675pt x 2483.2775pt>
 File: figures/age0surv.png Graphic file (type png)
 <use figures/age0surv.png>
-Package pdftex.def Info: figures/age0surv.png  used on input line 397.
+Package pdftex.def Info: figures/age0surv.png  used on input line 404.
 (pdftex.def)             Requested size: 201.99121pt x 129.51387pt.
- [9 <./figures/eggs.png> <./figures/age0surv.png>] [10]
-<figures/ntotal.png, id=316, 3216.015pt x 2019.545pt>
+ [10 <./figures/eggs.png> <./figures/age0surv.png>]
+
+LaTeX Warning: Reference `fig:LTRMlg' on page 11 undefined on input line 430.
+
+<figures/ntotal.png, id=316, 3303.34125pt x 2019.545pt>
 File: figures/ntotal.png Graphic file (type png)
 <use figures/ntotal.png>
-Package pdftex.def Info: figures/ntotal.png  used on input line 433.
-(pdftex.def)             Requested size: 201.99121pt x 126.83755pt.
-<figures/lagrange.pdf, id=317, 770.88pt x 484.81125pt>
+Package pdftex.def Info: figures/ntotal.png  used on input line 434.
+(pdftex.def)             Requested size: 201.99121pt x 123.47865pt.
+<figures/period.png, id=317, 2617.78pt x 2019.545pt>
+File: figures/period.png Graphic file (type png)
+<use figures/period.png>
+Package pdftex.def Info: figures/period.png  used on input line 439.
+(pdftex.def)             Requested size: 201.99121pt x 155.80435pt.
+
+LaTeX Warning: Reference `fig:lagrange' on page 11 undefined on input line 445.
+
+
+<figures/LTRMlg.png, id=318, 2617.78pt x 2019.545pt>
+File: figures/LTRMlg.png Graphic file (type png)
+<use figures/LTRMlg.png>
+Package pdftex.def Info: figures/LTRMlg.png  used on input line 449.
+(pdftex.def)             Requested size: 201.99121pt x 155.80435pt.
+<figures/lagrange.pdf, id=319, 627.34375pt x 484.81125pt>
 File: figures/lagrange.pdf Graphic file (type pdf)
 <use figures/lagrange.pdf>
-Package pdftex.def Info: figures/lagrange.pdf  used on input line 438.
-(pdftex.def)             Requested size: 201.99121pt x 127.03183pt.
-<figures/Figure2a.pdf, id=319, 770.88pt x 484.81125pt>
+Package pdftex.def Info: figures/lagrange.pdf  used on input line 454.
+(pdftex.def)             Requested size: 201.99121pt x 156.09706pt.
+[11 <./figures/ntotal.png> <./figures/period.png>]
+<figures/Figure2a.pdf, id=335, 627.34375pt x 484.81125pt>
 File: figures/Figure2a.pdf Graphic file (type pdf)
 <use figures/Figure2a.pdf>
-Package pdftex.def Info: figures/Figure2a.pdf  used on input line 459.
-(pdftex.def)             Requested size: 187.89914pt x 118.16948pt.
- [11 <./figures/ntotal.png> <./figures/lagrange.pdf>]
+Package pdftex.def Info: figures/Figure2a.pdf  used on input line 481.
+(pdftex.def)             Requested size: 187.89914pt x 145.20776pt.
+ [12 <./figures/LTRMlg.png> <./figures/lagrange.pdf>]
 
-LaTeX Warning: Reference `surv_age0' on page 12 undefined on input line 482.
+LaTeX Warning: Reference `surv_age0' on page 13 undefined on input line 504.
 
-<figures/sim.png, id=335, 3216.015pt x 2019.545pt>
-File: figures/sim.png Graphic file (type png)
-<use figures/sim.png>
-Package pdftex.def Info: figures/sim.png  used on input line 509.
-(pdftex.def)             Requested size: 201.99121pt x 126.83755pt.
-<figures/LTRMgraph.pdf, id=336, 818.05624pt x 505.89pt>
-File: figures/LTRMgraph.pdf Graphic file (type pdf)
-<use figures/LTRMgraph.pdf>
-Package pdftex.def Info: figures/LTRMgraph.pdf  used on input line 514.
-(pdftex.def)             Requested size: 201.99121pt x 124.91289pt.
-[12 <./figures/Figure2a.pdf>] [13 <./figures/sim.png> <./figures/LTRMgraph.pdf>
-] (./densitydepIPM.bbl [14] [15] [16]) [17]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 601.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 601.
+<figures/initial_sim.png, id=350, 2617.78pt x 2019.545pt>
+File: figures/initial_sim.png Graphic file (type png)
+<use figures/initial_sim.png>
+Package pdftex.def Info: figures/initial_sim.png  used on input line 531.
+(pdftex.def)             Requested size: 234.8775pt x 181.19652pt.
+[13 <./figures/Figure2a.pdf>] [14 <./figures/initial_sim.png>]
+(./densitydepIPM.bbl [15] [16] [17]) [18]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 621.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 621.
  (./densitydepIPM.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 601.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 601.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 621.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 621.
+Package rerunfilecheck Info: File `densitydepIPM.out' has not changed.
+(rerunfilecheck)             Checksum: 019FBB753E4FA1040A1EE00E82996561;1405.
 
-
-Package rerunfilecheck Warning: File `densitydepIPM.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `densitydepIPM.out':
-(rerunfilecheck)             Before: 34106C7CF5CACB6B7E50A14C6ADFE98E;1307
-(rerunfilecheck)             After:  70EB9DD515DE1C42D8A4950478FA2B59;1386.
 
 LaTeX Warning: There were undefined references.
 
@@ -1369,39 +1395,36 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 30741 strings out of 492649
- 587510 string characters out of 6129622
- 685880 words of memory out of 5000000
- 34115 multiletter control sequences out of 15000+600000
+ 30757 strings out of 492649
+ 587778 string characters out of 6129622
+ 685948 words of memory out of 5000000
+ 34126 multiletter control sequences out of 15000+600000
  540026 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  54i,14n,77p,10361b,969s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{subsubsection.3.2.1} has been referenced but does
- not exist, replaced by a fixed one
-
-</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
-/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb>
-</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
-/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
-usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></u
-sr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr
-/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/l
-ocal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loc
-al/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local
-/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/t
-exlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texl
-ive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive
-/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/20
-18/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2018
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2018/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2018/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2018/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on densitydepIPM.pdf (19 pages, 2438020 bytes).
+</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pf
+b></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
+></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
+</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
+/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></u
+sr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr
+/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/l
+ocal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/loc
+al/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local
+/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/te
+xlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texli
+ve/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/
+2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/20
+18/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/201
+8/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2018/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2018/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2018/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on densitydepIPM.pdf (20 pages, 3220486 bytes).
 PDF statistics:
- 481 PDF objects out of 1000 (max. 8388607)
- 417 compressed objects within 5 object streams
- 99 named destinations out of 1000 (max. 500000)
- 205 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 490 PDF objects out of 1000 (max. 8388607)
+ 421 compressed objects within 5 object streams
+ 101 named destinations out of 1000 (max. 500000)
+ 223 words of extra memory for PDF output out of 10000 (max. 10000000)
 

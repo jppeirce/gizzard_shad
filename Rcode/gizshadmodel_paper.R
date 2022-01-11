@@ -21,8 +21,8 @@ m_par <- tibble(
   # Then et al (2015): computed from 
   # 1-natural mortality = 1 - 8.872*K^.73 L^-.33
   surv_max = .52, #
-  surv_alpha = 106.2294 , # inflection point: computed in surv_a.R - for LG Reach
-  surv_beta = -699.5425, # slope
+  surv_alpha = 80, # inflection point: computed in surv_a.R - for LG Reach
+  surv_beta = -5, # slope
   ## New recruit from Michaletz (2017)
   recruit_mean = 105,
   recruit_sd = 25, # same as grow_sd
