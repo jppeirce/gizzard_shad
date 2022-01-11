@@ -67,7 +67,7 @@ ggplot(plot_df,
        color = "Legend") +
   scale_color_manual(
     values = rainbow(5),
-    labels = c("Year 1", "Year 2", "Year 3", "Year 4","Year 5"))+
+    labels = c("Year 0", "Year 1", "Year 2", "Year 3","Year 4"))+
   theme_bw() +  
   theme(legend.position = c(0.8, 0.5))+
   theme(text = element_text(size=16),
