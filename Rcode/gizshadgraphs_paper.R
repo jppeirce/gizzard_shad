@@ -74,8 +74,26 @@ ggplot(plot_df,
         aspect.ratio = .7)
 ggsave("~/Documents/research/gizzard_shad/figures/initial_sim.png")
 
-show_years <- 1:4
-#show_years <- c(5, 15, 25)
+
+plot_df <- data.frame(z = zmesh, year = n[,show_years])
+plot_df <- melt(plot_df, id.vars = 'z', variable.name = 'year')
+ggplot(plot_df,
+       aes(z, value)) + 
+  geom_line(aes(color = year)) + 
+  labs(x = "length (in mm)",
+       y = "density",
+       title = "n(z,t)",
+       color = "Legend") +
+  scale_color_manual(
+    values = rainbow(5),
+    labels = c("Year 0", "Year 1", "Year 2", "Year 3","Year 4"))+
+  theme_bw() +  
+  theme(legend.position = c(0.8, 0.5))+
+  theme(text = element_text(size=16),
+        aspect.ratio = .7)
+ggsave("~/Documents/research/gizzard_shad/figures/initial_sim_den.png")
+
+
 show_years <- 142:148
 n_freq <- sweep(n, 2, colSums(n),  FUN = "/")
 plot_df <- data.frame(z = zmesh, year = n_freq[,show_years])
@@ -146,7 +164,8 @@ ltrm_gzsd %>%
   scale_x_continuous(limits = c(0, u_shad), breaks = seq(0, 500, 200),
                      expand = c(0, 0)) +
   scale_y_continuous(limits = c(0, 0.015), breaks = seq(0, 0.015, 0.005),
-                     expand = c(0, 0))
+                     expand = c(0, 0))+
+  theme_bw() 
 ggsave("~/Documents/research/gizzard_shad/figures/LTRMmain.png")
 
 
@@ -164,7 +183,8 @@ ltrm_gzsd %>%
   scale_x_continuous(limits = c(0, u_shad), breaks = seq(0, 500, 200),
                      expand = c(0, 0)) +
   scale_y_continuous(limits = c(0, 0.015), breaks = seq(0, 0.015, 0.005),
-                     expand = c(0, 0))
+                     expand = c(0, 0))+ 
+  theme_bw() 
 ggsave("~/Documents/research/gizzard_shad/figures/LTRMlg.png")
 
 
@@ -182,18 +202,20 @@ for (i in 1:(tf - 1)) {
 }
 
 
+year_start <- tf-7
+year_end <- tf
 plot_average <- tibble(z = zmesh, 
                        year = rep("mean",N),
-                       n_freq = (1/floor(coef(n_total_period)[1]))*rowSums(n_freq[,year_start:year_end]) )
+                       n_freq = (1/8)*rowSums(n_freq[,year_start:year_end]) )
 ggplot(data = ltrm_gzsd_lg, aes(x = length_round)) +
   geom_histogram(aes(y = ..density..), bins = 50)+
   #  geom_density(aes(x = length)) +
   geom_line(data = plot_average, aes(x = z, y = n_freq/delta_z))+
   labs(x = "length (in mm)",
-       y = "frequency",
+       y = "relative frequency",
        color = "Legend") +
   scale_color_manual(breaks=c("a","b"))+
-  #  theme_bw()+
+  theme_bw()+
   theme(text = element_text(size=16),
         aspect.ratio = .7)
 ggsave("~/Documents/research/gizzard_shad/figures/lagrange.pdf")
