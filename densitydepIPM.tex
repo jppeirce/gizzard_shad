@@ -350,13 +350,13 @@ n(z',t+1) = \int_L^U K(z',z)n(z,t) \,dz,
 where $K(z',z) = s(z) G(z',z) + F(z',z)$ and $[L,U]$ is the range of all possible lengths.
 
 \section{Methods}
-\subsection{Study Area and LTRMP Data Collection}
+\subsection{Study Area and LTRM Data Collection}
 The 129 km long La Grange Reach is located between La Grange Lock and Dam (L\&D) and Peoria L\&D on the Illinois River, U.S., and is about midway between the Mississippi River and Lake Michigan. 
 The Illinois River is a major tributary of the Mississippi River, draining nearly two-thirds of the state of Illinois. 
-Along with the main channel of the UMR, the fish community of La Grange Reach has been monitored by the Long-term Resource Monitoring Program (LTRMP) from 1990 to the present, with approximately 500 random collections each year from 15 June to 31 October. 
-The LTRMP fish collection methodology included a multiple gear approach (netting and electrofishing) to monitor the general fish community of the UMR system through time \citep{gutreuter1995long}. 
+Along with the main channel of the UMR, the fish community of La Grange Reach has been monitored by the Long-term Resource Monitoring Program (LTRM) from 1990 to the present, with approximately 500 random collections each year from 15 June to 31 October. 
+The LTRM fish collection methodology included a multiple gear approach (netting and electrofishing) to monitor the general fish community of the UMR system through time \citep{gutreuter1995long}. 
 The total lengths were recorded for all fishes captured. 
-Methodology, protocols and modifications to the LTRMP can be found in \cite{gutreuter1995long}, and \cite{ickes2002evaluation}. 
+Methodology, protocols and modifications to the LTRM can be found in \cite{gutreuter1995long}, and \cite{ickes2002evaluation}. 
 
 The location of La Grange Reach has two important features motivation its choice for the methods of our study. 
 First, we parameterized the IPM using data from the main channel of the UMR.  As a part of Illinois River and UMR, La Grange Reach is upstream from the main channel (should we include figure/map?).  
@@ -379,7 +379,7 @@ Based on the observed length distributions of gizzard shad sampled from the main
  \label{fig:main}
 \end{figure}    
 We used a least squares method to estimate the $\alpha_s$ and $\beta_s$ parameters that 
-minimized the total square-distance between the (observed) pre-carp LTRMP length distribution in the main channels of the UMR (pools 4, 8, 13, 26, and the open river) and (predicted) model equilibrium, $n(z,t)$ during a 8-year period 100 years after initialization.  
+minimized the total square-distance between the (observed) pre-carp LTRM length distribution in the main channels of the UMR (pools 4, 8, 13, 26, and the open river) and (predicted) model equilibrium, $n(z,t)$ during a 8-year period 100 years after initialization.  
 The slope parameter $\beta_s$ was found to be large in magnitude resulting in a primarily two-valued survival probability.  
 Gizzard shad less than $\alpha_s$ mm in length have a very low survival rate ($\ds s_{\rm {min}}$) while lengths larger than  $\alpha_s$ mm have the maximum survival rate $\ds s_{\rm {max}}$. 
 A two-valued survival probability model are common in fisheries model (GREG - CITATIONS)
@@ -390,7 +390,7 @@ The logistic parameters for mean number of eggs produced by females of a certain
 The survival to age-0 was assumed to be dependent on the density of age-0 gizzard shad (Figure \ref{fig:surv_age0}).  
 Parameters for the exponentially decaying age-0 survival function were determined by fitting equation \ref{eq:s0} to the survival means  for 2003-2007 cohorts of gizzard shard in five Missouri reservoirs \citep{michaletz2010overwinter}.
 To complete the recruitment process we assign a length to the recruited individuals by simulating a Gaussian random variable with mean $\mu_c$ and standard deviation $\sigma_c$.
-The parameters for the size distribution of age-1 fish were gleaned from a study of gizzard shad located in large impoundments \citep{michaletz2017variation} and the historic 1990-2020 LTRMP dataset of gizzard shad in La Grange Reach.
+The parameters for the size distribution of age-1 fish were gleaned from a study of gizzard shad located in large impoundments \citep{michaletz2017variation} and the historic 1990-2020 LTRM dataset of gizzard shad in La Grange Reach.
 
 \begin{figure}
 \centering
@@ -416,7 +416,7 @@ We integrated over lengths from 0 mm to 500 mm.
 The upper limit was chosen based upon numerical stability and consistency of the system (e.g., avoiding eviction or the loss of individuals due to numerical errors \citep{williams2012avoiding}). 
 
 \subsection{Initial conditions}  We assumed that the initial density of gizzard shad was $d_0 = 964.7$, the annual average density of gizzard shad observed in La Grange Reach from 1993-2019.  
-The probability of an individual being length $z$ at time $t=0$  was assumed to be normally distributed with mean $0.5L_\infty$ and standard deviation $\sigma_0 = 30$ (similar to observations (1990-2020) in LTRMP fish dataset).  
+The probability of an individual being length $z$ at time $t=0$  was assumed to be normally distributed with mean $0.5L_\infty$ and standard deviation $\sigma_0 = 30$ (similar to observations (1990-2020) in LTRM fish dataset).  
 As a result, we initialized our model with length distribution
 \begin{equation}\label{eq:n}
  n(z,0) = d_0 \mbox{Norm} (0.5 L_\infty, \sigma_0) = 964.7 \mbox{Norm} (166, 30). 
@@ -424,9 +424,9 @@ As a result, we initialized our model with length distribution
 
 The model was coded in R \citep{R} and the scripts are published on JP github page \verb+https://github.com/jppeirce+.
 
-\subsubsection{Periodic orbit and comparison with the LTRMP La Grange dataset}
+\subsubsection{Periodic orbit and validation with external dataset}
 The total number of gizzard shad in our simulation reached a stable periodic orbit (Figure \ref{fig:ntotal}) within 50 years. 
-The length distributions during the periodic orbit (Figure \ref{fig:period}) has similarities to length observations from La Grange found in the LTRMP fish dataset (Figure \ref{fig:LTRMlg}). 
+The length distributions during the periodic orbit (Figure \ref{fig:period}) has similarities to length observations from La Grange found in the LTRM fish dataset (Figure \ref{fig:LTRMlg}). 
 \begin{figure}
 \centering
 \begin{subfigure}[b]{.43\textwidth}
@@ -461,7 +461,7 @@ This may be explained by gear bias.
 The methods used to capture fish make it more likely to record longer lengths ($>200$mm). 
 Studies [CITATION] suggest that due to the environmental stochasticity and other effects, smaller recruitment fish densities can fluctuate annually and be difficult to measure accurately. 
 While our model uses age-0 density to effect age-0 survival, we assumed constant viability which may be sensitive to the external factors mentioned above.
-In addition, the location of the maximum length and the variation in the of length of new recruits recorded in the LTRMP data, suggests that there may be smaller age-0 fish in La Grange Reach than in study location \citep{michaletz2017variation} used to parameterize the model.  
+In addition, the location of the maximum length and the variation in the of length of new recruits recorded in the LTRM data, suggests that there may be smaller age-0 fish in La Grange Reach than in study location \citep{michaletz2017variation} used to parameterize the model.  
 
 \subsubsection{Survival of Age-0 Cohort} \label{sec:survival}
 The dependence on survival of next generation of age-0 fish on the present density of age-0 fish strongly influences the density, at all ages, of gizzard shad within the population. 
@@ -523,11 +523,11 @@ This is consistent with the average lifespan of 4-6 years (CITATION).
 %\label{fig:LTRM}
 %\end{figure*}    
 
-After fitting two adult survival parameters using LTRMP data from the main channel if the Mississippi River, we compare a simulated length distribution with LTRMP data collected from the La Grange Reach of the Illinois River in 1992-2020. 
-Density dependence in the age-0 cohort produced a range of simulated length distributions (Figure \ref{fig:period}) that match well patterns in the LTRMP data from La Grange (Figure \ref{fig:LTRMlg}). 
+After fitting two adult survival parameters using LTRM data from the main channel if the Mississippi River, we compare a simulated length distribution with LTRM data collected from the La Grange Reach of the Illinois River in 1992-2020. 
+Density dependence in the age-0 cohort produced a range of simulated length distributions (Figure \ref{fig:period}) that match well patterns in the LTRM data from La Grange (Figure \ref{fig:LTRMlg}). 
 Specifically, the two peaks in Year 1 are similar to the observations made in 1997.  
 In 1997, there is wider range of mid-length and longer length gizzard shad and relative smaller amount of age-1 fish recorded.  
-In the next year, there was a higher frequency of age-1 fish in both the LTRMP data and the simulations (Year 2).
+In the next year, there was a higher frequency of age-1 fish in both the LTRM data and the simulations (Year 2).
 While not all observed length distributions are echoed in the simulations, the similarity in the average length distributions (Figure \ref{fig:lagrange}) suggest that our IPM may be a good prediction tool for future length distributions.  (LAST SENTENCE NEEDS A LOT MORE CLARITY)
 
 
@@ -563,7 +563,7 @@ While not all observed length distributions are echoed in the simulations, the s
 \section{Acknowledgments}
 
 These data are a product of the U.S. Army Corps of Engineer's Upper Mississippi 
-River Restoration Program (UMRR) Long Term Resource Monitoring (LTRMP) element 
+River Restoration Program (UMRR) Long Term Resource Monitoring (LTRM) element 
 implemented by the U.S. Geological Survey in collaboration with the five 
 Upper Mississippi River System (UMRS) states of Illinois, Iowa, Minnesota, 
 Missouri, and Wisconsin.
