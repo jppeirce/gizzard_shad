@@ -188,7 +188,7 @@ ltrm_gzsd %>%
 ggsave("~/Documents/research/gizzard_shad/figures/LTRMlg.png")
 
 
-## Average of periodic orbit compaired with LTRMP data from La Grange
+## Average of periodic orbit compared with LTRMP data from La Grange
 #### Now Check with La Grange
 n <- matrix(0, length(zmesh), tf)
 n0_total <- 995
@@ -207,7 +207,10 @@ year_end <- tf
 plot_average <- tibble(z = zmesh, 
                        year = rep("mean",N),
                        n_freq = (1/8)*rowSums(n_freq[,year_start:year_end]) )
-ggplot(data = ltrm_gzsd_lg, aes(x = length_round)) +
+ltrm_gzsd %>%
+  filter(year < 2107) %>%
+  filter(pool %in% c("LG")) %>%
+ggplot(., aes(x = length)) +
   geom_histogram(aes(y = ..density..), bins = 50)+
   #  geom_density(aes(x = length)) +
   geom_line(data = plot_average, aes(x = z, y = n_freq/delta_z))+

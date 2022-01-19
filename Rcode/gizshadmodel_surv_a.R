@@ -64,7 +64,7 @@ ltrm_gzsd <- ltrm_gzsd %>%
 # Filter main channel of UMR
 ltrm_gzsd_main <- ltrm_gzsd %>% filter(pool %in% c("04", "08", "13", "26", "OR"))
 # Filter pre-carp establishment year < 2000
-ltrm_gzsd_main <- ltrm_gzsd_main %>% filter(year < 2000)
+# ltrm_gzsd_main <- ltrm_gzsd_main %>% filter(year < 2000)
 # Round observations to nearest 10th
 ltrm_gzsd_main <- ltrm_gzsd_main %>%
   mutate(length_round = round(ltrm_gzsd_main$length, -1))
@@ -137,8 +137,8 @@ surv_params[i,3] <- opt$par[2] # assign beta
 }
 
 #### Now Check with La Grange
-m_par$surv_alpha <- opt$par[1]
-m_par$surv_beta <- opt$par[2]
+m_par$surv_alpha <- mean(surv_params$surv_alpha)
+m_par$surv_beta <- mean(surv_params$surv_beta)
 n <- matrix(0, length(zmesh), tf)
 n0_total <- 995
 n[, 1] <- dnorm(zmesh, mean = 0.5 * m_par$grow_max, sd = 30)

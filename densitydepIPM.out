@@ -6,14 +6,15 @@
 \BOOKMARK [2][-]{subsection.2.3}{Fecundity}{section.2}% 6
 \BOOKMARK [2][-]{subsection.2.4}{Dynamical Model}{section.2}% 7
 \BOOKMARK [1][-]{section.3}{Methods}{}% 8
-\BOOKMARK [2][-]{subsection.3.1}{Study Area and LTRM Data Collection}{section.3}% 9
-\BOOKMARK [2][-]{subsection.3.2}{Parameterization}{section.3}% 10
-\BOOKMARK [2][-]{subsection.3.3}{Growth and survival of adults}{section.3}% 11
+\BOOKMARK [2][-]{subsection.3.1}{Research area used for model parameterization}{section.3}% 9
+\BOOKMARK [2][-]{subsection.3.2}{Research area used for model validation}{section.3}% 10
+\BOOKMARK [2][-]{subsection.3.3}{Parameterization}{section.3}% 11
 \BOOKMARK [3][-]{subsubsection.3.3.1}{Fecundity and recruitment}{subsection.3.3}% 12
-\BOOKMARK [1][-]{section.4}{Analysis and Results}{}% 13
-\BOOKMARK [2][-]{subsection.4.1}{Initial conditions}{section.4}% 14
-\BOOKMARK [3][-]{subsubsection.4.1.1}{Periodic orbit and validation with external dataset}{subsection.4.1}% 15
-\BOOKMARK [3][-]{subsubsection.4.1.2}{Survival of Age-0 Cohort}{subsection.4.1}% 16
-\BOOKMARK [2][-]{subsection.4.2}{Time Evolution of Initial State}{section.4}% 17
-\BOOKMARK [1][-]{section.5}{Discussion}{}% 18
-\BOOKMARK [1][-]{section.6}{Acknowledgments}{}% 19
+\BOOKMARK [3][-]{subsubsection.3.3.2}{Growth and survival of adults}{subsection.3.3}% 13
+\BOOKMARK [1][-]{section.4}{Analysis and Results}{}% 14
+\BOOKMARK [2][-]{subsection.4.1}{Initial conditions}{section.4}% 15
+\BOOKMARK [3][-]{subsubsection.4.1.1}{Periodic orbit and validation with external dataset}{subsection.4.1}% 16
+\BOOKMARK [3][-]{subsubsection.4.1.2}{Survival of age-0 cohort}{subsection.4.1}% 17
+\BOOKMARK [2][-]{subsection.4.2}{Time Evolution of Initial State}{section.4}% 18
+\BOOKMARK [1][-]{section.5}{Discussion}{}% 19
+\BOOKMARK [1][-]{section.6}{Acknowledgments}{}% 20
