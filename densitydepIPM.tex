@@ -434,7 +434,7 @@ We integrated over lengths from 0 mm to 500 mm.
 The upper limit was chosen based upon numerical stability and consistency of the system (e.g., avoiding eviction or the loss of individuals due to numerical errors \citep{williams2012avoiding}). 
 
 \subsection{Initial conditions}  We assumed that the initial density of gizzard shad was $d_0 = 964.7$, the annual average density of gizzard shad observed in La Grange Reach from 1993-2019.  
-The probability of an individual being length $z$ at time $t=0$  was assumed to be normally distributed with mean $0.5L_\infty$ and standard deviation $\sigma_0 = 30$ (similar to observations (1990-2020) in LTRM fish dataset).  
+The probability of an individual being length $z$ at time $t=0$  was assumed to be normally distributed with mean $0.5L_\infty$ and standard deviation $\sigma_0 = 30$.  
 As a result, we initialized our model with length distribution
 \begin{equation}\label{eq:n}
  n(z,0) = d_0 \mbox{Norm} (0.5 L_\infty, \sigma_0) = 964.7 \mbox{Norm} (166, 30). 
@@ -546,12 +546,10 @@ The resulting simulated length distributions (Figure \ref{fig:period}) reflected
 Specifically, the two peaks in Year 1 are similar to the observations made in 1997.  
 In 1997, there is wider range of mid-length and longer length gizzard shad and relative smaller amount of age-1 fish recorded.  
 In the next year, there was a higher frequency of age-1 fish in both the LTRM data and the simulations (Year 2).
-
-
-
 While not all observed length distributions are reflected in the simulations, the similarity in the average length distributions (Figure \ref{fig:lagrange}) suggest that our IPM could serve as a tool for predicting length distributions for gizzard shad across different study areas. (LAST SENTENCE NEEDS A LOT MORE CLARITY)
 
-Gaining an understanding of how length distributions of gizzard shad emerge under density-dependent survival in the age-0 class will serve as a foundation for investigating density effects at subsequent stages in the life cycle.  In addition, this single-species model could also be expanded to incorporate interspecific interactions between gizzard shad and species such as invasive carp, which appear to negatively impact gizzard shad life-histories through competition for food resources.   
+Gaining an understanding of how length distributions of gizzard shad emerge under density-dependent survival in the age-0 class will serve as a foundation for investigating density effects at subsequent stages in the life cycle.  
+In addition, this single-species model could also be expanded to incorporate interspecific interactions between gizzard shad and species such as invasive carp, which appear to negatively impact gizzard shad life-histories through competition for food resources.   
 
 \begin{enumerate}
 \item Summary of findings and key discussion points
