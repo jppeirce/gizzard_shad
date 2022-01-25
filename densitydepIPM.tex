@@ -441,46 +441,6 @@ As a result, we initialized our model with length distribution
 
 The model was coded in R \citep{R} and the scripts are published on JP github page \verb+https://github.com/jppeirce+.
 
-\subsubsection{Periodic orbit and validation with external dataset}
-The total number of gizzard shad in our simulation reached a stable periodic orbit (Figure \ref{fig:ntotal}) within 50 years. 
-The length distributions during the periodic orbit (Figure \ref{fig:period}) has similarities to length observations from La Grange found in the LTRM fish dataset (Figure \ref{fig:LTRMlg}). 
-\begin{figure}
-\centering
-\begin{subfigure}[b]{.43\textwidth}
-  \includegraphics[width=\textwidth]{figures/ntotal.png}
-   \caption{}
-  \label{fig:ntotal}
-\end{subfigure}
-\begin{subfigure}[b]{.43\textwidth}
-   \includegraphics[width=\textwidth]{figures/period.png}
-     \caption{}
-\label{fig:period}
-\end{subfigure}
-\caption{(a) The total number of gizzard shad in La Grange Reach predicted by IPM for first 150 years. (b) Simulated length distributions during an 8 year period of time (approximately 1 period of the total number function) }
-\end{figure}    
-In addition. the average simulated length distribution compares favorably to the length frequencies of observations from La Grange. (Figure \ref{fig:lagrange}). 
-\begin{figure}
-\centering
-\begin{subfigure}[b]{.43\textwidth}
-  \includegraphics[width=\textwidth]{figures/LTRMlg.png}
-   \caption{}
-  \label{fig:LTRMlg}
-\end{subfigure}
-\begin{subfigure}[b]{.43\textwidth}
-   \includegraphics[width=\textwidth]{figures/lagrange.pdf}
-     \caption{}
-\label{fig:lagrange}
-\end{subfigure}
-\caption{(a) Length frequencies of sampled gizzard shad in La Grange for each year, 1992-2020. (b) Length frequencies of sampled gizzard shad in La Grange from 1992-2020 compared with average (over 1 period) simulated length frequency.}
-\end{figure}    
-
-%We notice that the peak frequencies are near the same length with the model predicting slightly more adults lengths and fewer juvenile lengths than the observations. 
-This may be explained by gear bias.
-The methods used to capture fish make it more likely to record longer lengths ($>200$mm). 
-Studies [CITATION] suggest that due to the environmental stochasticity and other effects, smaller recruitment fish densities can fluctuate annually and be difficult to measure accurately. MOVED THIS SECTION TO DISCUSSION% 
-
-While our model uses age-0 density to effect age-0 survival, we assumed constant viability which may be sensitive to the external factors mentioned above.
-In addition, the location of the maximum length and the variation in the of length of new recruits recorded in the LTRM data, suggests that there may be smaller age-0 fish in La Grange Reach than in study location \citep{michaletz2017variation} used to parameterize the model.  
 
 \subsubsection{Survival of age-0 cohort} \label{sec:survival}
 The dependence on survival of next generation of age-0 fish on the present density of age-0 fish strongly influences the density, at all ages, of gizzard shad within the population. 
@@ -508,29 +468,81 @@ This cycle of oscillation continues, reflected in our model by the time-dependen
 %\label{fig:fecundity}
 \end{figure}    
 
-\subsection{Time evolution of the initial state}
-Starting with $n(z,0)$ defined by Equation \ref{eq:n}, we computed the length distribution for 4 years.  
-In year 1, there are two relative maximum frequencies corresponding to the recruitment of age-1 fish and the survival of the adults.
-The greatest value of $n(z,1)$ during year one is centered at the mean length of recruitment (Figure \ref{fig:length_den}). 
- \begin{figure*}
+\subsubsection{Periodic orbit and validation with external dataset}
+The total number of gizzard shad in our simulation reached a stable periodic orbit (Figure \ref{fig:ntotal}) within 50 years. 
+The length distributions during the periodic orbit (Figure \ref{fig:period}) has similarities to length observations from La Grange found in the LTRM fish dataset (Figure \ref{fig:LTRMlg}). 
+\begin{figure}
 \centering
 \begin{subfigure}[b]{.43\textwidth}
-  \includegraphics[width=\textwidth]{figures/initial_sim_den.png}
-\caption{}
-\label{fig:length_den}
+  \includegraphics[width=\textwidth]{figures/ntotal.png}
+   \caption{}
+  \label{fig:ntotal}
 \end{subfigure}
 \begin{subfigure}[b]{.43\textwidth}
-\includegraphics[width=\textwidth]{figures/initial_sim.png}
-\caption{}
-\label{fig:length_dist}
+   \includegraphics[width=\textwidth]{figures/period.png}
+     \caption{}
+\label{fig:period}
 \end{subfigure}
-\caption{Simulated (a) density and (b) frequency of lengths of gizzard shad. }
-\end{figure*}    
-In the following years, the fluctuation in the maximum value is likely the result the density-dependent survival function for age-0 fish as explained in Section \ref{sec:survival}. 
+\caption{(a) The total number of gizzard shad in La Grange Reach predicted by IPM for first 100 years. (b) Simulated length distributions during an 8 year interval of time (approximately 1 period of the the total density function) }
+\end{figure}    
+In addition. the average simulated length distribution compares favorably to the length frequencies of observations from La Grange. (Figure \ref{fig:lagrange}). 
+\begin{figure}
+\centering
+\begin{subfigure}[b]{.43\textwidth}
+  \includegraphics[width=\textwidth]{figures/LTRMlg.png}
+   \caption{}
+  \label{fig:LTRMlg}
+\end{subfigure}
+\begin{subfigure}[b]{.43\textwidth}
+   \includegraphics[width=\textwidth]{figures/lagrange.pdf}
+     \caption{}
+\label{fig:lagrange}
+\end{subfigure}
+\caption{(a) Length frequencies of sampled gizzard shad in La Grange for each year, 1992-2020. (b) Length frequencies of sampled gizzard shad in La Grange from 1992-2020 compared with average (over 1 period) simulated length frequency.}
+\end{figure}    
+
+%We notice that the peak frequencies are near the same length with the model predicting slightly more adults lengths and fewer juvenile lengths than the observations. 
+
+PARAGRAPHS:
+Figure \ref{fig:period} illustrates the periodic length dynamics within the gizzard shad population.  
+The ebb and flow of the frequency of the age-1 cohort are associated with the density-dependent survival function for age-0 fish as explained in Section \ref{sec:survival}.
+Specifically, the age-1 dominated frequency distribution in Year 1 ($t=89$ years) is the result of the low frequency of adults in previous years, Year 9 (both years $t=87$ and $t=97$).  
+Two years, later the Age-1 cohort 
 
 Figure \ref{fig:length_den} also demonstrates the length dynamics within the gizzard shad population.  
-The peak length frequency of age-1 fish in $n(z,1)$ near $z = 105$ mm is seen as a peak in $n(z,2)$ near 180 mm before becoming unindentifiable in the graph of $n(z,3)$.  
+The peak length frequency of age-1 fish in $n(z,1)$ near $z = 105$ mm is seen as a peak in $n(z,2)$ near 180 mm before becoming unidentifiable in the graph of $n(z,3)$.  
 This is consistent with the average lifespan of 4-6 years (CITATION). 
+
+
+[PART OF Discussion in comparing 5b to 
+While our model uses age-0 density to effect age-0 survival, we assumed constant viability which may be sensitive to the external factors mentioned above.
+In addition, the location of the maximum length and the variation in the of length of new recruits recorded in the LTRM data, suggests that there may be smaller age-0 fish in La Grange Reach than in study location \citep{michaletz2017variation} used to parameterize the model.  
+
+
+%\subsection{Time evolution of the initial state}
+%[NOT NEEDED - NOW THAT WE HAVE PERIODIC GRAPH TO DISCUSS]
+%Starting with $n(z,0)$ defined by Equation \ref{eq:n}, we computed the length distribution for 4 years.  
+%In year 1, there are two relative maximum frequencies corresponding to the recruitment of age-1 fish and the survival of the adults.
+%The greatest value of $n(z,1)$ during year one is centered at the mean length of recruitment (Figure \ref{fig:length_den}). 
+% \begin{figure*}
+%\centering
+%\begin{subfigure}[b]{.43\textwidth}
+%  \includegraphics[width=\textwidth]{figures/initial_sim_den.png}
+%\caption{}
+%\label{fig:length_den}
+%\end{subfigure}
+%\begin{subfigure}[b]{.43\textwidth}
+%\includegraphics[width=\textwidth]{figures/initial_sim.png}
+%\caption{}
+%\label{fig:length_dist}
+%\end{subfigure}
+%\caption{Simulated (a) density and (b) frequency of lengths of gizzard shad. }
+%\end{figure*}    
+%In the following years, the fluctuation in the maximum value is likely the result the density-dependent survival function for age-0 fish as explained in Section \ref{sec:survival}. 
+%
+%Figure \ref{fig:length_den} also demonstrates the length dynamics within the gizzard shad population.  
+%The peak length frequency of age-1 fish in $n(z,1)$ near $z = 105$ mm is seen as a peak in $n(z,2)$ near 180 mm before becoming unidentifiable in the graph of $n(z,3)$.  
+%This is consistent with the average lifespan of 4-6 years (CITATION). 
 
 
 \section{Discussion}
@@ -543,7 +555,8 @@ This is consistent with the average lifespan of 4-6 years (CITATION).
 %\end{figure*}    
 
 Gizzard shad are common in freshwater systems of North America where they are important components fo the freshwater community. 
-Given this, it is important to understand how populations of this species vary with changing environmental circumstances, such as the occurance of invasive species. Herein we use both LTRM data and parameters gleaned from other emiperical studies to develop an integral projection model for gizzard shad and test model outputs against patterns reported from a well-studied population of thsi species from the Illinois River.   
+Given this, it is important to understand how populations of this species vary with changing environmental circumstances, such as the occurrence of invasive species. 
+Herein we use both LTRM data and parameters gleaned from other empirical studies to develop an integral projection model for gizzard shad and test model outputs against patterns reported from a well-studied population of this species from the Illinois River.   
 
 After fitting two adult survival parameters using LTRM data from the main channel of the Mississippi River, we compared a simulated length distribution with LTRM data collected from the La Grange Reach of the Illinois River from 1992 to 2020. 
 The resulting simulated length distributions (Figure \ref{fig:period}) reflected a number of the patterns observed in gizzard shad captured from La Grange over the collection period (Figure \ref{fig:LTRMlg}). 
