@@ -359,7 +359,7 @@ Key ecological components of aquatic vegetation, bathymetry, fish, land use/land
 The LTRM fish collection methodology includes a multiple gear approach (netting and electrofishing) to monitor the general fish community in six study pools/reaches through time \citep{gutreuter1995long}.
 Methodology, protocols and modifications to the LTRM can be found in \cite{gutreuter1995long}, and \cite{ickes2002evaluation}. 
 With the exception of La Grange Reach, five (Pools 4, 8, 13, 26, and the Open River Reach) of the six study sites correspond to field stations located along the main channel of the river (Figure \ref{fig:field_stations}).
-Total length of gizzard shad in the main channel of the UMRS is recorded since 1989 with approximately 3000 random collections each year (Figure \ref{fig:LTRMmain}). 
+Total length of gizzard shad in the main channel of the UMRS has been recorded since 1989 with approximately 3000 random collections each year (Figure \ref{fig:LTRMmain}). 
 
 \begin{figure}
 \centering
@@ -379,10 +379,10 @@ Total length of gizzard shad in the main channel of the UMRS is recorded since 1
 \subsection{Research area used for model validation}
 The 129 km long La Grange Reach is located between La Grange Lock and Dam (L\&D) and Peoria L\&D on the Illinois River, U.S., and is approximately midway between the Mississippi River and Lake Michigan. 
 The Illinois River is a major tributary of the Mississippi River, draining nearly two-thirds of the state of Illinois. 
-Along with the main channel of the UMR, the fish community of La Grange Reach has been monitored by LTRM from 1990 to the present, with approximately 500 random collections each year from 15 June to 31 October. 
+Along with the main channel of the UMRS, the fish community of La Grange Reach has been monitored by LTRM from 1990 to the present, with approximately 500 random collections each year from 15 June to 31 October. 
 
 The location of La Grange Reach has two important features motivation its choice for the methods of our study. 
-First, we parameterized the IPM using data from the main channel of the UMRS.  
+First, we were able to parameterized the IPM using data collected from the main channel of the UMRS.  
 As a part of Illinois River and UMRS, La Grange Reach is upstream and relatively independence from main channel of the Mississippi River.  
 In recent years, there have been concerns with the threatening introduction of invasive carp to the Great Lakes.  
 As a consequence, the impact of invasive carp on the native fish populations in the pools leading to the Great Lakes have received an elevated level of attention.  
@@ -391,9 +391,9 @@ Understanding the population dynamics of gizzard shad in La Grange Reach, may ma
 \subsection{Parameterization}
 \subsubsection{Fecundity and recruitment}
 The maturity of female gizzard shad begin at approximately 140 mm and the number of eggs that are produced increases as the females increase in size \citep{jons1997ovarian}. 
-The logistic parameters for the mean number of eggs produced by females of a certain length were obtained by fitting the three-parameter logistic function to the data for batch fecundity versus length \citep{jons1997ovarian} (Figure \ref{fig:eggs}). 
+The logistic parameters for the mean number of eggs produced by females of a certain length were obtained by fitting the three-parameter logistic function (Equation \ref{eq:egg}) to the data for batch fecundity versus length \citep{jons1997ovarian} (Figure \ref{fig:eggs}). 
 The survival to age-0 was assumed to be dependent on the density of age-0 gizzard shad (Figure \ref{fig:surv_age0}).  
-Parameters for the exponentially decaying age-0 survival function were determined by fitting equation \ref{eq:s0} to the survival means for 2003-2007 cohorts of gizzard shard in five Missouri reservoirs \citep{michaletz2010overwinter}.
+Parameters for the exponentially decaying age-0 survival function (Equation \ref{eq:s0}) were determined by fitting equation \ref{eq:s0} to the survival means for 2003-2007 cohorts of gizzard shard in five Missouri reservoirs \citep{michaletz2010overwinter}.
 To complete the recruitment process we assign a length to the recruited individuals by simulating a Gaussian random variable with mean $\mu_c$ and standard deviation $\sigma_c$.
 These parameters for the size distribution of age-1 fish were gleaned from a study of gizzard shad located in large impoundments \citep{michaletz2017variation} and the historic 1990-2020 LTRM dataset of the main channel of the UMRS.
 
@@ -416,7 +416,7 @@ These parameters for the size distribution of age-1 fish were gleaned from a stu
 \subsubsection{Growth and survival of adults}
 The parameters for the growth function were chosen as the mean values published on a study of gizzard shad located in large impoundments \citep{michaletz2017variation}. 
 The survival rate of adults gizzard shad dependent on their length is not well documented and required us to make some additional modeling assumptions.  
-We assume that the probability of adult survival is related to the length by a four-parameter logistic function.
+We assume that the probability of adult survival is related to the length by a four-parameter logistic function (Equation \ref{eq:surv}).
 An investigation of gizzard shad in Lake Eerie (\cite{bodola1955life}) provided the minimum and maximum survival rate of adults. 
 Based on the observed length distributions of gizzard shad sampled from the main channel of the Mississippi River (Figure \ref{fig:LTRMmain}), we assumed that solutions of our model will exhibit periodic behavior every 8-9 years.   
 We used a least squares method to estimate the $\alpha_s$ and $\beta_s$ parameters that 
@@ -440,7 +440,6 @@ As a result, we initialized our model with length distribution
  \end{equation}
 
 The model was coded in R \citep{R} and the scripts are published on JP github page \verb+https://github.com/jppeirce+.
-
 
 \subsubsection{Survival of age-0 cohort} \label{sec:survival}
 The dependence on survival of next generation of age-0 fish on the present density of age-0 fish strongly influences the density, at all ages, of gizzard shad within the population. 
@@ -503,8 +502,10 @@ In addition. the average simulated length distribution compares favorably to the
 
 %We notice that the peak frequencies are near the same length with the model predicting slightly more adults lengths and fewer juvenile lengths than the observations. 
 
-Figure \ref{fig:period} illustrates the periodic length dynamics within the gizzard shad population.  
+After simulating an additional 50 years, we fit a periodic function to the annual density of gizzard shad and determined a period of approximately 8.5 years. 
+Figure \ref{fig:period} illustrates the periodic length dynamics within the gizzard shad population during a 8-year window of the periodic orbit.  
 The ebb and flow of the frequency of the age-1 cohort are associated with the density-dependent survival function for age-0 fish as explained in Section \ref{sec:survival}.
+In addition, Figure \ref{fig:period} captures the cohort length dynamics of the gizzard shad. 
 Specifically, the peak length frequency of age-1 fish in Year 1 near $z = 105$ mm is seen as a peak in Year 3 near 185 mm, a peak near 305 mm in Year 3, before becoming nearly unidentifiable in the graphs of Year 7 and 9.  
 This is consistent with the average lifespan of 4-6 years (CITATION). 
 The change in the location of these relative maximum influences the number of eggs being produced and consequently the density of age-0 fish the next year. 

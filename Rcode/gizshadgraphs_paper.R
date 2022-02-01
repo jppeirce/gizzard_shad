@@ -51,49 +51,19 @@ ggplot(plot_df,
         aspect.ratio = .7)
 ggsave("~/Documents/research/gizzard_shad/figures/ntotal.png")
 
-#####################################################
-## Length FREQUENCY distributions for first few years
-#####################################################
-show_years <- 1:5
-n_freq <- sweep(n, 2, colSums(n),  FUN = "/")
-plot_df <- data.frame(z = zmesh, year = n_freq[,show_years])
-plot_df <- melt(plot_df, id.vars = 'z', variable.name = 'year')
-ggplot(plot_df,
-       aes(z, value)) + 
-  geom_line(aes(color = year)) + 
-  labs(x = "length (in mm)",
-       y = "relative frequency",
-       title = "n(z,t)/total",
-       color = "Legend") +
-  scale_color_manual(
-    values = rainbow(5),
-    labels = c("Year 0", "Year 1", "Year 2", "Year 3","Year 4"))+
-  theme_bw() +  
-  theme(legend.position = c(0.8, 0.5))+
-  theme(text = element_text(size=16),
-        aspect.ratio = .7)
-ggsave("~/Documents/research/gizzard_shad/figures/initial_sim.png")
-
-
-plot_df <- data.frame(z = zmesh, year = n[,show_years])
-plot_df <- melt(plot_df, id.vars = 'z', variable.name = 'year')
-ggplot(plot_df,
-       aes(z, value)) + 
-  geom_line(aes(color = year)) + 
-  labs(x = "length (in mm)",
-       y = "density",
-       title = "n(z,t)",
-       color = "Legend") +
-  scale_color_manual(
-    values = rainbow(5),
-    labels = c("Year 0", "Year 1", "Year 2", "Year 3","Year 4"))+
-  theme_bw() +  
-  theme(legend.position = c(0.8, 0.5))+
-  theme(text = element_text(size=16),
-        aspect.ratio = .7)
-ggsave("~/Documents/research/gizzard_shad/figures/initial_sim_den.png")
-
-
+### Compute period of n_total
+# Make tibble of many periods at/near stable state
+many_period <- tibble(
+  t = (tf-30):tf,
+  n_tot = n_total[(tf-30):tf]
+)
+# fit sine curve to many_period
+n_total_period <- nls(
+  n_tot~(mean(many_period$n_tot)+(max(many_period$n_tot)-mean(many_period$n_tot))*sin((2*pi/per)*(t-shift))),
+  data = many_period,
+  start = list(
+    per = 9,
+    shift = 5))
 
 show_years <- tf -12 + seq(from = 1, 
                        length.out = 5,
