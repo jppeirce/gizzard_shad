@@ -85,7 +85,7 @@ least_sq <- function(x){
   m_par$surv_beta <- x[2] 
   ## Run model
   l_shad <- 0.00   # lower size limit in mm
-  u_shad <- max(ltrm_gzsd_main$length_round)  # upper size limit in mm - we want this to be
+  u_shad <- max(ltrm_gzsd_main$length_round)  # upper size limit in mm
   delta_z <- (u_shad - l_shad) / N
   zmesh <-  l_shad + ((1:N) - 1 / 2) * (u_shad - l_shad) / N
   # Initial length distribution
@@ -125,9 +125,9 @@ zmesh <-  l_shad + (1:N) * (u_shad - l_shad) / N
 n_total_period <- 8
 
 surv_params <- tibble(
-  year = tf-n_total_period + 1:(n_total_period -1), 
-  surv_alpha = rep(0, n_total_period -1),
-  surv_beta = rep(0, n_total_period -1)
+  year = tf-n_total_period + 1:(n_total_period), 
+  surv_alpha = rep(0, n_total_period),
+  surv_beta = rep(0, n_total_period)
 )
 for(i in 1:(n_total_period -1)){
 tf <- 200 - n_total_period + i
