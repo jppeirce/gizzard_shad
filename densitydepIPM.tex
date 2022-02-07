@@ -226,13 +226,13 @@ After a period of days, eggs hatch and fish develop from the larval stage to juv
 In many habitats, individuals can reach sexual maturity within a year. 
 As gizzard shad mature, their diet preferences typically shift from phytoplankton and zooplankton early in development to detritus and zooplankton as adults. 
 Given the large number of eggs produced by shad females ($>$ 300,000/year), there is evidence that intraspecific competition can be intense during early developmental stages in this species leading to density-dependent survival. 
-The strength of this competition may then subside as fish transition to feeding on different food items during latter stages of development.   
+The strength of competition may then subside as fish transition to feeding on different food items during latter stages of development.   
 
 \subsection{Equations}
 We used an integral projection model (IPM) to describe the life history of gizzard shad in the Upper Mississippi River (UMR) system. 
 IPMs were first introduced by Easterling \citep{easterling2000size}, as a generalization of stage-based, matrix population models. 
-Since that time, IPMs have been used to describe a wide range of organisms \citep{ellner2016data, merow2014advancing, rees2014building}, but have only recently be used to model fish populations \citep{erickson2017integral, liao2019dynamic, white2016fitting, pollesch2022developing}. Fish are an ideal group to investigate using this approach as many species are associated with robut datasets that contain information about life-history traits (i.e. growth and reproduction). The fact that gizzard shad have been the subject of numerous laboratory and field studies over the decades makes this species a logical choice for IPMs as many aspects of their life cycle have been documented.
-Specifically, functions used in our model incorporate data from studies on egg production and adult size,  survival of the age-0 stage and density, and nearly thirty years of length measurements in the main channel of the Upper Mississippi River system.
+Since that time, IPMs have been used to describe a wide range of organisms \citep{ellner2016data, merow2014advancing, rees2014building}, but have only recently be used to model fish populations \citep{erickson2017integral, liao2019dynamic, white2016fitting, pollesch2022developing}. Fish are an ideal group to investigate using this approach as many species have been well studied and are therefore associated with robut information about life-history traits (i.e. growth and reproduction). Gizzard shad are one such species and have been the subject of numerous laboratory and field studies over the decades making it a logical choice for IPMs.
+In our model specifically, we incorporate data from studies on 1) egg production in different size classes of fish, 2) density-dependent survival of age-0 shad, and 3) length distributions of gizzard shad in the UMRS that span nearly thirty years.
 
 We assumed that variations among individual gizzard shad can be summarized by its length $z$ (in mm) ranging from the minimum possible length $L$ to the maximum value $U$. 
 The state of the population at time $t$ (in years) is described by the length distribution $n(z,t)$. 
@@ -240,7 +240,7 @@ Specifically, for each time $t$, $n(z,t)$ is a smooth function of $z$ such that 
 
 Between times $t$ and $t+1$, individual gizzard shad may grow, die, and produce offspring that vary in length depending on the individuals current length (Figure \ref{life_cycle}). 
 At time $t+1$ the population will have a length distribution defined by $n(z, t+1)$. 
-For our model, we partition the life cycle of gizzard shad into two stages: 1) survival and growth, and  2) reproduction. 
+For our model, we partition the life cycle of gizzard shad into two compartments: 1) survival and growth, and  2) reproduction. 
 For an individual of length $z$ at time $t$, $P(z',z)\Delta z$ is the probability that the individual is alive at time $t+1$, and its size is in the interval $[z', z' + \Delta z]$ (as with $n(z,t)$ this is an approximation that is valid for small $\Delta z$, and the exact probability is given by an integral like the one above). 
 Similarly, $F(z',z)\Delta z$ is the number of new offspring in the interval $[z', z' + \Delta z]$ present at time $t+1$, per length-$z$ individual at time $t$.
 
