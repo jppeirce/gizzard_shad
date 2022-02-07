@@ -304,11 +304,11 @@ We assumed that the survival function is a logistic function,
 \begin{equation}\label{eq:surv}
 s(z,T) = s_{\rm min} + \frac{s_{\rm max}-s_{\rm min}}{1+e^{\beta_s(\ln(z)-\ln(\alpha_s)),}}.
 \end{equation}
-with four parameters: the minimum survival rate $s_{\rm min}$; a maximum survival rate, $s_{\rm max}$; and intercept parameter, $\alpha_{s}$; and a slope parameter, $\beta_{s}$ \citep{bolker2008ecological}.  
+with four parameters: the minimum survival rate $s_{\rm min}$; a maximum survival rate, $s_{\rm max}$; an intercept parameter, $\alpha_{s}$; and a slope parameter, $\beta_{s}$ \citep{bolker2008ecological}.  
 
 We assumed that the growth function is a two-variable normal distribution centered around a modified von Bertalanffy function of the length at time t. 
 The von Bertalanffy equation, commonly used to describe the length of a fish over time, is given by $\ds z(t) = L_{\infty} \left(1-e^{-K(t-t_0)} \right)$ where $L_\infty$ is maximum asymptotic length, $K$ is the growth rate, and $t_0$ is the initial time. 
-The expected length in the next year
+The expected fish length the following year is:
 \begin{align*}
  z' =z(t+1) & =  L_{\infty} \left(1-e^{-K(t+1-t_0)} \right) =  L_{\infty} - L_{\infty}e^{-K(t-t_0)} e^{-K} \\
  & =   L_\infty - \left( z(t)-L_\infty \right) e^{-K} =   L_{\infty} \left(1-e^{-K} \right) + z(t)e^{-K}. 
@@ -331,7 +331,7 @@ We assumed that the mean number of eggs produced by females of a certain length 
 \mbox{egg}(z) = \frac{\mbox{egg}_{\rm max}}{1+e^{\beta_e(\ln(z)-\ln(\alpha_e)),}}.
 \end{equation}
 
-The probability of survival of gizzard shad during their first year may depend on many factors \citep{michaletz2010overwinter} such as mean temperature, mean total length, the present density of age-0 fish.  
+The probability of gizzard shad survival during their first year can depend on many factors \citep{michaletz2010overwinter} including predation, temperature, the mean total length of fish, and the density of age-0 fish.  
 In this study, we focus only on the density factor and define the probability of survival of age-0 fish as the exponential function
 \begin{equation}\label{eq:s0}
 s_0(d(t)) = a_0 \, e^{-b_0 d(t)}
@@ -339,7 +339,7 @@ s_0(d(t)) = a_0 \, e^{-b_0 d(t)}
 where $a_0$ is the intercept, $b_0$ the decay rate, and $d(t)$ is the density at time $t$ of age-0 gizzard shad per 1000 m$^3$, 
 \[ d(t) = 10^{-3} \int_L^U p_b \, \mbox{egg}(z) \, \nu n(z,t) \, dz. \]  
 
-Finally, after computing the total number of viable eggs produced and survive to age-1 fish, we multiplied this number with a normal distribution of length,
+Finally, we computed the total number of eggs that result in age-1 fish and multiplied this number with a normal distribution of length,
 $ \ds C_1 (z') =  \mathrm{Normal PDF} (\mu_r, \sigma_r)$ where $\mu_r$ is the mean length of age-1 gizzard shad and $\sigma_r$ is the standard deviation. 
 
 \subsection{Dynamical model} 
