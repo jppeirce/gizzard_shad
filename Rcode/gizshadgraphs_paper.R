@@ -65,7 +65,7 @@ n_total_period <- nls(
     per = 9,
     shift = 5))
 
-show_years <- tf -12 + seq(from = 1, 
+show_years <- tf -11 + seq(from = 1, 
                        length.out = 5,
                        by  = 2)
 n_freq <- sweep(n, 2, colSums(n),  FUN = "/")
@@ -83,7 +83,7 @@ ggplot(plot_df,
     labels = c("Year 1", "Year 3",
                "Year 5","Year 7", "Year 9"))+
   theme_bw() +  
-  theme(legend.position = c(0.8, 0.5))+
+  theme(legend.position = c(0.85, 0.5))+
   theme(text = element_text(size=16),
         aspect.ratio = .7)
 ggsave("~/Documents/research/gizzard_shad/figures/period.png")
@@ -195,7 +195,7 @@ for (i in 1:(tf - 1)) {
 }
 
 
-year_start <- tf-7
+year_start <- tf-8
 year_end <- tf
 plot_average <- tibble(z = zmesh, 
                        year = rep("mean",N),

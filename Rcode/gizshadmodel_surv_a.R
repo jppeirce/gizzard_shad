@@ -21,7 +21,7 @@ u_shad <- 500.0    # upper size limit in mm - we want this to be
 # larger than L-infty
 delta_z <- (u_shad - l_shad) / N
 zmesh <-  l_shad + ((1:N) - 1 / 2) * (u_shad - l_shad) / N
-tf <- 200 # number of years
+tf <- 100 # number of years
 
 # Initial length distribution
 n <- matrix(0, length(zmesh), tf)
@@ -101,7 +101,6 @@ least_sq <- function(x){
   }
   # Compute equilibrium frequencies - averaged over approximately 1 period of 8 years
   ### Since tf = 200:
-#  model_equil <- (1/16)*rowSums(n[zmesh_obs/delta_z, year_start:year_end]/sum(n[zmesh_obs/delta_z, year_start:year_end]) )
     model_equil <- n[zmesh_obs/delta_z, tf]/sum(n[zmesh_obs/delta_z, tf])
   ## End model 
   sse <- sum((ltrm_gzsd_main$freq - model_equil/delta_z)^2)
@@ -125,15 +124,23 @@ zmesh <-  l_shad + (1:N) * (u_shad - l_shad) / N
 n_total_period <- 8
 
 surv_params <- tibble(
-  year = tf-n_total_period + 1:(n_total_period), 
+  year = tf-1-n_total_period + 1:(n_total_period), 
   surv_alpha = rep(0, n_total_period),
   surv_beta = rep(0, n_total_period)
 )
-for(i in 1:(n_total_period -1)){
-tf <- 200 - n_total_period + i
+
+for(i in 91:98){
+  tf <- i
+  opt <- optim(c(90,-50), fn = least_sq)
+  surv_params[i-90,2] <- opt$par[1] # assign alpha
+  surv_params[i-90,3] <- opt$par[2] # assign beta
+}
+
+for(i in surv_params$year){
+tf <- i
 opt <- optim(c(90,-50), fn = least_sq)
-surv_params[i,2] <- opt$par[1] # assign alpha
-surv_params[i,3] <- opt$par[2] # assign beta
+surv_params[i-(tf-n_total_period)+1,2] <- opt$par[1] # assign alpha
+surv_params[i-(tf-n_total_period)+1,3] <- opt$par[2] # assign beta
 }
 
 #### Now Check with La Grange
