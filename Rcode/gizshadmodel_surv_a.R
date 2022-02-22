@@ -136,13 +136,6 @@ for(i in 91:98){
   surv_params[i-90,3] <- opt$par[2] # assign beta
 }
 
-for(i in surv_params$year){
-tf <- i
-opt <- optim(c(90,-50), fn = least_sq)
-surv_params[i-(tf-n_total_period)+1,2] <- opt$par[1] # assign alpha
-surv_params[i-(tf-n_total_period)+1,3] <- opt$par[2] # assign beta
-}
-
 #### Now Check with La Grange
 m_par$surv_alpha <- mean(surv_params$surv_alpha)
 m_par$surv_beta <- mean(surv_params$surv_beta)

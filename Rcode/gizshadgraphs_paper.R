@@ -88,25 +88,51 @@ ggplot(plot_df,
         aspect.ratio = .7)
 ggsave("~/Documents/research/gizzard_shad/figures/period.png")
 
-# show_years <- (tf-11):(tf-4)
-# n_freq <- sweep(n, 2, colSums(n),  FUN = "/")
-# plot_df <- data.frame(z = zmesh, year = n_freq[,show_years])
-# plot_df <- melt(plot_df, id.vars = 'z', variable.name = 'year')
-# ggplot(plot_df,
-#        aes(z, value)) + 
-#   geom_line(aes(color = year)) + 
-#   labs(x = "length (in mm)",
-#        y = "relative frequency",
-#        title = "n(z,t)/total",
-#        color = "Legend") +
-#   scale_color_manual(
-#     values = rainbow(3),
-#     labels = c("Year 1", "Year 2", "Year 3",
-#                "Year 4","Year 5","Year 6","Year 7", "Year 8"))+
-#   theme_bw() +  
-#   theme(legend.position = c(0.8, 0.5))+
-#   theme(text = element_text(size=16),
-#         aspect.ratio = .7)
+show_years <- tf -10 + seq(from = 1, 
+                          length.out = 5,
+                          by  = 1)
+n_freq <- sweep(n, 2, colSums(n),  FUN = "/")
+plot_df <- data.frame(z = zmesh, year = n_freq[,show_years])
+plot_df <- melt(plot_df, id.vars = 'z', variable.name = 'year')
+ggplot(plot_df,
+       aes(z, value)) + 
+  geom_line(aes(color = year)) + 
+  labs(x = "length (in mm)",
+       y = "relative frequency",
+       title = "n(z,t)/total",
+       color = "Legend") +
+  scale_color_manual(
+    values = rainbow(5),
+    labels = c("Year 1", "Year 2",
+               "Year 3","Year 4", "Year 5"))+
+  theme_bw() +  
+  theme(legend.position = c(0.85, 0.5))+
+  theme(text = element_text(size=16),
+        aspect.ratio = .7)
+ggsave("~/Documents/research/gizzard_shad/figures/period_small.png")
+show_years <- tf -6 + seq(from = 1, 
+                          length.out = 5,
+                          by  = 1)
+n_freq <- sweep(n, 2, colSums(n),  FUN = "/")
+plot_df <- data.frame(z = zmesh, year = n_freq[,show_years])
+plot_df <- melt(plot_df, id.vars = 'z', variable.name = 'year')
+ggplot(plot_df,
+       aes(z, value)) + 
+  geom_line(aes(color = year)) + 
+  labs(x = "length (in mm)",
+       y = "relative frequency",
+       title = "n(z,t)/total",
+       color = "Legend") +
+  scale_color_manual(
+    values = rainbow(5),
+    labels = c("Year 5", "Year 6",
+               "Year 7","Year 8", "Year 9"))+
+  theme_bw() +  
+  theme(legend.position = c(0.85, 0.5))+
+  theme(text = element_text(size=16),
+        aspect.ratio = .7)
+ggsave("~/Documents/research/gizzard_shad/figures/period_large.png")
+
 
 ### Age-0 survival vs time
 surv_t <- rep(0, times = tf)
