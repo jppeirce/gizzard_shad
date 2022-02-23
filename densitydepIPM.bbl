@@ -82,6 +82,13 @@
   \bibinfo{volume}{123}~(\bibinfo{number}{5}) (\bibinfo{year}{1994})
   \bibinfo{pages}{703--717}.
 
+\bibitem[{Michaletz(2010)}]{michaletz2010overwinter}
+\bibinfo{author}{P.~H. Michaletz}, \bibinfo{title}{Overwinter survival of age-0
+  gizzard shad in Missouri reservoirs spanning a productivity gradient: roles
+  of body size and winter severity}, \bibinfo{journal}{Transactions of the
+  American Fisheries Society} \bibinfo{volume}{139}~(\bibinfo{number}{1})
+  (\bibinfo{year}{2010}) \bibinfo{pages}{241--256}.
+
 \bibitem[{DiCenzo et~al.(1996)DiCenzo, Maceina, and
   Stimpert}]{dicenzo1996relations}
 \bibinfo{author}{V.~J. DiCenzo}, \bibinfo{author}{M.~J. Maceina},
@@ -146,13 +153,6 @@
   spawning periodicity}, \bibinfo{journal}{Journal of Fish Biology}
   \bibinfo{volume}{50}~(\bibinfo{number}{1}) (\bibinfo{year}{1997})
   \bibinfo{pages}{150--156}.
-
-\bibitem[{Michaletz(2010)}]{michaletz2010overwinter}
-\bibinfo{author}{P.~H. Michaletz}, \bibinfo{title}{Overwinter survival of age-0
-  gizzard shad in Missouri reservoirs spanning a productivity gradient: roles
-  of body size and winter severity}, \bibinfo{journal}{Transactions of the
-  American Fisheries Society} \bibinfo{volume}{139}~(\bibinfo{number}{1})
-  (\bibinfo{year}{2010}) \bibinfo{pages}{241--256}.
 
 \bibitem[{Easterling et~al.(2000)Easterling, Ellner, and
   Dixon}]{easterling2000size}
