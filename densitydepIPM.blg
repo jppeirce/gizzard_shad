@@ -1,9 +1,9 @@
-This is BibTeX, Version 0.99d (TeX Live 2015)
-Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+This is BibTeX, Version 0.99d (TeX Live 2018)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: densitydepIPM.aux
 The style file: elsarticle-num-names.bst
 Database file #1: gizshad.bib
-Repeated entry---line 219 of file gizshad.bib
+Repeated entry---line 218 of file gizshad.bib
  : @article{love2018does
  :                      ,
 I'm skipping whatever remains of this entry
@@ -11,43 +11,43 @@ Warning--empty journal in jester1972life
 Warning--empty journal in gutreuter1995long
 You've used 34 entries,
             2793 wiz_defined-function locations,
-            817 strings with 12252 characters,
-and the built_in function-call counts, 19911 in all, are:
-= -- 1169
+            816 strings with 12260 characters,
+and the built_in function-call counts, 19939 in all, are:
+= -- 1168
 > -- 769
 < -- 12
 + -- 316
 - -- 236
-* -- 2725
+* -- 2730
 := -- 2675
 add.period$ -- 34
 call.type$ -- 34
 change.case$ -- 137
 chr.to.int$ -- 34
 cite$ -- 36
-duplicate$ -- 1570
-empty$ -- 1495
+duplicate$ -- 1572
+empty$ -- 1504
 format.name$ -- 342
-if$ -- 3491
+if$ -- 3500
 int.to.chr$ -- 1
 int.to.str$ -- 35
-missing$ -- 400
+missing$ -- 401
 newline$ -- 112
 num.names$ -- 102
 pop$ -- 433
 preamble$ -- 1
 purify$ -- 170
 quote$ -- 0
-skip$ -- 383
+skip$ -- 384
 stack$ -- 0
 substring$ -- 1072
-swap$ -- 1457
+swap$ -- 1460
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 202
+type$ -- 200
 warning$ -- 2
 while$ -- 119
 width$ -- 0
-write$ -- 347
+write$ -- 348
 (There was 1 error message)

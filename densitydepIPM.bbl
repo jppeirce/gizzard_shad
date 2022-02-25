@@ -94,8 +94,8 @@
 \bibinfo{author}{V.~J. DiCenzo}, \bibinfo{author}{M.~J. Maceina},
   \bibinfo{author}{M.~R. Stimpert}, \bibinfo{title}{Relations between reservoir
   trophic state and gizzard shad population characteristics in Alabama
-  reservoirs}, \bibinfo{journal}{North American journal of fisheries
-  management} \bibinfo{volume}{16}~(\bibinfo{number}{4}) (\bibinfo{year}{1996})
+  reservoirs}, \bibinfo{journal}{North American Journal of Fisheries
+  Management} \bibinfo{volume}{16}~(\bibinfo{number}{4}) (\bibinfo{year}{1996})
   \bibinfo{pages}{888--895}.
 
 \bibitem[{Irons et~al.(2007)Irons, Sass, McClelland, and
@@ -129,14 +129,14 @@
 \bibitem[{Catalano and Allen(2011)}]{catalano2011whole}
 \bibinfo{author}{M.~J. Catalano}, \bibinfo{author}{M.~S. Allen},
   \bibinfo{title}{A whole-lake density reduction to assess compensatory
-  responses of gizzard shad Dorosoma cepedianum}, \bibinfo{journal}{Canadian
-  Journal of Fisheries and Aquatic Sciences}
+  responses of gizzard shad \emph{Dorosoma cepedianum}},
+  \bibinfo{journal}{Canadian Journal of Fisheries and Aquatic Sciences}
   \bibinfo{volume}{68}~(\bibinfo{number}{6}) (\bibinfo{year}{2011})
   \bibinfo{pages}{955--968}.
 
 \bibitem[{Bodola(1955)}]{bodola1955life}
 \bibinfo{author}{A.~Bodola}, \bibinfo{title}{The life history of the gizzard
-  shad, Dorosoma cepedianum, in western Lake Erie}, Ph.D. thesis,
+  shad, \emph{Dorosoma cepedianum}, in western Lake Erie}, Ph.D. thesis,
   \bibinfo{school}{Doctoral dissertation. Ohio State University, Columbus},
   \bibinfo{year}{1955}.
 
@@ -165,8 +165,9 @@
 \bibitem[{Ellner et~al.(2016)Ellner, Childs, Rees et~al.}]{ellner2016data}
 \bibinfo{author}{S.~P. Ellner}, \bibinfo{author}{D.~Z. Childs},
   \bibinfo{author}{M.~Rees}, et~al., \bibinfo{title}{Data-driven modelling of
-  structured populations}, \bibinfo{journal}{A practical guide to the Integral
-  Projection Model. Cham: Springer} .
+  structured populations: A practical guide to the Integral Projection Model.},
+  \bibinfo{publisher}{Springer International Publishing, Switzerland},
+  \bibinfo{year}{2016}.
 
 \bibitem[{Merow et~al.(2014)Merow, Dahlgren, Metcalf, Childs, Evans, Jongejans,
   Record, Rees, Salguero-G{\'o}mez, and McMahon}]{merow2014advancing}
@@ -203,7 +204,7 @@
   \bibinfo{author}{Y.~Chen}, \bibinfo{author}{Q.~Liu}, \bibinfo{title}{A
   dynamic energy budget--integral projection model (DEB-IPM) to predict
   population-level dynamics based on individual data: a case study using the
-  small and rapidly reproducing species Engraulis japonicus},
+  small and rapidly reproducing species \emph{Engraulis japonicus}},
   \bibinfo{journal}{Marine and Freshwater Research}
   \bibinfo{volume}{71}~(\bibinfo{number}{4}) (\bibinfo{year}{2019})
   \bibinfo{pages}{461--468}.

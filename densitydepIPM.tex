@@ -132,8 +132,8 @@ Results of our work suggest that this model could serve as an important tool for
 
 %%Research highlights
 \begin{highlights}
-\item Research highlight 1
-\item Research highlight 2
+\item Integral projection model that incorporates data from studies on 1) egg production in different size classes of adult gizzard shad, 2) density-dependent survival of age-0 shad, and 3) length distributions of gizzard shad in the Upper Mississippi River system that span nearly thirty years.
+\item  We parameterized survival parameters using gizzard shad data collected from the 5 sites along the Mississippi River and validated our model using empirical information collected from the La Grange Reach of the Illinois River.
 \end{highlights}
 
 \begin{keyword}
@@ -333,7 +333,7 @@ The mean number of eggs produced by females of a certain length is a three-param
 The probability of gizzard shad survival during their first year can depend on many factors \citep{michaletz2010overwinter} including predation, temperature, the mean total length of fish, and the density of age-0 fish.  
 In this study, we focused only on the density factor and assumed the probability of survival of age-0 fish is the exponential function,
 \begin{equation}\label{eq:s0}
-s_0(d(t)) = a_0 \, e^{-b_0 d(t),}
+s_0(d(t)) = a_0 \, e^{-b_0 d(t)},
 \end{equation}
 where $a_0$ is the intercept, $b_0$ the decay rate, and $d(t)$ is the density at time $t$ of age-0 gizzard shad per 1000 m$^3$, 
 \[ d(t) = 10^{-3} \int_L^U p_b \, \mbox{egg}(z) \, \nu n(z,t) \, dz. \]  
@@ -407,7 +407,7 @@ The parameters for the size distribution of age-1 fish were gleaned from a study
 The parameters for the growth function were chosen as the mean values published on a study of gizzard shad located in large impoundments \citep{michaletz2017variation}. 
 The association between adult lengths and survival have not been well-resolved in gizzard shad leading us to make a number of assumptions.  
 First, we assume that the probability of adult survival is related to the length by a four-parameter logistic function (Equation \ref{eq:surv}).
-An investigation of gizzard shad in Lake Eerie (\citep{bodola1955life}) provided the minimum and maximum survival rate of adults. 
+An investigation of gizzard shad in Lake Eerie \citep{bodola1955life} provided the minimum and maximum survival rate of adults. 
 Based on the observed length distributions of gizzard shad sampled from the main channel of the Mississippi River (Figure \ref{fig:LTRMmain}), we assumed that solutions of our model will exhibit periodic behavior every 8-9 years.   
 We used a least squares method to estimate the $\alpha_s$ and $\beta_s$ parameters that 
 minimized the total square-distance between the (observed) pre-carp LTRM length distribution in the main channel of the UMRS and (predicted) model equilibrium, $n(z,t)$ during a 8-year period occurring 100 years after initialization.  
@@ -507,6 +507,7 @@ This is consistent with the lifespan reported for gizzard that can range, on ave
 The change in the location of these relative maximum influences the number of eggs being produced and consequently the density of age-0 fish the next year. 
 An increase in the frequency of larger adults leads to a subsequent reduction in the resulting age-1 cohort due to our density-dependent survival function in age-0 fish.
 
+\section{Discussion}
 Gizzard shad are common in freshwater systems of North America where they are important components of the aquatic communities. 
 Given this, it is important to understand how populations of this species vary with changing environmental circumstances, such as the occurrence of invasive species. 
 Herein we use both LTRM data and parameters gleaned from other empirical studies to develop an integral projection model for gizzard shad and test model outputs against patterns reported from a well-studied population of this species from the La Grange Reach of the Illinois River.   
@@ -523,7 +524,7 @@ This may be explained by gear bias.
 The methods used to capture fish make it more likely to record longer lengths ($>200$mm). 
 Studies [CITATION] suggest that due to the environmental stochasticity and other effects, smaller recruitment fish densities can fluctuate annually and be difficult to measure accurately. 
 
-While our model uses age-0 density to effect age-0 survival, we assumed constant viability which may be sensitive to the external factors mentioned above.
+While our model uses the density of age-0 gizzard shad to effect the survival probability in their first year, we assumed constant viability which may be sensitive to the external factors mentioned above.
 In addition, the location of the maximum length and the variation in the of length of new recruits recorded in the LTRM data, suggests that there may be smaller age-0 fish in La Grange Reach than in study location \citep{michaletz2017variation} used to parameterize the model.  
 
 Gaining an understanding of how length distributions of gizzard shad emerge under density-dependent survival in the age-0 class will serve as a foundation for investigating density effects at subsequent stages in the life cycle.  
