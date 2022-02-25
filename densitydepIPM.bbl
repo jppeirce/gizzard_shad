@@ -1,4 +1,4 @@
-\begin{thebibliography}{34}
+\begin{thebibliography}{36}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\urlprefix}{URL }
@@ -280,5 +280,20 @@
   for Statistical Computing}, \bibinfo{organization}{R Foundation for
   Statistical Computing}, \bibinfo{address}{Vienna, Austria},
   \urlprefix\url{https://www.R-project.org/}, \bibinfo{year}{2017}.
+
+\bibitem[{Rose(2000)}]{rose2000quantitative}
+\bibinfo{author}{K.~A. Rose}, \bibinfo{title}{Why are quantitative
+  relationships between environmental quality and fish populations so
+  elusive?}, \bibinfo{journal}{Ecological Applications}
+  \bibinfo{volume}{10}~(\bibinfo{number}{2}) (\bibinfo{year}{2000})
+  \bibinfo{pages}{367--385}.
+
+\bibitem[{Okamoto et~al.(2016)Okamoto, Schmitt, and
+  Holbrook}]{okamoto2016stochastic}
+\bibinfo{author}{D.~K. Okamoto}, \bibinfo{author}{R.~J. Schmitt},
+  \bibinfo{author}{S.~J. Holbrook}, \bibinfo{title}{Stochastic density effects
+  on adult fish survival and implications for population fluctuations},
+  \bibinfo{journal}{Ecology letters} \bibinfo{volume}{19}~(\bibinfo{number}{2})
+  (\bibinfo{year}{2016}) \bibinfo{pages}{153--162}.
 
 \end{thebibliography}

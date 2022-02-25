@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  25 FEB 2022 08:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  25 FEB 2022 13:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1318,48 +1318,43 @@ File: figures/Figure2a.pdf Graphic file (type pdf)
 <use figures/Figure2a.pdf>
 Package pdftex.def Info: figures/Figure2a.pdf  used on input line 448.
 (pdftex.def)             Requested size: 187.89914pt x 116.89493pt.
-<figures/ntotal.png, id=336, 2722.17pt x 1697.34125pt>
+<figures/ntotal.png, id=333, 2722.17pt x 1697.34125pt>
 File: figures/ntotal.png Graphic file (type png)
 <use figures/ntotal.png>
-Package pdftex.def Info: figures/ntotal.png  used on input line 468.
-(pdftex.def)             Requested size: 155.02pt x 96.65622pt.
-<figures/period_small.png, id=337, 2324.685pt x 1697.34125pt>
-File: figures/period_small.png Graphic file (type png)
-<use figures/period_small.png>
-Package pdftex.def Info: figures/period_small.png  used on input line 473.
-(pdftex.def)             Requested size: 133.17567pt x 97.226pt.
-<figures/period_large.png, id=338, 2324.685pt x 1697.34125pt>
-File: figures/period_large.png Graphic file (type png)
-<use figures/period_large.png>
-Package pdftex.def Info: figures/period_large.png  used on input line 474.
-(pdftex.def)             Requested size: 133.17567pt x 97.226pt.
-<figures/LTRMlg.png, id=339, 2722.17pt x 1697.34125pt>
+Package pdftex.def Info: figures/ntotal.png  used on input line 466.
+(pdftex.def)             Requested size: 211.38832pt x 131.80157pt.
+<figures/period_facet.png, id=334, 2600.71625pt x 1697.34125pt>
+File: figures/period_facet.png Graphic file (type png)
+<use figures/period_facet.png>
+Package pdftex.def Info: figures/period_facet.png  used on input line 471.
+(pdftex.def)             Requested size: 211.38832pt x 137.93971pt.
+<figures/LTRMlg.png, id=335, 2722.17pt x 1697.34125pt>
 File: figures/LTRMlg.png Graphic file (type png)
 <use figures/LTRMlg.png>
-Package pdftex.def Info: figures/LTRMlg.png  used on input line 486.
+Package pdftex.def Info: figures/LTRMlg.png  used on input line 483.
 (pdftex.def)             Requested size: 201.99121pt x 125.92244pt.
-<figures/lagrange.pdf, id=340, 653.44125pt x 406.51875pt>
+<figures/lagrange.pdf, id=336, 653.44125pt x 406.51875pt>
 File: figures/lagrange.pdf Graphic file (type pdf)
 <use figures/lagrange.pdf>
-Package pdftex.def Info: figures/lagrange.pdf  used on input line 491.
+Package pdftex.def Info: figures/lagrange.pdf  used on input line 488.
 (pdftex.def)             Requested size: 201.99121pt x 125.65973pt.
- [11] [12 <./figures/Figure2a.pdf> <./figures/ntotal.png> <./figures/period_sma
-ll.png> <./figures/period_large.png> <./figures/LTRMlg.png> <./figures/lagrange
-.pdf>] [13] (./densitydepIPM.bbl [14]
-[15] [16] [17]) [18]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 582.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 582.
- (./densitydepIPM.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 582.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 582.
+ [11] [12 <./figures/Figure2a.pdf> <./figures/ntotal.png> <./figures/period_fac
+et.png> <./figures/LTRMlg.png> <./figures/lagrange.pdf>] [13] (./densitydepIPM.
+bbl [14] [15] [16] [17]) [18]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 566.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 566.
+
+(./densitydepIPM.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 566.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 566.
 Package rerunfilecheck Info: File `densitydepIPM.out' has not changed.
 (rerunfilecheck)             Checksum: 1C6D680DE84BBB4CBB77C73D555823C0;1200.
  ) 
 Here is how much of TeX's memory you used:
- 30763 strings out of 492649
- 588314 string characters out of 6129622
- 687510 words of memory out of 5000000
- 34147 multiletter control sequences out of 15000+600000
+ 30766 strings out of 492649
+ 588405 string characters out of 6129622
+ 687598 words of memory out of 5000000
+ 34149 multiletter control sequences out of 15000+600000
  540026 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  54i,14n,77p,10361b,969s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1382,10 +1377,10 @@ ve/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2018/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2018/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on densitydepIPM.pdf (20 pages, 3497001 bytes).
+Output written on densitydepIPM.pdf (20 pages, 3215533 bytes).
 PDF statistics:
- 489 PDF objects out of 1000 (max. 8388607)
- 418 compressed objects within 5 object streams
- 85 named destinations out of 1000 (max. 500000)
- 204 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 491 PDF objects out of 1000 (max. 8388607)
+ 422 compressed objects within 5 object streams
+ 87 named destinations out of 1000 (max. 500000)
+ 199 words of extra memory for PDF output out of 10000 (max. 10000000)
 

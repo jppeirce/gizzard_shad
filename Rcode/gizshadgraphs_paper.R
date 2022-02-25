@@ -6,7 +6,7 @@ source("gizshadmodel.R")
 #######################
 
 ## Normal Distribution ##
-N <- 50 # number of size classes
+N <- 400 # number of size classes
 l_shad <- 0.00   # lower size limit in mm
 u_shad <- 500.0    # upper size limit in mm - we want this to be
                    # larger than L-infty
@@ -65,73 +65,102 @@ n_total_period <- nls(
     per = 9,
     shift = 5))
 
-show_years <- tf -11 + seq(from = 1, 
-                       length.out = 5,
-                       by  = 2)
-n_freq <- sweep(n, 2, colSums(n),  FUN = "/")
-plot_df <- data.frame(z = zmesh, year = n_freq[,show_years])
-plot_df <- melt(plot_df, id.vars = 'z', variable.name = 'year')
-ggplot(plot_df,
-       aes(z, value)) + 
-  geom_line(aes(color = year)) + 
-  labs(x = "length (in mm)",
-       y = "relative frequency",
-       title = "n(z,t)/total",
-       color = "Legend") +
-  scale_color_manual(
-    values = rainbow(5),
-    labels = c("Year 1", "Year 3",
-               "Year 5","Year 7", "Year 9"))+
-  theme_bw() +  
-  theme(legend.position = c(0.85, 0.5))+
-  theme(text = element_text(size=16),
-        aspect.ratio = .7)
-ggsave("~/Documents/research/gizzard_shad/figures/period.png")
+# show_years <- tf -11 + seq(from = 1, 
+#                        length.out = 5,
+#                        by  = 2)
+# n_freq <- sweep(n, 2, colSums(n),  FUN = "/")
+# plot_df <- data.frame(z = zmesh, year = n_freq[,show_years])
+# plot_df <- melt(plot_df, id.vars = 'z', variable.name = 'year')
+# ggplot(plot_df,
+#        aes(z, value)) + 
+#   geom_line(aes(color = year)) + 
+#   labs(x = "length (in mm)",
+#        y = "relative frequency",
+#        title = "n(z,t)/total",
+#        color = "Legend") +
+#   scale_color_manual(
+#     values = rainbow(5),
+#     labels = c("Year 1", "Year 3",
+#                "Year 5","Year 7", "Year 9"))+
+#   theme_bw() +  
+#   theme(legend.position = c(0.85, 0.5))+
+#   theme(text = element_text(size=16),
+#         aspect.ratio = .7)
+# ggsave("~/Documents/research/gizzard_shad/figures/period.png")
+# 
+# show_years <- tf -10 + seq(from = 1, 
+#                           length.out = 5,
+#                           by  = 1)
+# n_freq <- sweep(n, 2, colSums(n),  FUN = "/")
+# plot_df <- data.frame(z = zmesh, year = n_freq[,show_years])
+# plot_df <- melt(plot_df, id.vars = 'z', variable.name = 'year')
+# ggplot(plot_df,
+#        aes(z, value)) + 
+#   geom_line(aes(color = year)) + 
+#   labs(x = "length (in mm)",
+#        y = "relative frequency",
+#        title = "n(z,t)/total",
+#        color = "Legend") +
+#   scale_color_manual(
+#     values = rainbow(5),
+#     labels = c("Year 1", "Year 2",
+#                "Year 3","Year 4", "Year 5"))+
+#   theme_bw() +  
+#   theme(legend.position = c(0.85, 0.5))+
+#   theme(text = element_text(size=16),
+#         aspect.ratio = .7)
+# ggsave("~/Documents/research/gizzard_shad/figures/period_small.png")
+# show_years <- tf -6 + seq(from = 1, 
+#                           length.out = 5,
+#                           by  = 1)
+# n_freq <- sweep(n, 2, colSums(n),  FUN = "/")
+# plot_df <- data.frame(z = zmesh, year = n_freq[,show_years])
+# plot_df <- melt(plot_df, id.vars = 'z', variable.name = 'year')
+# ggplot(plot_df,
+#        aes(z, value)) + 
+#   geom_line(aes(color = year)) + 
+#   labs(x = "length (in mm)",
+#        y = "relative frequency",
+#        title = "n(z,t)/total",
+#        color = "Legend") +
+#   scale_color_manual(
+#     values = rainbow(5),
+#     labels = c("Year 5", "Year 6",
+#                "Year 7","Year 8", "Year 9"))+
+#   theme_bw() +  
+#   theme(legend.position = c(0.85, 0.5))+
+#   theme(text = element_text(size=16),
+#         aspect.ratio = .7)
+# ggsave("~/Documents/research/gizzard_shad/figures/period_large.png")
+# 
 
-show_years <- tf -10 + seq(from = 1, 
-                          length.out = 5,
-                          by  = 1)
+show_years <- tf -11 + seq(from = 1, 
+                           length.out = 9,
+                           by  = 1)
 n_freq <- sweep(n, 2, colSums(n),  FUN = "/")
-plot_df <- data.frame(z = zmesh, year = n_freq[,show_years])
-plot_df <- melt(plot_df, id.vars = 'z', variable.name = 'year')
+plot_df <- data.frame(z = zmesh, Year = n_freq[,show_years])
+plot_df <- melt(plot_df, id.vars = 'z', variable.name = 'Year')
 ggplot(plot_df,
        aes(z, value)) + 
-  geom_line(aes(color = year)) + 
+  geom_line() + 
   labs(x = "length (in mm)",
        y = "relative frequency",
        title = "n(z,t)/total",
        color = "Legend") +
-  scale_color_manual(
-    values = rainbow(5),
-    labels = c("Year 1", "Year 2",
-               "Year 3","Year 4", "Year 5"))+
+ # scale_color_manual(
+#    values = rainbow(5),
+#    labels = c("Year 1", "Year 2",
+#               "Year 3","Year 4", "Year 5"))+
+  facet_wrap(~ Year, nrow = 3)+
+  scale_x_continuous(limits = c(0, u_shad), breaks = seq(0, 500, 200),
+                     expand = c(0, 0)) +
+#  scale_y_continuous(limits = c(0, 0.0), breaks = seq(0, 0.015, 0.005),
+#                     expand = c(0, 0))+
   theme_bw() +  
   theme(legend.position = c(0.85, 0.5))+
   theme(text = element_text(size=16),
         aspect.ratio = .7)
-ggsave("~/Documents/research/gizzard_shad/figures/period_small.png")
-show_years <- tf -6 + seq(from = 1, 
-                          length.out = 5,
-                          by  = 1)
-n_freq <- sweep(n, 2, colSums(n),  FUN = "/")
-plot_df <- data.frame(z = zmesh, year = n_freq[,show_years])
-plot_df <- melt(plot_df, id.vars = 'z', variable.name = 'year')
-ggplot(plot_df,
-       aes(z, value)) + 
-  geom_line(aes(color = year)) + 
-  labs(x = "length (in mm)",
-       y = "relative frequency",
-       title = "n(z,t)/total",
-       color = "Legend") +
-  scale_color_manual(
-    values = rainbow(5),
-    labels = c("Year 5", "Year 6",
-               "Year 7","Year 8", "Year 9"))+
-  theme_bw() +  
-  theme(legend.position = c(0.85, 0.5))+
-  theme(text = element_text(size=16),
-        aspect.ratio = .7)
-ggsave("~/Documents/research/gizzard_shad/figures/period_large.png")
+ggsave("~/Documents/research/gizzard_shad/figures/period_facet.png")
 
 
 ### Age-0 survival vs time
@@ -194,14 +223,14 @@ ltrm_gzsd %>%
   filter(pool %in% c("LG")) %>%
   ggplot(., aes(x = length)) +
   geom_histogram(aes(y = ..density..), bins = 30) +
-  facet_wrap(~ year, nrow = 4) +
+  facet_wrap(~ year, ncol = 9) +
   labs(x = "length (in mm)",
        y = "length frequency",
        title = "Length Frequency",
        subtitle = "Upper Mississippi River - La Grange, 1992-2020") +
   scale_x_continuous(limits = c(0, u_shad), breaks = seq(0, 500, 200),
                      expand = c(0, 0)) +
-  scale_y_continuous(limits = c(0, 0.015), breaks = seq(0, 0.015, 0.005),
+  scale_y_continuous(limits = c(0, 0.014), breaks = seq(0, 0.015, 0.005),
                      expand = c(0, 0))+ 
   theme_bw() 
 ggsave("~/Documents/research/gizzard_shad/figures/LTRMlg.png")
