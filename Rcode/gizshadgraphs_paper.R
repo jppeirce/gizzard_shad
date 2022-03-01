@@ -134,7 +134,7 @@ n_total_period <- nls(
 # ggsave("~/Documents/research/gizzard_shad/figures/period_large.png")
 # 
 
-show_years <- tf -11 + seq(from = 1, 
+show_years <- tf -13 + seq(from = 1, 
                            length.out = 9,
                            by  = 1)
 n_freq <- sweep(n, 2, colSums(n),  FUN = "/")
@@ -249,12 +249,11 @@ for (i in 1:(tf - 1)) {
   n[, i + 1] <- k_iter %*% n[, i]
 }
 
-
-year_start <- tf-8
+year_start <- tf-9
 year_end <- tf
 plot_average <- tibble(z = zmesh, 
                        year = rep("mean",N),
-                       n_freq = (1/8)*rowSums(n_freq[,year_start:year_end]) )
+                       n_freq = (1/9)*rowSums(n_freq[,year_start:year_end]) )
 ltrm_gzsd %>%
   filter(year < 2107) %>%
   filter(pool %in% c("LG")) %>%

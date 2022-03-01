@@ -121,7 +121,7 @@ zmesh <-  l_shad + (1:N) * (u_shad - l_shad) / N
 # Estimate surv_alpha and surv_beta for each year (8) of the period
 # Use mean for model parameters
 
-n_total_period <- 8
+n_total_period <- 9
 
 surv_params <- tibble(
   year = tf-1-n_total_period + 1:(n_total_period), 
@@ -129,7 +129,7 @@ surv_params <- tibble(
   surv_beta = rep(0, n_total_period)
 )
 
-for(i in 91:98){
+for(i in 91:99){
   tf <- i
   opt <- optim(c(90,-50), fn = least_sq)
   surv_params[i-90,2] <- opt$par[1] # assign alpha
@@ -149,21 +149,4 @@ for (i in 1:(tf - 1)) {
                                                         m_par)) * delta_z
   n[, i + 1] <- k_iter %*% n[, i]
 }
-
-plot_df <- data.frame(z = zmesh, freq = n[, tf]/sum(n[, tf]))
-ltrm_gzsd_lg <- ltrm_gzsd %>% 
-  mutate(length_round = round(ltrm_gzsd$length, -1))  %>% 
-  filter(pool == "LG")
-ggplot(data = ltrm_gzsd_lg, aes(x = length_round)) +
-  geom_histogram(aes(y = ..density..), bins = 49)+
-  #  geom_density(aes(x = length)) +
-  geom_line(data = plot_df, aes(x = z, y = freq/delta_z))+
-  labs(x = "length (in mm)",
-       y = "frequency",
-       color = "Legend") +
-  scale_color_manual(breaks=c("a","b"))+
-  #  theme_bw()+
-  theme(text = element_text(size=16),
-        aspect.ratio = .7)
-#ggsave("~/OneDrive - University of Wisconsin-La Crosse/GizzardShad/paper/figures/lagrange.pdf")
 

@@ -23,8 +23,8 @@ m_par <- tibble(
   surv_max = 1 - 8.872*grow_rate^.73*grow_max^(-.33), 
   # inflection point: will be temp dependent
   # computed for La Grange Reach
-  surv_alpha = 79.52702, 
-  surv_beta = -156.7095, # slope
+  surv_alpha = 80.0136, 
+  surv_beta = -139.9312, # slope
   ## New recruit from Michaletz (2017)
   recruit_mean = 105,
   recruit_sd = 25, # same as grow_sd
