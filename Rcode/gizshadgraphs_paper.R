@@ -170,7 +170,7 @@ for (i in 1:tf) {
 plot_df <- tibble(time_years = 1:100, prob = surv_t[1:100])
 ggplot(data = plot_df,
        aes(x = time_years, y = prob)) +
-  geom_line(color = "blue", size = 1) +
+  geom_line() +
   labs(x = "time (in years)",
        y = "probability of survival")+
   scale_x_continuous(limits = c(5, 100), breaks = seq(0, 100, 20)) +
