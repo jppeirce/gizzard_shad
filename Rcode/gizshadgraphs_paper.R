@@ -43,7 +43,6 @@ ggplot(plot_df,
        y = "total") +
   labs(x = "time (in years)",
        y = "total density",
-       title = "Total n(z,t)",
        color = "Legend") +
   theme_bw() +  
   theme(legend.position = c(0.8, 0.4))+
@@ -145,7 +144,6 @@ ggplot(plot_df,
   geom_line() + 
   labs(x = "length (in mm)",
        y = "relative frequency",
-       title = "n(z,t)/total",
        color = "Legend") +
  # scale_color_manual(
 #    values = rainbow(5),
@@ -174,10 +172,7 @@ ggplot(data = plot_df,
        aes(x = time_years, y = prob)) +
   geom_line(color = "blue", size = 1) +
   labs(x = "time (in years)",
-       y = "probability of survival",
-       title = "Survival Probability of Age-0")+
-  #       subtitle = paste("Inital Total Density =", n0_total / 1000,
-  #                        "per m^3")) +
+       y = "probability of survival")+
   scale_x_continuous(limits = c(5, 100), breaks = seq(0, 100, 20)) +
   scale_y_continuous(limits = c(0, .04), breaks = seq(0, 0.2, 0.005)) +
   theme_bw() +
@@ -207,7 +202,6 @@ ltrm_gzsd %>%
   facet_wrap(~ year, nrow = 4) +
   labs(x = "length (in mm)",
        y = "length frequency",
-       title = "Length Frequency",
        subtitle = "Upper Mississippi River - Main Channel, 1989-2020") +
   scale_x_continuous(limits = c(0, u_shad), breaks = seq(0, 500, 200),
                      expand = c(0, 0)) +
@@ -226,7 +220,6 @@ ltrm_gzsd %>%
   facet_wrap(~ year, ncol = 9) +
   labs(x = "length (in mm)",
        y = "length frequency",
-       title = "Length Frequency",
        subtitle = "Upper Mississippi River - La Grange, 1992-2020") +
   scale_x_continuous(limits = c(0, u_shad), breaks = seq(0, 500, 200),
                      expand = c(0, 0)) +
@@ -249,7 +242,7 @@ for (i in 1:(tf - 1)) {
   n[, i + 1] <- k_iter %*% n[, i]
 }
 
-year_start <- tf-9
+year_start <- tf-8
 year_end <- tf
 plot_average <- tibble(z = zmesh, 
                        year = rep("mean",N),

@@ -3,51 +3,56 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: densitydepIPM.aux
 The style file: elsarticle-num-names.bst
 Database file #1: gizshad.bib
-Repeated entry---line 218 of file gizshad.bib
+You're missing a field name---line 193 of file gizshad.bib
+ : 
+ : %  title={Enhancing Restoration and Advancing Knowledge of the Upper Mississippi River, A Strategic Plan for the Upper Mississippi River Restoration Program 2015-2025},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Repeated entry---line 237 of file gizshad.bib
  : @article{love2018does
  :                      ,
 I'm skipping whatever remains of this entry
 Warning--empty journal in jester1972life
 Warning--empty journal in gutreuter1995long
-You've used 36 entries,
+You've used 37 entries,
             2793 wiz_defined-function locations,
-            826 strings with 12602 characters,
-and the built_in function-call counts, 21046 in all, are:
-= -- 1240
-> -- 796
+            832 strings with 12795 characters,
+and the built_in function-call counts, 21567 in all, are:
+= -- 1267
+> -- 822
 < -- 13
-+ -- 328
-- -- 244
-* -- 2877
-:= -- 2819
-add.period$ -- 36
-call.type$ -- 36
-change.case$ -- 145
-chr.to.int$ -- 36
-cite$ -- 38
-duplicate$ -- 1662
-empty$ -- 1596
-format.name$ -- 354
-if$ -- 3698
++ -- 338
+- -- 252
+* -- 2947
+:= -- 2894
+add.period$ -- 37
+call.type$ -- 37
+change.case$ -- 149
+chr.to.int$ -- 37
+cite$ -- 39
+duplicate$ -- 1706
+empty$ -- 1632
+format.name$ -- 365
+if$ -- 3788
 int.to.chr$ -- 1
-int.to.str$ -- 37
-missing$ -- 423
-newline$ -- 118
-num.names$ -- 108
-pop$ -- 455
+int.to.str$ -- 38
+missing$ -- 434
+newline$ -- 121
+num.names$ -- 111
+pop$ -- 468
 preamble$ -- 1
-purify$ -- 180
+purify$ -- 185
 quote$ -- 0
-skip$ -- 407
+skip$ -- 418
 stack$ -- 0
-substring$ -- 1146
-swap$ -- 1543
+substring$ -- 1158
+swap$ -- 1582
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 212
+type$ -- 218
 warning$ -- 2
-while$ -- 127
+while$ -- 129
 width$ -- 0
-write$ -- 368
-(There was 1 error message)
+write$ -- 378
+(There were 2 error messages)

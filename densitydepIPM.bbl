@@ -1,4 +1,4 @@
-\begin{thebibliography}{36}
+\begin{thebibliography}{37}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\urlprefix}{URL }
@@ -233,6 +233,14 @@
 \bibitem[{Bolker(2008)}]{bolker2008ecological}
 \bibinfo{author}{B.~M. Bolker}, \bibinfo{title}{Ecological models and data in
   R}, \bibinfo{publisher}{Princeton University Press}, \bibinfo{year}{2008}.
+
+\bibitem[{Bouska et~al.(2018)Bouska, Houser, De~Jager, and
+  Hendrickson}]{bouska2018developing}
+\bibinfo{author}{K.~L. Bouska}, \bibinfo{author}{J.~N. Houser},
+  \bibinfo{author}{N.~R. De~Jager}, \bibinfo{author}{J.~Hendrickson},
+  \bibinfo{title}{Developing a shared understanding of the Upper Mississippi
+  River}, \bibinfo{journal}{Ecology and Society}
+  \bibinfo{volume}{23}~(\bibinfo{number}{2}).
 
 \bibitem[{Gutreuter et~al.(1995)Gutreuter, Burkhardt, and
   Lubinski}]{gutreuter1995long}

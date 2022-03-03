@@ -1,22 +1,5 @@
-%% \documentclass[preprint,5p,times,twocolumn,authoryear]{elsarticle}
-
-%% Use the option review to obtain double line spacing
 \documentclass[preprint,review,12pt,authoryear]{elsarticle}
 
-%% Use the options 1p,twocolumn; 3p; 3p,twocolumn; 5p; or 5p,twocolumn
-%% for a journal layout:
-%% \documentclass[final,1p,times]{elsarticle}
-%% \documentclass[final,1p,times,twocolumn]{elsarticle}
-%% \documentclass[final,3p,times]{elsarticle}
-%% \documentclass[final,3p,times,twocolumn]{elsarticle}
-%% \documentclass[final,5p,times]{elsarticle}
-%% \documentclass[final,5p,times,twocolumn]{elsarticle}
-
-%% For including figures, graphicx.sty has been loaded in
-%% elsarticle.cls. If you prefer to use the old commands
-%% please give \usepackage{epsfig}
-
-%% The amssymb package provides various useful mathematical symbols
 \usepackage{amssymb}
 \usepackage{amsmath}
 \usepackage{latexsym}     
@@ -34,13 +17,6 @@
 % add the following two lines to your document to get bigger arrows
 \usetikzlibrary{arrows.meta}
 \tikzset{>={Latex[width=3mm,length=3mm]}}
-%% The amsthm package provides extended theorem environments
-%% \usepackage{amsthm}
-
-%% The lineno packages adds line numbers. Start line numbering with
-%% \begin{linenumbers}, end it with \end{linenumbers}. Or switch it on
-%% for the whole article with \linenumbers.
-%% \usepackage{lineno}
 
 \def\ds{\displaystyle}
 
@@ -51,30 +27,31 @@
 \linenumbers
 \begin{frontmatter}
 
+\noindent {\bf This draft manuscript is distributed solely for purposes of scientific peer review. Its content is deliberative and predecisional, so it must not be disclosed or released by reviewers. Because the manuscript has not yet been approved for publication by the U.S. Geological Survey (USGS), it does not represent any official USGS finding or policy.} \\
 
 \title{An integral projection model for gizzard shad (\emph{Dorosoma cepedianum}) utilizing density-dependent age-0 survival}
 
-\author{ J. Peirce$^{\rm 1,4}$,  G.  Sandland$^{\rm 3,4}$, B. Bennie$^{\rm 1}$, R.A. Erickson$^{\rm 2}$}
+\author{ J. Peirce$^{\rm 1,3}$,  G.  Sandland$^{\rm 2,3}$, B. Bennie$^{\rm 1}$, R.A. Erickson$^{\rm 4}$}
 \address{
 ${\rm 1}$ University of Wisconsin - La Crosse, Mathematics \& Statistics Department\\ 
-${\rm 2}$ U.S.G.S. Upper Mississippi Environmental Science Center\\ 
-${\rm 3}$ University of Wisconsin - La Crosse, Biology Department\\
-${\rm 4}$ River Studies Center} 
+${\rm 2}$ University of Wisconsin - La Crosse, Biology Department\\
+${\rm 3}$ River Studies Center} 
+${\rm 4}$ U.S. Geological Survey, Upper Mississippi Environmental Sciences Center\\ 
 
 \begin{abstract}
 %% Text of abstract
 Gizzard shad (\emph{Dorosoma cepedianum}) is a common freshwater fish species found throughout the central and eastern portions of North America. 
 Within these regions, gizzard shad play a number of critical roles in the freshwater community such as serving as prey for other fish species and translocating nutrients from substrates into the water column. 
 Because of this, it is important that we understand how gizzard shad populations respond to environmental changes and what these changes may mean for aquatic communities in general and fish assemblages in particular. 
-Here, we introduce an integral projection model (IPM) for gizzard shad that incorporates empirical information from a number of sources including Long Term Resource Monitoring (LTRM) data collected from the Mississippi River. 
+Here, we introduce an integral projection model (IPM) for gizzard shad that incorporates empirical information from a number of sources including Long Term Resource Monitoring (LTRM) data. 
 IPMs are a generalization of stage-based, matrix population models that have been used to describe a wide range of organisms and, as such are a natural choice for gizzard shad since many aspects of their life cycle have been studied. 
-We test model outputs against empirical patterns reported for gizzard shad from a different location along the Illinois River (La Grange Reach). 
+We tested model outputs against empirical patterns reported for gizzard shad from a different location along the Illinois River (La Grange Reach). 
 Results of our work suggest that our model could serve as an important tool for predicting gizzard shad population responses to changing environmental conditions, including those mediated through species invasions.
 \end{abstract}
 
 %%Graphical abstract
 \begin{graphicalabstract}
-\begin{figure*}
+\begin{figure}
     \begin{center}
 %\scalebox{.75}[.75]{
 \begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=3cm,
@@ -93,9 +70,6 @@ Results of our work suggest that our model could serve as an important tool for 
 \node (repro_in) at (2.3, 3)  {};
 \node (repro_out) at (4.25, 3)  {};
 \node (repro_down) at (3, 2.5)  {};
-%\node[align=center] (surv) at (4.5,3) {\\
-%        \includegraphics[width=0.15\textwidth]{adult.jpeg}\\
-%        };
 \node (grow_box) at (6.6,3.85) {Survival \& Growth};
 \node[main node, align=center] (census_next) at (10,3) {Census $t+1$ \\
         \includegraphics[width=0.15\textwidth]{adult.jpeg}\\
@@ -125,14 +99,14 @@ Results of our work suggest that our model could serve as an important tool for 
 %}
 \end{center}
  \caption{\small{Life cycle diagram and census points for pre-reproduction census of gizzard shad used in a density-dependent integral projection model.}}
-\end{figure*}
+\end{figure}
 
 \end{graphicalabstract}
 
 %%Research highlights
 \begin{highlights}
 \item We introduce an integral projection model that incorporates data from studies on 1) egg production in different size classes of adult gizzard shad, 2) density-dependent survival of age-0 shad, and 3) length distributions of gizzard shad in the Upper Mississippi River system that span nearly thirty years.
-\item  We established survival parameters using gizzard shad data collected from the 5 sites along the Mississippi River and validated our model using empirical information collected from the La Grange Reach of the Illinois River.
+\item  We establish survival parameters using gizzard shad data collected from the 5 sites along the Mississippi River and validate our model using empirical information collected from the La Grange Reach of the Illinois River.
 \end{highlights}
 
 \begin{keyword}
@@ -141,29 +115,19 @@ Results of our work suggest that our model could serve as an important tool for 
   Mississippi River basin \sep
   population ecology \sep
   invasive species impact 
-%% keywords here, in the form: keyword \sep keyword
-
-%% PACS codes here, in the form: \PACS code \sep code
-
-%% MSC codes here, in the form: \MSC code \sep code
-%% or \MSC[2008] code \sep code (2000 is the default)
 
 \end{keyword}
 
 \end{frontmatter}
 
-%% \linenumbers
-
-%% main text
-
-
 \section{Introduction}
 Gizzard shad (\emph{Dorosoma cepedianum}) is a laterally compressed, deep-bodied fish species that occupies numerous aquatic systems throughout central, southern and eastern regions of the United States \citep{pierce1981aspects,vanni2005linking}.  
-In more eutrophic habitats, such as reservoirs, gizzard shad can reach high abunadances leading to its dominance within fish assemblages. 
+They have the potential to reach high abundances in more eutrophic habitats, such as reservoirs, leading to its dominance within fish assemblages. 
 Because of this, gizzard shad have the potential to influence freshwater systems in a number of ways. 
 First, young shad often serve as a critical food source for many fish species, including those of commercial and recreational importance (such as walleye and largemouth bass)\citep{jester1972life}. 
 Thus, gizzard shad can serve as an important trophic link within aquatic food webs.
-Second, because detritus can serve as a primary food source throughout much of gizzard shad development (i.e. from the age-0 stage onward), these fish can transport nutrients
+Second, because detritus can serve as a primary food source throughout much of gizzard shad development 
+(i.e., from the age-0 stage onward), these fish can transport nutrients
 from benthic regions into pelagic habitats \citep{mather1995regeneration, schaus2000effects, vanni2005linking}. 
 This process can result in an increase in the nutrients available to organisms within the water column leading to increases in phytoplankton biomass, algal blooms, and, due to these conditions, shifts in freshwater community structure \citep{aday2003direct, schaus2000effects}. 
 Finally, the fact that detritus can comprise a substantial portion of gizzard shad diet also makes this species an important connection between terrestrial inputs and aquatic processes \citep{schaus2000effects}.
@@ -179,8 +143,8 @@ Although substantial empirical work on gizzard shad biology has accumulated over
 Work by \citet{catalano2010size, catalano2011whole} used empirically-based simulations of gizzard shad to assess population-level responses in this species.
 As part of this process, the authors investigated population-structure using fish lengths but did
 not consider the impacts of gizzard-shad densities on population patterns.
-Here, we introduce an integral projection model for gizzard shad based on empirical data with density-dependent survival in age-0 fish.
-We then compare model outcomes to the dynamics reported for this fish species in a well-studied pool of the Illinois River (La Grange Reach).
+Here, we introduce an integral projection model (IPM) for gizzard shad based on empirical data with density-dependent survival in age-0 fish.
+We then compare model outcomes to the dynamics reported for this fish species in a well-studied pool of the Illinois River (specifically, the La Grange Reach).
 Results from this work suggest that our model could be an important tool for predicting gizzard shad population responses to changing environmental conditions, including those mediated through species invasions (i.e., silver and bighead carp).
 
 \begin{table*}
@@ -228,10 +192,10 @@ Given the large number of eggs produced by shad females ($>$ 300,000/year), ther
 The strength of competition may then subside as fish transition to feeding on different food types during latter stages of development.   
 
 \subsection{Equations}
-We used an integral projection model (IPM) to describe the life history of gizzard shad in the Upper Mississippi River system (UMRS). 
+We used an IPM to describe the life history of gizzard shad in the Upper Mississippi River system (UMRS). 
 IPMs were first introduced by Easterling \citep{easterling2000size}, as a generalization of stage-based, matrix population models. 
-Since that time, IPMs have been used to describe a wide range of organisms \citep{ellner2016data, merow2014advancing, rees2014building}, but have only recently be used to model fish populations \citep{erickson2017integral, liao2019dynamic, white2016fitting, pollesch2022developing}. 
-Fish are an ideal group to investigate using this approach as many species have been well studied and are therefore associated with robust information about life-history traits (i.e. growth and reproduction). 
+Since that time, IPMs have been used to describe a wide range of organisms \citep{ellner2016data, merow2014advancing, rees2014building}, but have only recently be used to model fish populations, such as \citep{erickson2017integral, liao2019dynamic, white2016fitting, pollesch2022developing}. 
+Fish are an ideal group to investigate using this approach as many species have been well studied and are therefore associated with robust information about life-history traits (i.e., growth and reproduction). 
 Gizzard shad are one such species and have been the subject of numerous laboratory and field studies over the decades making it a logical choice for IPMs.
 In our model specifically, we incorporate data from studies on 1) egg production in different size classes of adults, 2) density-dependent survival of age-0 shad, and 3) length distributions of gizzard shad in the UMRS that span nearly thirty years.
 
@@ -296,24 +260,15 @@ Between times $t$ and $t+1$, individual gizzard shad may grow, die, and produce 
 
 \subsubsection{Growth and survival}
 For an individual of length $z$ at time $t$, $P(z',z)\Delta z$ is the probability that the individual is alive at time $t+1$, and its size is in the interval $[z', z' + \Delta z]$ (as with $n(z,t)$ this is an approximation that is valid for small $\Delta z$, and the exact probability is given by an integral like the one above). We define $P(z', z) = s(z)G(z',z)$ where $s(z)$ is the annual adult survival probability and the growth $G(z',z)$ describes the annual length transitions. 
-We assumed that the survival function is a logistic function,
+The survival function is a logistic function,
 \begin{equation}\label{eq:surv}
 s(z) = s_{\rm min} + \frac{s_{\rm max}-s_{\rm min}}{1+e^{\beta_s(\ln(z)-\ln(\alpha_s))}},
 \end{equation}
 with four parameters: the minimum survival rate $s_{\rm min}$; a maximum survival rate, $s_{\rm max}$; an intercept parameter, $\alpha_{s}$; and a slope parameter, $\beta_{s}$ \citep{bolker2008ecological}.  
-
-We assumed that the growth function is a two-variable normal distribution centered around a modified von Bertalanffy function of the length at time t. 
-The von Bertalanffy equation, commonly used to describe the length of a fish over time, is given by $\ds z(t) = L_{\infty} \left(1-e^{-K(t-t_0)} \right)$ where $L_\infty$ is maximum asymptotic length, $K$ is the growth rate, and $t_0$ is the initial time. 
-The expected fish length the following year is:
-\begin{align*}
- z' =z(t+1) & =  L_{\infty} \left(1-e^{-K(t+1-t_0)} \right) =  L_{\infty} - L_{\infty}e^{-K(t-t_0)} e^{-K} \\
- & =   L_\infty - \left( z(t)-L_\infty \right) e^{-K} =   L_{\infty} \left(1-e^{-K} \right) + z(t)e^{-K}. 
- \end{align*}
-Consequently, the growth kernel
-%\begin{equation}\label{eq:grow}
-$\ds G(z',z) = \mathrm{Prob}(z' \, | \,  z, L_{\infty}, K_g) = \mathrm{Normal PDF}(\mu_g, \sigma_g)$
-%\end{equation}
-where $\mu_g =  L_{\infty} \left(1-e^{-K_g} \right) + z(t)e^{-K_g}$, $K_g$ is the individual growth rate of gizzard shad, and $\sigma_g$ is the standard deviation.
+The growth function is a two-variable normal distribution centered around a modified von Bertalanffy function of the length at time t \citep{erickson2017integral}.  
+Consequently if $L_\infty$ is maximum asymptotic length and $K_g$ is the individual growth rate of gizzard shad, then the growth kernel
+$$\ds G(z',z) = \mathrm{Prob}(z' \, | \,  z, L_{\infty}, K_g) = \mathrm{Normal PDF}(\mu_g, \sigma_g)$$
+where $\mu_g =  L_{\infty} \left(1-e^{-K_g} \right) + z(t)e^{-K_g}$ and $\sigma_g$ is the standard deviation.
 
 \subsection{Fecundity}
 
@@ -322,7 +277,7 @@ The fecundity kernel is
 \begin{equation}\label{eq:fecundity}
 F(z', z) = p_b \, \mbox{egg}(z) \, \nu \, s_0(d(t)) \, C_1(z')
 \end{equation}
-where $p_b$ is the probability of reproducing, $\mbox{egg}(z)$ is the mean number of eggs produced, $\nu$ is the probability that an egg is viable, $s_0(d(t))$ is the density-dependent probability of surviving to age-1, and $C_1 (z')$ is the length distribution of new recruits at age-1 (when they are first censused).
+where $p_b$ is the probability of reproducing, $\mbox{egg}(z)$ is the mean number of eggs produced, $\nu$ is the probability that an egg is viable, $s_0(d(t))$ is the density-dependent probability of surviving to age-1, and $C_1 (z')$ is the length distribution of new recruits at age-1 (when they are first censused in the model).
 
 The mean number of eggs produced by females of a certain length is a three-parameter logistic function,
 \begin{equation}\label{eq:egg}
@@ -341,7 +296,6 @@ Finally, the total number of eggs that survive to be an age-1 fish is multiplied
 $ \ds C_1 (z') =  \mathrm{Normal PDF} (\mu_r, \sigma_r)$ where $\mu_r$ is the mean length of age-1 gizzard shad and $\sigma_r$ is the standard deviation. 
 
 \subsection{Dynamical model} 
-%In traditional matrix population models, the state vector is multiplied on the left by a matrix to project the current measurement to its future value.  In an integral projection model, the projection matrix is replaces by an integral kernel $K(z',z)$ that projects the population forward in time.  
 The population at time $t+1$ is the sum of the contributions from each individual alive at time $t$,
 \begin{equation}\label{eq:IPM}
 n(z',t+1) = \int_L^U K(z',z)n(z,t) \,dz,
@@ -350,8 +304,7 @@ where $K(z',z) = s(z) G(z',z) + F(z',z)$ and $[L,U]$ is the range of all possibl
 
 \section{Methods}
 \subsection{LTRM data and model parameterization} \label{LTRM}
-The integrity and health of the UMRS is assessed through Long Term Resource Monitoring (LTRM) which is overseen by a number of agencies including the U.S. Army Corp of Engineers, the United States Geological Survey, and the United States Fish and Wildlife Service. 
-The goal of the LTRM is to track changes in the condition and/or stability of the UMRS ecosystem and participate in restoration activities throughout the region. 
+The LTRM element of the Upper Mississippi River Restoration monitors the UMRS to provide an understanding of the system's ecology, resource changes, and inform management \citep{bouska2018developing}.
 In order to achieve this goal, numerous features of the UMRS, such as aquatic vegetation, bathymetry, fish, land use/land cover, and water quality are continually surveyed from Navigation Pool 1 (at Minneapolis, Minnesota) south to the confluence of the Mississippi and Ohio Rivers at Cairo, Illinois. 
 LTRM fish surveys are conducted at five locations along the main channel of the Upper Mississippi River (Pools 4, 8, 13, 26, and the Open River Reach) and at one location along the Illinois River (La Grange Reach) (Figure \ref{fig:field_stations}). 
 Fish are captured using a multiple gear approach (which includes netting and electrofishing) in order to monitor the responses and health of fish communities along these two very important waterways over time \citep{gutreuter1995long}. 
@@ -427,11 +380,9 @@ As a result, we initialized our model with length distribution
  n(z,0) = d_0 \mbox{Norm} (0.5 L_\infty, \sigma_0) = 964.7 \mbox{Norm} (197.15, 30). 
  \end{equation}
 
-The model was coded in R \citep{R} and the scripts are published on JP github page \verb+https://github.com/jppeirce+.
+The model was coded in R \citep{R} and the scripts are published on JP's GitHub page \verb+https://github.com/jppeirce+.
 
 \subsubsection{Effect of density-dependence on the survival probability of the age-0 cohort} \label{sec:survival}
-%The dependence on survival of next generation of age-0 fish on the present density of age-0 fish strongly influences the density, at all ages, of gizzard shad within the %
-%population. 
 
 In the simulated solutions to the IPM, the density of age-0 Fish strongly influenced the density of gizzard shad at subsequent developmental stages.
 When adult densities are large, there may be more fish of longer lengths that can produce a greater number of eggs.  
@@ -443,19 +394,12 @@ This oscillatory pattern is reflected in our model by the time-dependent surviva
 
 \begin{figure}
 \centering
-%\begin{subfigure}[b]{.43\textwidth}
   \includegraphics[width=.4\textwidth]{figures/Figure2a.pdf}
    \caption{}
   \label{fig:age0time}
-%\end{subfigure}
-%\begin{subfigure}[b]{.43\textwidth}
-%   \includegraphics[width=\textwidth]{figures/Figure2b.pdf}
-%     \caption{}
-%\label{fig:lambda}
-%\end{subfigure}
+ 
 \caption{Survival probability of age-0 gizzard shad.}
-%\caption{(a) Graph of $p_b(z)$ (b) Graph of $\mbox{egg}(z)$, (c) Density-dependent survival of age-0 gizzard shard.}
-%\label{fig:fecundity}
+
 \end{figure}    
 
 \subsubsection{Periodic orbit and validation with external dataset}
@@ -471,9 +415,7 @@ This oscillatory pattern is reflected in our model by the time-dependent surviva
      \caption{}
 \label{fig:period}
 \end{subfigure}
-\caption{(a) The total density of gizzard shad in La Grange Reach predicted by the IPM in the first 100 years. 
-(b) Simulated length distributions during a 9 year interval of time (approximately 1 period of the total density function).}
-%(b) Simulated length distributions during an 9 year interval of time (approximately 1 period of the total density function)}
+\caption{(a) The total density of gizzard shad in La Grange Reach predicted by the IPM in the first 100 years. (b) Simulated length distributions during a 9 year interval of time (approximately 1 period of the total density function).}
 \end{figure}    
 
 \begin{figure}
@@ -496,16 +438,10 @@ Figure \ref{fig:period} illustrates the periodic length dynamics within the gizz
 As a validation of the model, the simulated length distributions during a periodic orbit (Figure \ref{fig:period}) have similarities to fish lengths observed from the La Grange Reach (Figure \ref{fig:LTRMlg}). 
 In addition, the ebb and flow of the frequency of the age-1 cohort can be observed and is associated with the density-dependent survival function for age-0 fish (explained in Section \ref{sec:survival}).
 
-%Figure \ref{fig:period} captures the cohort length dynamics of the gizzard shad. 
-%The peak length frequency of age-1 fish in Year 1 near $z = 105$ mm is seen as a peak in Year 2 near 185 mm, a peak near 305 mm in Year 3, before becoming nearly unidentifiable in the graphs for Years 7 and 9.  
-%This is consistent with the lifespan reported for gizzard that can range, on average, between 4 to 6 years \citep{bodola1955life}. 
-%The change in the location of these relative maximum influences the number of eggs being produced and consequently the density of age-0 fish the next year. 
-%An increase in the frequency of larger adults leads to a subsequent reduction in the resulting age-1 cohort due to our density-dependent survival function in age-0 fish.
-
 \section{Discussion}
 Gizzard shad are common in freshwater systems of North America where they are important components of the aquatic communities. 
 Given this, it is important to understand how populations of this species vary with changing environmental circumstances, such as the occurrence of invasive species. 
-Herein we use both LTRM data and parameters gleaned from other empirical studies to develop an integral projection model for gizzard shad and test model outputs against patterns reported from a well-studied population of this species from the La Grange Reach of the Illinois River.   
+Herein, we use both LTRM data and parameters gleaned from other empirical studies to develop an integral projection model for gizzard shad and test model outputs against patterns reported from a well-studied population of this species from the La Grange Reach of the Illinois River.   
 
 After fitting two adult survival parameters using LTRM data from the main channel of the Mississippi River, we compared a simulated length distribution with empirical data collected from the La Grange Reach of the Illinois River from 1992 to 2020. 
 The resulting simulated length distributions (Figure \ref{fig:period}) reflected a number of the patterns observed in gizzard shad captured from the La Grange Reach over the same timeframe (Figure \ref{fig:LTRMlg}). 
@@ -521,46 +457,16 @@ In addition, the location of the maximum length and the variation in the of leng
 Gaining an understanding of how length distributions of gizzard shad emerge under density-dependent survival in the age-0 class will serve as a foundation for investigating density effects at subsequent stages in the life cycle.  
 In addition, this single-species model could also be expanded to incorporate interspecific interactions between gizzard shad and species such as invasive carp, which appear to negatively impact gizzard shad life-histories through competition for food resources.   
 
-%\begin{enumerate}
-%\item Summary of findings and key discussion points
- % \begin{enumerate}
- % \item Comparison to empirical data [X]
-  %\item Deviations from empirical data
-  %\item discussion about sameness and differences 
-  %\item Sources of density within our model
-  %\end{enumerate}
-%\item Comparison to existing literature
-  %\begin{enumerate}
-  %\item Talk about Matt's work \citep{catalano2010size,
-   %   catalano2011whole}
- % \item Broader need for models such as this
-  %\end{enumerate}
-%\item Implications for management of species
-  %\begin{enumerate}
-  %\item Invasive species
-  %\item Impact of size on harvest
-  %\item impact of size on movement
-  %\end{enumerate}
-%\item Future ideas to explore
-  %\begin{enumerate}
-  %\item Multi-species model
-  %\item Spatial impacts
-  %\item Climate on density
-  %\item Changing climate scenarios
-  %\end{enumerate}
-%\end{enumerate}
-
 \section{Acknowledgments}
 
 These data are a product of the U.S. Army Corps of Engineer's Upper Mississippi River Restoration Program (UMRR) Long Term Resource Monitoring (LTRM) element implemented by the U.S. Geological Survey in collaboration with the five Upper Mississippi River System (UMRS) states of Illinois, Iowa, Minnesota, Missouri, and Wisconsin.
 The U.S. Army Corps of Engineers (Corps) provides guidance and has overall program responsibility.
 
-We thank the U.S.~Geological Survey  Biothreats program and Great Lakes Restoration Initiative for funding.
-In addition, research was supported by NSF-DMS Grant \#1852224, ``REU Site: Ecological Modeling of the Mississippi River Basin''. 
+We thank the U.S.~Geological Survey  Biological Threats and Invasive Species Program and Great Lakes Restoration Initiative for funding.
+In addition, research was supported by NSF-DMS Grant \#1852224, ``REU Site: Ecological Modeling of the Mississippi River Basin''. Any use of trade, firm, or product names is for descriptive purposes only and does not imply endorsement by the U.S. Government.
 
  \bibliographystyle{elsarticle-num-names} 
  \bibliography{gizshad}
-
 
 
 \end{document}
