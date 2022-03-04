@@ -189,7 +189,7 @@ After a period of days, eggs hatch and fish develop from the larval stage to juv
 In many habitats, individuals can reach sexual maturity within a year. 
 As gizzard shad mature, their diet preferences typically shift from phytoplankton and zooplankton early in development to detritus and zooplankton as adults. 
 Given the large number of eggs produced by shad females ($>$ 300,000/year), there is evidence that intraspecific competition can be intense during early developmental stages in this species leading to density-dependent mortality. 
-The strength of competition may then subside as fish transition to feeding on different food types during latter stages of development.   
+The strength of competition may then subside as fish transition to feeding on different food types during later stages of development.   
 
 \subsection{Equations}
 We used an IPM to describe the life history of gizzard shad in the Upper Mississippi River system (UMRS). 
@@ -202,7 +202,7 @@ In our model specifically, we incorporate data from studies on 1) egg production
 We assumed that variations among individual gizzard shad can be summarized by its length $z$ (in mm) ranging from the minimum possible length $L$ to the maximum value $U$. 
 The state of the population at time $t$ (in years) is described by the length distribution $n(z,t)$. 
 Specifically, for each time $t$, $n(z,t)$ is a smooth function of $z$ such that the number of individuals of length $z$ in the interval $[a,b]$ at time $t$ is $\ds \int_a^b n(z,t) \, dz$. 
-Between times $t$ and $t+1$, individual gizzard shad may grow, die, and produce offspring that vary in length depending on the individuals current length (Figure \ref{life_cycle}). 
+Between times $t$ and $t+1$, individual gizzard shad may grow, die, and produce offspring that vary in length depending on the individual's current length (Figure \ref{life_cycle}). 
 
 \begin{figure*}
     \begin{center}
@@ -332,7 +332,7 @@ We undertook this approach as the La Grange Reach is upstream of the Mississippi
 \end{figure}    
 
 \subsubsection{Fecundity and recruitment}
-Female gizzard shad begin reproducing at approximately 140 mm in length and egg numbers tend to increases with fish size \citep{jons1997ovarian}. 
+Female gizzard shad begin reproducing at approximately 140 mm in length and egg numbers tend to increase with fish size \citep{jons1997ovarian}. 
 The logistic parameters for the mean number of eggs produced by females of a certain length were obtained by fitting the three-parameter logistic function (Equation \ref{eq:egg}) to the data for batch fecundity versus length \citep{jons1997ovarian} (Figure \ref{fig:eggs}). 
 Fish survival to age-1 was assumed to be dependent on the density of age-0 gizzard shad (Figure \ref{fig:surv_age0}).  
 Parameters for the exponentially decaying age-0 survival function (Equation \ref{eq:s0}) were determined by fitting equation \ref{eq:s0} to the survival means for 2003-2007 cohorts of gizzard shard in five Missouri reservoirs \citep{michaletz2010overwinter}.
@@ -388,7 +388,7 @@ In the simulated solutions to the IPM, the density of age-0 Fish strongly influe
 When adult densities are large, there may be more fish of longer lengths that can produce a greater number of eggs.  
 More eggs leads to a higher density of age-0 fish and reflectively a reduction in the survival to age-1. 
 If reduced survival continues over subsequent years, the overall density of fish within the population may decline and result in a smaller number of longer length fish that are reproducing.  
-Fewer fish spawning, could result in a smaller age-0 class which, in turn, could enhance survival probability in this cohort (through reduced competition). 
+Fewer fish spawning could result in a smaller age-0 class which, in turn, could enhance survival probability in this cohort (through reduced competition). 
 We would then expect the overall density of fish to increase over the following years, until large numbers of eggs are again produced by larger, adult fish.  
 This oscillatory pattern is reflected in our model by the time-dependent survival probability of age-0 recruits (Figure \ref{fig:age0time}).
 
@@ -447,11 +447,11 @@ After fitting two adult survival parameters using LTRM data from the main channe
 The resulting simulated length distributions (Figure \ref{fig:period}) reflected a number of the patterns observed in gizzard shad captured from the La Grange Reach over the same timeframe (Figure \ref{fig:LTRMlg}). 
 
 The average (over 1 period) simulated length frequency compares well with the overall length frequencies of  gizzard shad sampled in La Grange Reach from 1992-2020 (Figure \ref{fig:lagrange}). 
-Peak frequencies are near the same lengths with the model predicting slightly more adults lengths and fewer juvenile lengths than the observations. 
+Peak frequencies are near the same lengths with the model predicting slightly higher density of adult lengths and fewer juvenile lengths than observations. 
 This may be explained by gear type and capture method which vary from site to site potentially introducing bias in the observed length distributions year to year.
-In addition, studies also suggest that environmental stochasticity and food variability may alter recruitment densities which be difficult to measure accurately \citep{rose2000quantitative, okamoto2016stochastic}. 
+In addition, studies also suggest that environmental stochasticity and food variability may alter recruitment densities which are difficult to measure accurately \citep{rose2000quantitative, okamoto2016stochastic}. 
 
-While our model uses the density of age-0 gizzard shad to effect the survival probability in their first year, we assumed constant viability which may be sensitive to the external factors mentioned above.
+While our model uses the density of age-0 gizzard shad to affect the survival probability in their first year, we assumed constant viability which may be sensitive to the external factors mentioned above.
 In addition, the location of the maximum length and the variation in the of length of new recruits recorded in the LTRM data, suggests that there may be smaller age-0 fish in La Grange Reach than in the study location \citep{michaletz2017variation} used to parameterize the model.  
 
 Gaining an understanding of how length distributions of gizzard shad emerge under density-dependent survival in the age-0 class will serve as a foundation for investigating density effects at subsequent stages in the life cycle.  
@@ -467,7 +467,6 @@ In addition, research was supported by NSF-DMS Grant \#1852224, ``REU Site: Ecol
 
  \bibliographystyle{elsarticle-num-names} 
  \bibliography{gizshad}
-
 
 \end{document}
 
