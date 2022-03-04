@@ -1,4 +1,4 @@
-\begin{thebibliography}{37}
+\begin{thebibliography}{38}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\urlprefix}{URL }
@@ -241,6 +241,26 @@
   \bibinfo{title}{Developing a shared understanding of the Upper Mississippi
   River}, \bibinfo{journal}{Ecology and Society}
   \bibinfo{volume}{23}~(\bibinfo{number}{2}).
+
+\bibitem[{Maher et~al.(2015)Maher, Griffin, Stauffer, Sternburg, Fischer,
+  Hagerty, Hubbell, Johnson, McCain, Mitvalsky, Novak, Westlake, Clevenstine,
+  Duyvejonck, Hauser, Jawson, Johnson, Stoner, Benjamin, Buntin, and
+  Mickelsen}]{UMRR2015}
+\bibinfo{author}{R.~Maher}, \bibinfo{author}{M.~Griffin},
+  \bibinfo{author}{K.~Stauffer}, \bibinfo{author}{J.~Sternburg},
+  \bibinfo{author}{J.~Fischer}, \bibinfo{author}{K.~Hagerty},
+  \bibinfo{author}{M.~Hubbell}, \bibinfo{author}{B.~Johnson},
+  \bibinfo{author}{K.~McCain}, \bibinfo{author}{K.~Mitvalsky},
+  \bibinfo{author}{T.~Novak}, \bibinfo{author}{K.~Westlake},
+  \bibinfo{author}{B.~Clevenstine}, \bibinfo{author}{J.~Duyvejonck},
+  \bibinfo{author}{J.~Hauser}, \bibinfo{author}{M.~Jawson},
+  \bibinfo{author}{B.~Johnson}, \bibinfo{author}{J.~Stoner},
+  \bibinfo{author}{G.~Benjamin}, \bibinfo{author}{D.~Buntin},
+  \bibinfo{author}{K.~Mickelsen}, \bibinfo{title}{Enhancing Restoration and
+  Advancing Knowledge of the Upper Mississippi River, A Strategic Plan for the
+  Upper Mississippi River Restoration Program 2015-2025}, \bibinfo{type}{Tech.
+  Rep.}, \bibinfo{institution}{U.S. Army Corps of Engineers},
+  \bibinfo{year}{2015}.
 
 \bibitem[{Gutreuter et~al.(1995)Gutreuter, Burkhardt, and
   Lubinski}]{gutreuter1995long}

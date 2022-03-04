@@ -3,56 +3,51 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: densitydepIPM.aux
 The style file: elsarticle-num-names.bst
 Database file #1: gizshad.bib
-You're missing a field name---line 193 of file gizshad.bib
- : 
- : %  title={Enhancing Restoration and Advancing Knowledge of the Upper Mississippi River, A Strategic Plan for the Upper Mississippi River Restoration Program 2015-2025},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
 Repeated entry---line 237 of file gizshad.bib
  : @article{love2018does
  :                      ,
 I'm skipping whatever remains of this entry
 Warning--empty journal in jester1972life
 Warning--empty journal in gutreuter1995long
-You've used 37 entries,
+You've used 38 entries,
             2793 wiz_defined-function locations,
-            832 strings with 12795 characters,
-and the built_in function-call counts, 21567 in all, are:
-= -- 1267
-> -- 822
+            838 strings with 13386 characters,
+and the built_in function-call counts, 22756 in all, are:
+= -- 1293
+> -- 950
 < -- 13
-+ -- 338
-- -- 252
-* -- 2947
-:= -- 2894
-add.period$ -- 37
-call.type$ -- 37
-change.case$ -- 149
-chr.to.int$ -- 37
-cite$ -- 39
-duplicate$ -- 1706
-empty$ -- 1632
-format.name$ -- 365
-if$ -- 3788
++ -- 382
+- -- 294
+* -- 3152
+:= -- 3070
+add.period$ -- 38
+call.type$ -- 38
+change.case$ -- 154
+chr.to.int$ -- 38
+cite$ -- 40
+duplicate$ -- 1782
+empty$ -- 1681
+format.name$ -- 410
+if$ -- 3975
 int.to.chr$ -- 1
-int.to.str$ -- 38
-missing$ -- 434
-newline$ -- 121
-num.names$ -- 111
-pop$ -- 468
+int.to.str$ -- 39
+missing$ -- 462
+newline$ -- 124
+num.names$ -- 114
+pop$ -- 484
 preamble$ -- 1
-purify$ -- 185
+purify$ -- 190
 quote$ -- 0
-skip$ -- 418
+skip$ -- 427
 stack$ -- 0
-substring$ -- 1158
-swap$ -- 1582
+substring$ -- 1170
+swap$ -- 1688
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 218
+type$ -- 224
 warning$ -- 2
-while$ -- 129
+while$ -- 131
 width$ -- 0
-write$ -- 378
-(There were 2 error messages)
+write$ -- 389
+(There was 1 error message)
