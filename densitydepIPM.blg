@@ -9,45 +9,45 @@ Repeated entry---line 237 of file gizshad.bib
 I'm skipping whatever remains of this entry
 Warning--empty journal in jester1972life
 Warning--empty journal in gutreuter1995long
-You've used 38 entries,
+You've used 39 entries,
             2793 wiz_defined-function locations,
-            838 strings with 13386 characters,
-and the built_in function-call counts, 22756 in all, are:
-= -- 1293
-> -- 950
+            845 strings with 13700 characters,
+and the built_in function-call counts, 23422 in all, are:
+= -- 1329
+> -- 982
 < -- 13
-+ -- 382
-- -- 294
-* -- 3152
-:= -- 3070
-add.period$ -- 38
-call.type$ -- 38
-change.case$ -- 154
-chr.to.int$ -- 38
-cite$ -- 40
-duplicate$ -- 1782
-empty$ -- 1681
-format.name$ -- 410
-if$ -- 3975
++ -- 394
+- -- 304
+* -- 3251
+:= -- 3158
+add.period$ -- 39
+call.type$ -- 39
+change.case$ -- 158
+chr.to.int$ -- 39
+cite$ -- 41
+duplicate$ -- 1834
+empty$ -- 1728
+format.name$ -- 423
+if$ -- 4090
 int.to.chr$ -- 1
-int.to.str$ -- 39
-missing$ -- 462
-newline$ -- 124
-num.names$ -- 114
-pop$ -- 484
+int.to.str$ -- 40
+missing$ -- 476
+newline$ -- 127
+num.names$ -- 117
+pop$ -- 496
 preamble$ -- 1
-purify$ -- 190
+purify$ -- 195
 quote$ -- 0
-skip$ -- 427
+skip$ -- 438
 stack$ -- 0
-substring$ -- 1170
-swap$ -- 1688
+substring$ -- 1201
+swap$ -- 1742
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 224
+type$ -- 230
 warning$ -- 2
-while$ -- 131
+while$ -- 135
 width$ -- 0
-write$ -- 389
+write$ -- 399
 (There was 1 error message)

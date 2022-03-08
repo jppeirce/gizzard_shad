@@ -1,4 +1,4 @@
-\begin{thebibliography}{38}
+\begin{thebibliography}{39}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\urlprefix}{URL }
@@ -139,6 +139,16 @@
   shad, \emph{Dorosoma cepedianum}, in western Lake Erie}, Ph.D. thesis,
   \bibinfo{school}{Doctoral dissertation. Ohio State University, Columbus},
   \bibinfo{year}{1955}.
+
+\bibitem[{Then et~al.(2015)Then, Hoenig, Hall, Hewitt, and editor:
+  Ernesto~Jardim}]{then2015evaluating}
+\bibinfo{author}{A.~Y. Then}, \bibinfo{author}{J.~M. Hoenig},
+  \bibinfo{author}{N.~G. Hall}, \bibinfo{author}{D.~A. Hewitt},
+  \bibinfo{author}{H.~editor: Ernesto~Jardim}, \bibinfo{title}{Evaluating the
+  predictive performance of empirical estimators of natural mortality rate
+  using information on over 200 fish species}, \bibinfo{journal}{ICES Journal
+  of Marine Science} \bibinfo{volume}{72}~(\bibinfo{number}{1})
+  (\bibinfo{year}{2015}) \bibinfo{pages}{82--92}.
 
 \bibitem[{Michaletz(2017)}]{michaletz2017variation}
 \bibinfo{author}{P.~Michaletz}, \bibinfo{title}{Variation in characteristics
