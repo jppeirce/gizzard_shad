@@ -179,17 +179,6 @@
   population model},
 \newblock \bibinfo{journal}{Ecology} \bibinfo{volume}{81}
   (\bibinfo{year}{2000}) \bibinfo{pages}{694--708}.
-%Type = Article
-\bibitem[{Briggs et~al.(2010)Briggs, Dabbs, Holm, Lubben, Rebarber, Tenhumberg,
-  and Riser-Espinoza}]{briggs2010structured}
-\bibinfo{author}{J.~Briggs}, \bibinfo{author}{K.~Dabbs},
-  \bibinfo{author}{M.~Holm}, \bibinfo{author}{J.~Lubben},
-  \bibinfo{author}{R.~Rebarber}, \bibinfo{author}{B.~Tenhumberg},
-  \bibinfo{author}{D.~Riser-Espinoza},
-\newblock \bibinfo{title}{Structured population dynamics: An introduction to
-  integral modeling},
-\newblock \bibinfo{journal}{Mathematics Magazine} \bibinfo{volume}{83}
-  (\bibinfo{year}{2010}) \bibinfo{pages}{243--257}.
 %Type = Book
 \bibitem[{Ellner et~al.(2016)Ellner, Childs, Rees et~al.}]{ellner2016data}
 \bibinfo{author}{S.~P. Ellner}, \bibinfo{author}{D.~Z. Childs},
@@ -216,6 +205,17 @@
 \newblock \bibinfo{title}{Building integral projection models: a user's guide},
 \newblock \bibinfo{journal}{Journal of Animal Ecology} \bibinfo{volume}{83}
   (\bibinfo{year}{2014}) \bibinfo{pages}{528--545}.
+%Type = Article
+\bibitem[{Briggs et~al.(2010)Briggs, Dabbs, Holm, Lubben, Rebarber, Tenhumberg,
+  and Riser-Espinoza}]{briggs2010structured}
+\bibinfo{author}{J.~Briggs}, \bibinfo{author}{K.~Dabbs},
+  \bibinfo{author}{M.~Holm}, \bibinfo{author}{J.~Lubben},
+  \bibinfo{author}{R.~Rebarber}, \bibinfo{author}{B.~Tenhumberg},
+  \bibinfo{author}{D.~Riser-Espinoza},
+\newblock \bibinfo{title}{Structured population dynamics: An introduction to
+  integral modeling},
+\newblock \bibinfo{journal}{Mathematics Magazine} \bibinfo{volume}{83}
+  (\bibinfo{year}{2010}) \bibinfo{pages}{243--257}.
 %Type = Article
 \bibitem[{Erickson et~al.(2017)Erickson, Eager, Brey, Hansen, and
   Kocovsky}]{erickson2017integral}
@@ -369,6 +369,13 @@
   Statistical Computing}, \bibinfo{address}{Vienna, Austria},
   \bibinfo{year}{2017}. \URLprefix \url{https://www.R-project.org/}.
 %Type = Article
+\bibitem[{Rose(2000)}]{rose2000quantitative}
+\bibinfo{author}{K.~A. Rose},
+\newblock \bibinfo{title}{Why are quantitative relationships between
+  environmental quality and fish populations so elusive?},
+\newblock \bibinfo{journal}{Ecological Applications} \bibinfo{volume}{10}
+  (\bibinfo{year}{2000}) \bibinfo{pages}{367--385}.
+%Type = Article
 \bibitem[{Okamoto et~al.(2016)Okamoto, Schmitt, and
   Holbrook}]{okamoto2016stochastic}
 \bibinfo{author}{D.~K. Okamoto}, \bibinfo{author}{R.~J. Schmitt},
@@ -377,12 +384,5 @@
   implications for population fluctuations},
 \newblock \bibinfo{journal}{Ecology letters} \bibinfo{volume}{19}
   (\bibinfo{year}{2016}) \bibinfo{pages}{153--162}.
-%Type = Article
-\bibitem[{Rose(2000)}]{rose2000quantitative}
-\bibinfo{author}{K.~A. Rose},
-\newblock \bibinfo{title}{Why are quantitative relationships between
-  environmental quality and fish populations so elusive?},
-\newblock \bibinfo{journal}{Ecological Applications} \bibinfo{volume}{10}
-  (\bibinfo{year}{2000}) \bibinfo{pages}{367--385}.
 
 \end{thebibliography}

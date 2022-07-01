@@ -1,4 +1,4 @@
-## IPM for Gizzard Shad (Fall 2021)
+## IPM for Gizzard Shad (Spring 2022)
 # Remember to set the working directory:
 # Session -> Set Working Directory -> To Source Location
 library(tidyverse)  #used to make pretty graphs
