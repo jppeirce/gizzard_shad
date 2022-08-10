@@ -16,7 +16,8 @@ tf <-100 # number of years
 
 # Initial length distribution
 n <- matrix(0, length(zmesh), tf)
-n0_total <- 995
+n0_total <-1487.929
+# n0_total <- 995
 n[, 1] <- dnorm(zmesh, mean = 0.5*m_par$grow_max, sd = 30)
     #normal like LTRM 1994
 n[, 1] <- (n[, 1] / sum(n[, 1])) * n0_total / delta_z
