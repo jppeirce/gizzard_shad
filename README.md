@@ -1,4 +1,4 @@
-# R code to accompany the paper, "A Mathematical Model for the Control of Swimmer's Itch."
+# R code to accompany the paper, "An integral projection model for gizzard shad (Dorosoma cepedianum) utilizing density-dependent age-0 survival"
 
 Gizzard shad (Dorosoma cepedianum) is a common freshwater fish species found throughout the central and eastern portions of North America. 
 Within these regions, gizzard shad play several critical roles in the freshwater community such as serving as prey for other fish species and translocating nutrients from substrates into the water column. 
@@ -10,3 +10,6 @@ Results of our work indicate that our model could serve as an important tool for
 
 # File summary:
 
+Start here: gizshadgraphs_paper.R
+
+More detail coming soon.
